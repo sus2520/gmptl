@@ -8,10 +8,6 @@ function WelcomePage() {
   const handleAccept = () => {
     if (isChecked) {
       console.log('Terms accepted, proceeding...');
-      // Add navigation logic, e.g., using react-router-dom
-      // import { useNavigate } from 'react-router-dom';
-      // const navigate = useNavigate();
-      // navigate('/next-page');
     } else {
       alert('Please accept the Terms and Conditions.');
     }
@@ -19,16 +15,13 @@ function WelcomePage() {
 
   return (
     <div className="welcome-page">
-      <div className="header-bar">
-        <div className="header-left"></div>
-        <div className="header-right"></div>
-      </div>
+      <div className="header-bar"></div>
       <div
-        className="welcome-bg-image"
+        className="welcome-logo"
         style={{ backgroundImage: image19 ? `url(${image19})` : 'none' }}
       ></div>
       <div
-        className="welcome-logo"
+        className="welcome-bg-image"
         style={{ backgroundImage: image19 ? `url(${image19})` : 'none' }}
       ></div>
       <div className="welcome-container">

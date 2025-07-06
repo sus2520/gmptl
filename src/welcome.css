@@ -5,8 +5,8 @@ html, body {
   width: 100%;
   min-height: 100vh;
   background: #FFFFFF;
-  overflow: auto; /* Enable horizontal and vertical scrolling */
-  font-family: 'Montserrat', sans-serif; /* Global font */
+  overflow: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Desktop Container */
@@ -16,7 +16,7 @@ html, body {
   max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
-  padding-top: 31.44px; /* Offset for fixed header */
+  padding-top: 31.44px;
 }
 
 /* Header Bar (Assuming "diagnot bar") */
@@ -30,18 +30,19 @@ html, body {
   transform: translateX(-50%);
   display: flex;
   z-index: 10;
+  background: linear-gradient(to right, #1B577E 50%, #EB5617 50%);
 }
 
-.header-left {
-  width: 50%;
-  height: 100%;
-  background: #1B577E;
-}
-
-.header-right {
-  width: 50%;
-  height: 100%;
-  background: #EB5617;
+/* Logo Image */
+.welcome-logo {
+  position: absolute;
+  width: 181.76px;
+  height: 160.19px;
+  left: 50px;
+  top: 50px;
+  background: url('../assets/image19.png');
+  background-size: contain;
+  z-index: 2;
 }
 
 /* Background Image */
@@ -50,39 +51,27 @@ html, body {
   width: 496.49px;
   height: 437.58px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   top: 50%;
-  background: url('../assets/image19.png'); /* Updated to match JSX import */
+  background: url('../assets/image19.png');
   background-size: cover;
   opacity: 0.5;
   z-index: 1;
 }
 
-/* Logo Image */
-.welcome-logo {
-  position: absolute;
-  width: 181.76px;
-  height: 160.19px;
-  left: 116.27px;
-  top: 68.99px;
-  background: url('../assets/image19.png'); /* Updated to match JSX import */
-  background-size: contain;
-  z-index: 2;
-}
-
-/* Main Content Container (Rectangle 744) */
+/* Main Content Container */
 .welcome-container {
   box-sizing: border-box;
   position: relative;
   width: min(90%, 778.52px);
   min-height: 810.81px;
   margin: 50px auto;
+  padding: 20px;
   border: 0.5px solid #2C51A1;
   box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-  padding: 20px;
   z-index: 3;
-  overflow: auto; /* Enable scrolling within container if content overflows */
+  overflow: auto;
 }
 
 /* Welcome Title */
@@ -91,8 +80,9 @@ html, body {
   max-width: 727px;
   margin: 0 auto 20px;
   font-weight: 600;
-  font-size: clamp(24px, 5vw, 34px);
-  line-height: 41px;
+  font-size: 34px;
+  line-height: 34px;
+  letter-spacing: 0;
   color: #EE581B;
   text-align: center;
 }
@@ -103,8 +93,9 @@ html, body {
   max-width: 600.74px;
   margin: 0 auto 20px;
   font-weight: 500;
-  font-size: clamp(18px, 4vw, 24px);
+  font-size: 24px;
   line-height: 40px;
+  letter-spacing: 0;
   text-align: justify;
   color: #333333;
 }
@@ -113,24 +104,29 @@ html, body {
 .checkbox-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 592.87px;
-  margin: 20px auto;
+  width: 592.87px;
+  height: 30.97px;
+  margin: 0 auto;
+  /* Adjusted from absolute to relative positioning */
 }
 
 .checkbox {
   width: 30.97px;
   height: 30.97px;
   cursor: pointer;
-  border: 1px solid #333333; /* Default style */
+  border: 1px solid #333333;
+  /* Removed absolute positioning; handled by flex */
 }
 
 .checkbox-label {
+  width: 549px;
+  height: 22px;
   margin-left: 10px;
   font-weight: 500;
-  font-size: clamp(14px, 3vw, 18.063px);
+  font-size: 18.063px;
   line-height: 22px;
   color: #333333;
+  /* Removed absolute positioning; handled by flex */
 }
 
 /* Accept Button */
@@ -138,7 +134,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: min(90%, 217.98px);
+  width: 217.98px;
   height: 42px;
   margin: 20px auto;
   background: #1B5680;
@@ -180,6 +176,7 @@ html, body {
 
   .welcome-title {
     font-size: clamp(20px, 4vw, 28px);
+    line-height: clamp(20px, 4vw, 28px);
   }
 
   .welcome-content {
@@ -188,6 +185,17 @@ html, body {
   }
 
   .checkbox-container {
-    max-width: 90%;
+    width: 90%;
+    height: auto;
+  }
+
+  .checkbox {
+    width: 25px;
+    height: 25px;
+  }
+
+  .checkbox-label {
+    width: auto;
+    font-size: clamp(14px, 3vw, 16px);
   }
 }

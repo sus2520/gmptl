@@ -67,7 +67,25 @@ export default function Activities() {
       ></div>
 
       <div className="activities-container">
-        <div className="activities-title">Actividades</div>
+        <div
+          className="activities-title"
+          style={{
+            position: 'absolute',
+            width: '206px',
+            height: '41px',
+            left: 'calc(50% - 206px / 2 - 31.57px)',
+            top: '139.08px',
+            fontFamily: 'Montserrat',
+            fontWeight: 600,
+            fontSize: '34px',
+            lineHeight: '41px',
+            color: '#EE581B',
+            textAlign: 'left',
+          }}
+        >
+          Actividades
+        </div>
+
 
         <div className="activities-row-header">
           <div className="activity-label">Actividad</div>

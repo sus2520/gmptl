@@ -1,5 +1,5 @@
 import React from 'react';
-import './Activities.css';
+import '../Activities.css';
 
 export default function Activities() {
   return (

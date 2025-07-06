@@ -70,7 +70,7 @@ html, body {
   z-index: 2;
 }
 
-/* Main Content Container */
+/* Main Content Container (Rectangle 744) */
 .welcome-container {
   box-sizing: border-box;
   position: relative;
@@ -82,6 +82,7 @@ html, body {
   border-radius: 10px;
   padding: 20px;
   z-index: 3;
+  overflow: auto; /* Enable scrolling within container if content overflows */
 }
 
 /* Welcome Title */

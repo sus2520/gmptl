@@ -21,6 +21,7 @@ html, body {
 
 /* 3. Diagonal Header Bar */
 /* Diagonal Header Bar (Figma: Group 20937) */
+/* Full bar wrapper */
 .header-bar {
   position: absolute;
   width: 1440px;
@@ -28,31 +29,30 @@ html, body {
   left: 0;
   top: 0;
   z-index: 10;
-  transform: rotateY(180deg); /* This is the same as matrix(-1, 0, 0, 1, 0, 0) */
+  overflow: hidden;
 }
 
-/* Blue part: Rectangle 746 */
-.header-bar .blue-bar {
+/* Blue background base */
+.header-bar::before {
+  content: '';
   position: absolute;
-  width: 720px;
-  height: 31.44px;
-  right: 720px;
-  top: 0;
+  width: 100%;
+  height: 100%;
   background: #1B577E;
-  z-index: 11;
 }
 
-/* Orange diagonal part: Rectangle 745 */
-.header-bar .orange-bar {
+/* Orange diagonal overlay */
+.header-bar::after {
+  content: '';
   position: absolute;
-  width: 744.67px;
-  height: 31.44px;
-  left: 695.33px;
+  width: 750px; /* adjust for slant size */
+  height: 100%;
+  right: 0;
   top: 0;
   background: #EB5617;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
-  z-index: 12;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
 }
+
 
 
 /* 4. Logo */

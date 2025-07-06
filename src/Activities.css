@@ -20,7 +20,7 @@ body, html {
 .activities-container {
   position: absolute;
   width: 727px;
-  top: 100px;
+  top: 316.17px; /* Adjusted based on Figma top + height of header */
   left: 356.5px;
   background: #FFFFFF;
   border: 1px solid #1E4473;
@@ -31,13 +31,19 @@ body, html {
   overflow-y: auto;
 }
 
-/* 4. Title */
+/* 4. Title (Adjusted to match Group 20932 dimensions) */
 .activities-title {
+  position: absolute;
+  width: 640.97px;
+  height: 45px;
+  left: 351px;
+  top: 271.17px; /* As per Figma */
   font-size: 24px;
   font-weight: 700;
   color: #1E4473;
-  margin-bottom: 24px;
-  text-align: center;
+  text-align: center; /* Centered text as requested */
+  line-height: 45px; /* Vertically center text within height */
+  margin: 0; /* Remove default margin */
 }
 
 /* 5. Table Header */
@@ -50,6 +56,7 @@ body, html {
   border-bottom: 1px solid #1E4473;
   padding-bottom: 8px;
   margin-bottom: 8px;
+  margin-top: 45px; /* Space after title */
 }
 
 /* 6. Row Container */
@@ -67,7 +74,7 @@ body, html {
   font-size: 14px;
   border-bottom: 1px solid #e0e0e0;
   color: #1E1E1E;
-  gap: 15px; /* Adds 15px space between columns */
+  gap: 15px; /* Maintains space between columns */
 }
 
 /* 8. Row Children */
@@ -80,7 +87,7 @@ body, html {
 
 /* activity text (1st column) */
 .activities-row .activity {
-  flex: 0 0 55%; /* Maintained at 55% as per previous adjustment */
+  flex: 0 0 55%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

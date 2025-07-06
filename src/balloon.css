@@ -24,22 +24,31 @@ html, body {
   height: 31.44px;
   left: 0;
   top: 0;
-  background: #1B577E;
   z-index: 10;
   overflow: hidden;
 }
 
+/* Blue background base */
+.header-bar::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1B577E;
+}
+
+/* Orange diagonal overlay */
 .header-bar::after {
   content: '';
   position: absolute;
-  width: 744.67px;
-  height: 31.44px;
-  left: 695.33px;
+  width: 750px; /* adjust for slant size */
+  height: 100%;
+  right: 0;
   top: 0;
   background: #EB5617;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
-  z-index: 11;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
 }
+
 
 .logo-image {
   position: absolute;

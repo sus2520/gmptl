@@ -1,187 +1,125 @@
-/* Base Setup */
-html, body {
+/* 1. Reset & Base Styles */
+body, html {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
-  overflow: auto;
+  background: #FFFFFF;
+  overflow: hidden;
 }
 
-/* Main Container */
-.welcome-page {
+/* 2. Wrapper for Whole Page */
+.activities-wrapper {
   position: relative;
   width: 1440px;
   height: 1024px;
   margin: 0 auto;
   background: #FFFFFF;
-  overflow: hidden;
 }
 
-/* Diagonal Header Bar */
+/* 3. Diagonal Header Bar */
 .header-bar {
   position: absolute;
   width: 1440px;
   height: 31.44px;
+  left: 0;
   top: 0;
-  left: 0;
-  z-index: 10;
+  background: #E35F21;
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Mirrored like Figma */
 }
 
-.header-bar::before {
-  content: '';
+/* 4. Logo Image */
+.activities-logo {
   position: absolute;
-  width: 720px;
-  height: 100%;
-  left: 0;
-  background: #1B577E;
-  transform: rotate(180deg);
-}
-
-.header-bar::after {
-  content: '';
-  position: absolute;
-  width: 744.67px;
-  height: 100%;
-  left: 695.33px;
-  background: #EB5617;
-  transform: rotate(180deg);
-}
-
-/* Logo */
-.welcome-logo {
-  position: absolute;
+  top: calc(50% - 160.19px / 2);
+  left: 60px;
   width: 181.76px;
   height: 160.19px;
-  top: 68.99px;
-  left: 116.27px;
-  background: url('../assets/logo.png') no-repeat center;
-  background-size: contain;
-  z-index: 5;
 }
 
-/* Watermark Image */
-.welcome-bg-image {
-  position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  top: calc(50% - 437.58px / 2);
-  left: calc(50% - 496.49px / 2);
-  background: url('../assets/watermark.png') no-repeat center;
-  background-size: cover;
-  opacity: 0.5;
-  pointer-events: none;
-  z-index: 1;
+.activities-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* Activities Container */
+/* 5. Container Box */
 .activities-container {
   position: absolute;
-  width: 778.52px;
-  height: 864.68px;
-  top: 106.6px;
-  left: 330.74px;
+  width: 727px;
+  height: 605.97px;
+  top: 198.42px;
+  left: 356.5px;
   background: #FFFFFF;
-  border: 0.5px solid #2C51A1;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
-  padding: 20px 0;
-  z-index: 2;
+  border: 1px solid #1E4473;
+  border-radius: 8px;
+  padding: 32px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
-/* Title */
+/* 6. Title */
 .activities-title {
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 41px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1E4473;
+  margin-bottom: 24px;
   text-align: center;
-  color: #EE581B;
-  margin-bottom: 30px;
 }
 
-/* Table Headers */
-.activities-row-header {
+/* 7. Table Header */
+.activities-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 600.74px;
-  margin: 0 auto;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  color: #1B577E;
+  font-size: 16px;
+  color: #1E4473;
+  border-bottom: 1px solid #1E4473;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
-/* Divider */
-.activities-divider {
-  width: 600.74px;
-  height: 0;
-  margin: 10px auto;
-  border: 1px solid #1B5680;
-}
-
-/* Activity Row */
-.activity-row {
+/* 8. Table Rows */
+.activities-row {
   display: flex;
-  align-items: center;
-  width: 674.47px;
-  height: 45px;
-  margin: 10px auto;
-  font-weight: 500;
-  font-size: 18.06px;
-  color: #333333;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #1E1E1E;
 }
 
-.activity-icon {
-  width: 54px;
-  height: 45px;
-  margin-right: 15px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+.activities-row span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.activity-name {
-  width: 212px;
-  text-align: left;
+/* 9. Status Colors */
+.status-ok {
+  color: green;
+  font-weight: bold;
 }
 
-.activity-duration {
-  width: 92px;
-  text-align: center;
+.status-pending {
+  color: red;
+  font-weight: bold;
 }
 
-.activity-status {
-  width: 96px;
-  text-align: right;
-}
-
-.activity-status.ok {
-  color: #00B050;
-}
-
-.activity-status.pending {
-  color: #FF0000;
-}
-
-/* Exit Button */
+/* 10. Exit Button */
 .exit-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 217.98px;
-  height: 42px;
-  margin: 20px auto;
-  background: #1B5680;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 18px;
-  color: #FEE9E7;
+  margin-top: 24px;
+  padding: 10px 20px;
+  background: #1E4473;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
   cursor: pointer;
-  transition: background 0.3s;
+  float: right;
+  transition: background 0.3s ease;
 }
 
 .exit-button:hover {
-  background: #154a6b;
+  background: #16365c;
 }

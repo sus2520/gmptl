@@ -1,8 +1,7 @@
 import React from 'react';
 import '../Activities.css';
-
-
 import logoImage from '../assets/image19.png';
+import watermarkImage from '../assets/watermark.png'; // Optional background
 
 const activities = [
   'Balloon Analogue Risk Task (BART)',
@@ -29,35 +28,53 @@ const activities = [
 
 const Activities = () => {
   return (
-    <div className="activities-wrapper">
+    <div className="welcome-page">
+      {/* Diagonal Bar */}
       <div className="header-bar"></div>
 
-      <div className="activities-logo">
+      {/* Logo */}
+      <div className="welcome-logo">
         <img src={logoImage} alt="Logo" />
       </div>
 
+      {/* Watermark */}
+      <div className="welcome-bg-image">
+        <img src={watermarkImage} alt="Background" />
+      </div>
+
+      {/* Main Activity Box */}
       <div className="activities-container">
-        <h1 className="activities-title">Actividades</h1>
+        <div className="activities-title">Actividades</div>
 
-        <div className="activities-table">
-          <div className="activities-header">
-            <span>Actividad</span>
-            <span>Duración</span>
-            <span>Avance</span>
-          </div>
-
-          {activities.map((task, index) => (
-            <div className="activities-row" key={index}>
-              <span>{task}</span>
-              <span>{index % 2 === 0 ? '7 minutos' : '5 minutos'}</span>
-              <span className={index < 2 ? 'status-ok' : 'status-pending'}>
-                {index < 2 ? 'OK' : 'Pendiente'}
-              </span>
-            </div>
-          ))}
+        {/* Header Row */}
+        <div className="activities-row-header">
+          <div>Actividad</div>
+          <div>Duración</div>
+          <div>Avance</div>
         </div>
 
-        <button className="exit-button">Salir</button>
+        <div className="activities-divider"></div>
+
+        {/* Activities */}
+        {activities.map((task, index) => (
+          <div className="activity-row" key={index}>
+            <div className="activity-icon"></div>
+            <div className="activity-name">{task}</div>
+            <div className="activity-duration">
+              {index % 2 === 0 ? '7 minutos' : '5 minutos'}
+            </div>
+            <div
+              className={`activity-status ${
+                index < 2 ? 'ok' : 'pending'
+              }`}
+            >
+              {index < 2 ? 'OK' : 'Pendiente'}
+            </div>
+          </div>
+        ))}
+
+        {/* Exit Button */}
+        <div className="exit-button">Salir</div>
       </div>
     </div>
   );

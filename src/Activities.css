@@ -1,4 +1,4 @@
-/* 1. Base Setup */
+/* Base Setup */
 html, body {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ html, body {
   overflow: auto;
 }
 
-/* 2. Full Page Container */
+/* Main Container */
 .welcome-page {
   position: relative;
   width: 1440px;
@@ -19,128 +19,101 @@ html, body {
   overflow: hidden;
 }
 
-/* 3. Diagonal Header Bar */
+/* Diagonal Header Bar */
 .header-bar {
   position: absolute;
   width: 1440px;
   height: 31.44px;
-  left: 0;
   top: 0;
+  left: 0;
   z-index: 10;
-  overflow: hidden;
 }
 
-/* Blue full-width base */
 .header-bar::before {
   content: '';
   position: absolute;
-  width: 100%;
+  width: 720px;
   height: 100%;
+  left: 0;
   background: #1B577E;
+  transform: rotate(180deg);
 }
 
-/* Orange overlay with diagonal slash */
 .header-bar::after {
   content: '';
   position: absolute;
-  width: 750px;
+  width: 744.67px;
   height: 100%;
-  right: 0;
-  top: 0;
+  left: 695.33px;
   background: #EB5617;
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  transform: rotate(180deg);
 }
 
-
-/* 4. Logo */
+/* Logo */
 .welcome-logo {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
-  left: 116.27px;
   top: 68.99px;
+  left: 116.27px;
+  background: url('../assets/logo.png') no-repeat center;
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   z-index: 5;
 }
 
-/* 5. Background Watermark Image */
+/* Watermark Image */
 .welcome-bg-image {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
-  left: calc(50% - 496.49px / 2);
   top: calc(50% - 437.58px / 2);
+  left: calc(50% - 496.49px / 2);
+  background: url('../assets/watermark.png') no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 0.7; /* Increased for visibility */
-  z-index: 1; /* Below content, above background */
+  opacity: 0.5;
   pointer-events: none;
+  z-index: 1;
 }
 
-/* 6. Main Content Container */
+/* Activities Container */
 .activities-container {
-  box-sizing: border-box;
   position: absolute;
   width: 778.52px;
   height: 864.68px;
-  left: calc(50% - 778.52px / 2);
-  top: calc(50% - 864.68px / 2 + 26.93px);
+  top: 106.6px;
+  left: 330.74px;
   background: #FFFFFF;
   border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-  padding: 20px;
-  z-index: 3;
+  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
+  padding: 20px 0;
+  z-index: 2;
 }
 
-/* 7. Title */
+/* Title */
 .activities-title {
-  width: 206px;
-  height: 41px;
-  margin: 0 auto; /* Centered */
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 600;
   font-size: 34px;
   line-height: 41px;
-  color: #EE581B;
   text-align: center;
-  position: relative;
-  top: 10px; /* Adjusted to fit within container */
+  color: #EE581B;
+  margin-bottom: 30px;
 }
 
-/* 8. Table Headers */
+/* Table Headers */
 .activities-row-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 600.74px;
-  margin: 40px auto 0; /* Centered, with top margin */
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
+  margin: 0 auto;
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
   color: #1B577E;
 }
 
-.activity-label {
-  width: 149px; /* Adjusted for longest activity name */
-  text-align: left;
-}
-
-.activity-duration {
-  width: 113px;
-  text-align: center;
-}
-
-.activity-status {
-  width: 96px;
-  text-align: right;
-}
-
-/* 9. Divider Line */
+/* Divider */
 .activities-divider {
   width: 600.74px;
   height: 0;
@@ -148,37 +121,29 @@ html, body {
   border: 1px solid #1B5680;
 }
 
-/* 10. Activity Rows */
+/* Activity Row */
 .activity-row {
   display: flex;
   align-items: center;
   width: 674.47px;
   height: 45px;
   margin: 10px auto;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 18.06px;
-  line-height: 40px;
   color: #333333;
-}
-
-.activity-row.clickable-row {
-  cursor: pointer;
-}
-
-.activity-row:hover {
-  background: rgba(0, 0, 0, 0.05); /* Subtle hover effect */
 }
 
 .activity-icon {
   width: 54px;
   height: 45px;
-  margin-right: 14.63px; /* Gap between icon and text */
+  margin-right: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .activity-name {
-  width: 212px; /* Adjusted for longest name (Sanguijuelas Voladoras) */
+  width: 212px;
   text-align: left;
 }
 
@@ -192,7 +157,15 @@ html, body {
   text-align: right;
 }
 
-/* 11. Exit Button */
+.activity-status.ok {
+  color: #00B050;
+}
+
+.activity-status.pending {
+  color: #FF0000;
+}
+
+/* Exit Button */
 .exit-button {
   display: flex;
   justify-content: center;
@@ -201,12 +174,9 @@ html, body {
   height: 42px;
   margin: 20px auto;
   background: #1B5680;
-  border-radius: 11.9606px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
+  border-radius: 12px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 18px;
   color: #FEE9E7;
   cursor: pointer;
   transition: background 0.3s;

@@ -1,201 +1,140 @@
-/* Allow scrolling on entire page */
+/* 1. Base Setup */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background: #FFFFFF;
-  overflow: auto;
   font-family: 'Montserrat', sans-serif;
+  overflow: auto;
 }
 
-/* Desktop Container */
+/* 2. Full Page Container */
 .welcome-page {
   position: relative;
-  width: 100%;
-  max-width: 1440px;
-  min-height: 100vh;
+  width: 1440px;
+  height: 1024px;
   margin: 0 auto;
-  padding-top: 31.44px;
+  overflow: hidden;
 }
 
-/* Header Bar (Assuming "diagnot bar") */
+/* 3. Diagonal Header Bar */
 .header-bar {
-  position: fixed;
-  width: 100%;
-  max-width: 1440px;
-  height: 31.44px;
+  position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  z-index: 10;
+  left: 0;
+  width: 1440px;
+  height: 31.44px;
   background: linear-gradient(to right, #1B577E 50%, #EB5617 50%);
+  z-index: 10;
 }
 
-/* Logo Image */
+/* 4. Logo */
 .welcome-logo {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
-  left: 50px;
-  top: 50px;
-  background: url('../assets/image19.png');
+  left: 62px;
+  top: 80px;
+  background-image: url('../assets/image19.png');
   background-size: contain;
-  z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 5;
 }
 
-/* Background Image */
+/* 5. Background watermark image (faded) */
 .welcome-bg-image {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
   left: 50%;
-  transform: translateX(-50%);
   top: 50%;
-  background: url('../assets/image19.png');
+  transform: translate(-50%, -50%);
+  background-image: url('../assets/image19.png');
   background-size: cover;
-  opacity: 0.5;
+  background-repeat: no-repeat;
+  opacity: 0.1;
   z-index: 1;
 }
 
-/* Main Content Container */
+/* 6. Main Content Box */
 .welcome-container {
-  box-sizing: border-box;
-  position: relative;
-  width: min(90%, 778.52px);
-  min-height: 810.81px;
-  margin: 50px auto;
-  padding: 20px;
+  position: absolute;
+  width: 727px;
+  height: 605.97px;
+  left: 356.5px; /* (1440 - 727) / 2 */
+  top: 198.42px;
+  background: #FFFFFF;
   border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
+  padding: 40px 30px;
+  box-sizing: border-box;
   z-index: 3;
-  overflow: auto;
 }
 
-/* Welcome Title */
+/* 7. Title */
 .welcome-title {
-  width: 100%;
-  max-width: 727px;
-  margin: 0 auto 20px;
-  font-weight: 600;
   font-size: 34px;
+  font-weight: 600;
   line-height: 34px;
-  letter-spacing: 0;
   color: #EE581B;
   text-align: center;
+  margin-bottom: 30px;
 }
 
-/* Welcome Content */
+/* 8. Description Paragraphs */
 .welcome-content {
-  width: 100%;
-  max-width: 600.74px;
-  margin: 0 auto 20px;
-  font-weight: 500;
   font-size: 24px;
+  font-weight: 500;
   line-height: 40px;
-  letter-spacing: 0;
-  text-align: justify;
   color: #333333;
+  text-align: justify;
+  margin-bottom: 30px;
 }
 
-/* Checkbox Container */
+/* 9. Checkbox Row */
 .checkbox-container {
   display: flex;
   align-items: center;
+  gap: 10px;
   width: 592.87px;
   height: 30.97px;
   margin: 0 auto;
-  /* Adjusted from absolute to relative positioning */
+  margin-bottom: 30px;
 }
 
 .checkbox {
   width: 30.97px;
   height: 30.97px;
-  cursor: pointer;
   border: 1px solid #333333;
-  /* Removed absolute positioning; handled by flex */
+  cursor: pointer;
 }
 
 .checkbox-label {
-  width: 549px;
-  height: 22px;
-  margin-left: 10px;
-  font-weight: 500;
   font-size: 18.063px;
-  line-height: 22px;
+  font-weight: 500;
   color: #333333;
-  /* Removed absolute positioning; handled by flex */
+  line-height: 22px;
 }
 
-/* Accept Button */
+/* 10. Button */
 .accept-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 217.98px;
   height: 42px;
-  margin: 20px auto;
   background: #1B5680;
-  border-radius: 11.9606px;
+  border-radius: 11.96px;
+  color: #FEE9E7;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 42px;
   cursor: pointer;
+  margin: 0 auto;
   transition: background 0.3s;
 }
 
 .accept-button:hover {
   background: #154a6b;
-}
-
-.accept-button-text {
-  font-weight: 700;
-  font-size: 18px;
-  color: #FEE9E7;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .welcome-logo {
-    width: 120px;
-    height: 106px;
-    left: 20px;
-    top: 40px;
-  }
-
-  .welcome-bg-image {
-    width: 300px;
-    height: 265px;
-  }
-
-  .welcome-container {
-    padding: 15px;
-    width: min(95%, 700px);
-    min-height: 700px;
-    margin: 40px auto;
-  }
-
-  .welcome-title {
-    font-size: clamp(20px, 4vw, 28px);
-    line-height: clamp(20px, 4vw, 28px);
-  }
-
-  .welcome-content {
-    font-size: clamp(16px, 3.5vw, 20px);
-    line-height: 32px;
-  }
-
-  .checkbox-container {
-    width: 90%;
-    height: auto;
-  }
-
-  .checkbox {
-    width: 25px;
-    height: 25px;
-  }
-
-  .checkbox-label {
-    width: auto;
-    font-size: clamp(14px, 3vw, 16px);
-  }
 }

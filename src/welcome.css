@@ -1,25 +1,47 @@
-/* src/welcome.css */
-
 /* Desktop Container */
 body {
   position: relative;
   width: 1440px;
-  height: 1024px;
+  min-height: 1024px; /* Changed from height to min-height to allow vertical scrolling */
   background: #FFFFFF;
-  margin: 0 auto; /* Center the container */
-  overflow: hidden; /* Prevent overflow issues */
+  margin: 0 auto;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
-/* Background Image (Overlay) */
+/* Header Bar */
+.header-bar {
+  position: fixed; /* Fix header at top */
+  width: 1440px;
+  height: 31.44px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center without flipping */
+  display: flex;
+  z-index: 10; /* Ensure header stays above content */
+}
+
+.header-left {
+  width: 720px; /* Half of 1440px */
+  height: 31.44px;
+  background: #1B577E;
+}
+
+.header-right {
+  width: 720px; /* Adjusted to split evenly */
+  height: 31.44px;
+  background: #EB5617;
+}
+
+/* Background Image */
 .welcome-bg-image {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
   left: calc(50% - 496.49px / 2);
   top: calc(50% - 437.58px / 2);
-  background: url('/src/assets/image (19).png');
+  background-size: cover;
   opacity: 0.5;
-  background-size: cover; /* Ensure image fits */
 }
 
 /* Logo Image */
@@ -29,8 +51,7 @@ body {
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background: url('/src/assets/image (19).png');
-  background-size: contain; /* Preserve aspect ratio */
+  background-size: contain;
 }
 
 /* Main Content Container */
@@ -44,7 +65,7 @@ body {
   border: 0.5px solid #2C51A1;
   box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-  padding: 20px; /* Add padding for content */
+  padding: 20px;
 }
 
 /* Welcome Title */
@@ -89,7 +110,7 @@ body {
   position: relative;
   width: 549px;
   height: 22px;
-  margin-left: 40px; /* Adjust for checkbox alignment */
+  margin-left: 40px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -104,7 +125,6 @@ body {
   height: 30.97px;
   left: 0;
   top: 0;
-  border: 1px solid #333333; /* Default checkbox style */
 }
 
 /* Accept Button */
@@ -124,6 +144,10 @@ body {
   cursor: pointer;
 }
 
+.accept-button:hover {
+  background: #154a6b;
+}
+
 .accept-button-text {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -131,32 +155,42 @@ body {
   font-size: 18px;
   line-height: 100%;
   color: #FEE9E7;
-  text-align: center;
 }
 
-/* Header Bar */
-.header-bar {
-  position: absolute;
-  width: 1440px;
-  height: 31.44px;
-  top: 0;
-  left: 0;
-}
+/* Responsive Design */
+@media (max-width: 1440px) {
+  .welcome-logo {
+    width: 120px;
+    height: 106px;
+    left: 20px;
+    top: 40px;
+  }
 
-.header-left {
-  position: absolute;
-  width: 720px;
-  height: 31.44px;
-  right: 720px;
-  top: 0;
-  background: #1B577E;
-}
+  .welcome-bg-image {
+    width: 300px;
+    height: 265px;
+  }
 
-.header-right {
-  position: absolute;
-  width: 744.67px;
-  height: 31.44px;
-  left: 695.33px;
-  top: 0;
-  background: #EB5617;
+  .welcome-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .welcome-title {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .welcome-content {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+  }
+
+  .accept-button {
+    width: 180px;
+  }
 }

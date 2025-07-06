@@ -13,8 +13,7 @@ import image5 from '../assets/image5.png';
 import image6 from '../assets/image6.png';
 import image7 from '../assets/image7.png';
 import image8 from '../assets/image8.png';
-import image9 from '../assets/image9.png';
-import image10 from '../assets/image10.png';
+
 
 export default function Activities() {
   const navigate = useNavigate();
@@ -28,25 +27,12 @@ export default function Activities() {
     'N-Back Task',
     'Negative Feedback Arithmetic Task',
     'Wisconsin Card Sorting Test (WCST)',
-    'Emotion Recognition Task',
-    'Reading the Mind in the Eyes',
-    'Wechsler Arithmetic Subtest',
-    'Numerical Sequences',
-    'Delay Discounting Task',
-    'Raven’s Progressive Matrices',
-    'Visual Cancellation Test',
-    'Modified Ultimatum Game',
-    'Stop-Signal Task',
-    'Rapid Verbal Fluency (Benton)',
-    'Eriksen Flanker Task',
-    'Token Test',
+
   ];
 
   const images = [
     image1, image2, image3, image4, image5,
-    image6, image7, image8, image9, image10,
-    image1, image2, image3, image4, image5,
-    image6, image7, image8, image9, image10,
+    image6, image7, image8, 
   ];
 
   const activities = titles.map((title, i) => ({

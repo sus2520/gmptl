@@ -1,21 +1,7 @@
 import React from 'react';
 import '../Activities.css';
-import image19 from '../assets/image19.png';
 
 export default function Activities() {
-  const activities = [
-    { title: 'Globos Asesinos', duration: '7 minutos', status: 'OK', statusColor: '#00B050' },
-    { title: 'Sanguijuelas Voladoras', duration: '5 minutos', status: 'OK', statusColor: '#00B050' },
-    { title: 'Orcas Insanas', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000' },
-    { title: 'Platillos Voladores', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000' },
-    { title: 'La Venganza', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000' },
-    { title: 'Siniestro', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000' },
-    { title: 'Casa del Terror', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000' },
-    { title: 'Raimundo', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000' },
-    { title: 'Leviatán', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000' },
-    { title: 'Insensatos', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000' },
-  ];
-
   return (
     <div className="welcome-page">
       {/* Diagonal Bar Header */}
@@ -25,10 +11,10 @@ export default function Activities() {
       </div>
 
       {/* Background Watermark */}
-      <div className="welcome-bg-image" style={{ backgroundImage: `url(${image19})` }} />
+      <div className="welcome-bg-image" />
 
       {/* Logo */}
-      <div className="welcome-logo" style={{ backgroundImage: `url(${image19})` }} />
+      <div className="welcome-logo" />
 
       {/* Activities Container */}
       <div className="activities-container">
@@ -40,12 +26,20 @@ export default function Activities() {
         </div>
         <div className="activities-divider" />
 
-        {activities.map((act, index) => (
-          <div
-            key={index}
-            className="activity-row"
-            style={{ top: `${273.67 + index * 62}px` }}
-          >
+        {/* Activities List */}
+        {[
+          { title: 'Globos Asesinos', duration: '7 minutos', status: 'OK', statusColor: '#00B050' },
+          { title: 'Sanguijuelas Voladoras', duration: '5 minutos', status: 'OK', statusColor: '#00B050' },
+          { title: 'Orcas Insanas', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000' },
+          { title: 'Platillos Voladores', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000' },
+          { title: 'La Venganza', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000' },
+          { title: 'Siniestro', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000' },
+          { title: 'Casa del Terror', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000' },
+          { title: 'Raimundo', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000' },
+          { title: 'Leviatán', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000' },
+          { title: 'Insensatos', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000' },
+        ].map((act, index) => (
+          <div key={index} className="activity-row">
             <div className="activity-icon" />
             <div className="activity-name">{act.title}</div>
             <div className="activity-duration">{act.duration}</div>

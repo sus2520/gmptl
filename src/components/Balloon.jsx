@@ -1,9 +1,8 @@
-// src/pages/Balloon.jsx
 import React from 'react';
 import '../balloon.css'; // Ensure this file matches your latest styles
 import logo from '../assets/image19.png';
-import balloonImage from '../assets/ballon.png';
-
+import watermark from '../assets/watermark.png';
+import balloonImg from '../assets/balloon.png'; // ✅ Corrected spelling
 
 export default function Balloon() {
   return (
@@ -14,7 +13,7 @@ export default function Balloon() {
       {/* 🔶 Watermark background image */}
       <div
         className="welcome-bg-image"
-        style={{ backgroundImage: `url(${logo})` }}
+        style={{ backgroundImage: `url(${watermark})` }}
       ></div>
 
       {/* 🔷 Logo */}
@@ -28,7 +27,7 @@ export default function Balloon() {
         {/* 🟠 Left Balloon Image */}
         <div
           className="balloon-graphic"
-          style={{ backgroundImage: `url(${balloonImage})` }}
+          style={{ backgroundImage: `url(${balloonImg})` }} // Corrected typo from balloonImage to balloonImg
         ></div>
 
         {/* 🟠 Balloon Info Texts */}

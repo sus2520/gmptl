@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "audit-fix": "npm audit fix"
   }

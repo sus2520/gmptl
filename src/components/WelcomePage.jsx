@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../welcome.css';
-import image19 from '../assets/image19.png';
+import logoImage from '../assets/image19.png';
+import watermarkImage from '../assets/watermark.png';
 
 function WelcomePage() {
   const [isChecked, setIsChecked] = useState(false);
@@ -23,8 +24,8 @@ function WelcomePage() {
       <div
         className="welcome-logo"
         style={{
-          backgroundImage: image19 ? `url(${image19})` : 'none',
-          backgroundSize: 'cover',
+          backgroundImage: logoImage ? `url(${logoImage})` : 'none',
+          backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
         }}
       ></div>
@@ -32,10 +33,9 @@ function WelcomePage() {
       <div
         className="welcome-bg-image"
         style={{
-          backgroundImage: image19 ? `url(${image19})` : 'none',
+          backgroundImage: watermarkImage ? `url(${watermarkImage})` : 'none',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.5,
         }}
       ></div>
 

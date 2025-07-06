@@ -28,6 +28,8 @@ html, body {
   background: #1B577E; /* Blue */
   z-index: 10;
   overflow: hidden;
+  /* Removed transform: matrix(-1, 0, 0, 1, 0, 0) as it flips the header unnecessarily */
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
 }
 
 .header-bar::after {
@@ -49,26 +51,25 @@ html, body {
   height: 160.19px;
   left: 62px;
   top: 80px;
-  background-image: url('../assets/image19.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   z-index: 5;
 }
-/* 5. Background watermark image (faded) */
+
+/* 5. Background Watermark Image */
 .welcome-bg-image {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
   left: calc(50% - 248.245px); /* Centered horizontally */
-  top: calc(50% - 218.79px);   /* Centered vertically */
+  top: calc(50% - 218.79px); /* Centered vertically */
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.5;
-  z-index: 2; /* Lower than container, higher than background */
+  opacity: 0.7; /* Increased from 0.5 for better visibility */
+  z-index: 1; /* Below container, above background */
   pointer-events: none; /* Avoid interference */
 }
-
 
 /* 6. Main Content Box */
 .welcome-container {

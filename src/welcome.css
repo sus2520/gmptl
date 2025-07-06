@@ -18,18 +18,17 @@ html, body {
   overflow: hidden;
 }
 
-/* 3. Diagonal Header Bar */
+/* 3. Diagonal Header Bar (Group 20937) */
 .header-bar {
   position: absolute;
   width: 1440px;
   height: 31.44px;
   left: 0;
   top: 0;
-  background: #1B577E; /* Blue */
+  background: #1B577E; /* Blue on left as per Figma */
   z-index: 10;
   overflow: hidden;
-  /* Removed transform: matrix(-1, 0, 0, 1, 0, 0) as it flips the header unnecessarily */
-  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+  /* Removed transform: matrix(-1, 0, 0, 1, 0, 0) to align with Figma design */
 }
 
 .header-bar::after {
@@ -39,7 +38,7 @@ html, body {
   height: 31.44px;
   left: 695.33px;
   top: 0;
-  background: #EB5617; /* Orange */
+  background: #EB5617; /* Orange on right as per Figma */
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); /* Diagonal split */
   z-index: 11;
 }
@@ -60,10 +59,10 @@ html, body {
 /* 5. Background Watermark Image */
 .welcome-bg-image {
   position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: calc(50% - 248.245px); /* Centered horizontally */
-  top: calc(50% - 218.79px); /* Centered vertically */
+  width: 496.4864196777344px;
+  height: 437.58123779296875px;
+  left: 471.76px;
+  top: 293.21px;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.7; /* Increased from 0.5 for better visibility */
@@ -148,5 +147,144 @@ html, body {
 }
 
 .accept-button:hover {
+  background: #154a6b;
+}
+
+/* 11. Activities Section (for WelcomePage adaptation) */
+.activities-container {
+  position: absolute;
+  width: 778.52px;
+  height: 864.68px;
+  left: calc(50% - 778.52px / 2);
+  top: calc(50% - 864.68px / 2 + 26.93px);
+  background: #FFFFFF;
+  border: 0.5px solid #2C51A1;
+  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 3;
+}
+
+.activities-title {
+  width: 206px;
+  height: 41px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #EE581B;
+  text-align: center;
+  position: relative;
+  top: 10px;
+}
+
+.activities-row-header {
+  display: flex;
+  justify-content: space-between;
+  width: 600.74px;
+  margin: 40px auto 0;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1B577E;
+}
+
+.activity-label {
+  width: 149px;
+  text-align: left;
+}
+
+.activity-duration {
+  width: 113px;
+  text-align: center;
+}
+
+.activity-status {
+  width: 96px;
+  text-align: right;
+}
+
+.activities-divider {
+  width: 600.74px;
+  height: 0;
+  margin: 10px auto;
+  border: 1px solid #1B5680;
+}
+
+.activity-row {
+  display: flex;
+  align-items: center;
+  width: 674.47px;
+  height: 45px;
+  margin: 10px auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18.06px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.activity-row.clickable-row {
+  cursor: pointer;
+}
+
+.activity-row:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.activity-icon {
+  width: 54px;
+  height: 45px;
+  margin-right: 14.63px;
+}
+
+.activity-name {
+  width: 212px;
+  text-align: left;
+}
+
+.activity-duration {
+  width: 92px;
+  text-align: center;
+}
+
+.activity-status {
+  width: 96px;
+  text-align: right;
+}
+
+.activity-status.ok {
+  color: #00B050; /* Green for OK */
+}
+
+.activity-status.pending {
+  color: #FF0000; /* Red for Pendiente */
+}
+
+.exit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 217.98px;
+  height: 42px;
+  margin: 20px auto;
+  background: #1B5680;
+  border-radius: 11.9606px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #FEE9E7;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.exit-button:hover {
   background: #154a6b;
 }

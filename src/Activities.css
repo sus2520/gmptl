@@ -18,19 +18,18 @@
   z-index: 3;
 }
 
-/* Logo */
 .welcome-logo {
   position: absolute;
-  top: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px;
-  height: 80px;
+  width: 181.76px;
+  height: 160.19px;
+  left: 62px;
+  top: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: 3;
+  z-index: 5;
 }
+
 
 /* Watermark Background */
 .welcome-bg-image {

@@ -4,7 +4,6 @@ body, html {
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   background: #FFFFFF;
-  /* Allow page scroll if content overflows */
   overflow-y: auto;
 }
 
@@ -54,9 +53,7 @@ body, html {
   border-radius: 8px;
   padding: 32px;
   box-sizing: border-box;
-
-  /* Allow vertical scrolling if content overflows */
-  max-height: 605.97px; /* You can adjust this */
+  max-height: 605.97px;
   overflow-y: auto;
 }
 
@@ -84,7 +81,6 @@ body, html {
 /* 8. Row Container (holds all rows in normal flow) */
 .activities-rows-wrapper {
   width: 100%;
-  /* Height automatic so container scroll works */
   height: auto;
   margin: 0 auto;
 }
@@ -107,22 +103,23 @@ body, html {
   margin-right: 12px;
 }
 
-/* activity text */
+/* activity text (2nd column) - 45% of container width */
 .activities-row .activity {
-  flex: 1.5;
+  flex: 0 0 45%; /* Set to 45% of the container width */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/* duration */
+/* duration (3rd column) - adjusted proportionally */
 .activities-row .duration {
-  flex: 0.8;
+  flex: 0 0 20%; /* Adjusted to balance with 45% activity column */
+  text-align: left;
 }
 
-/* status */
+/* status (4th column) - adjusted proportionally */
 .activities-row .status {
-  flex: 0.7;
+  flex: 0 0 15%; /* Adjusted to balance with other columns */
   text-align: left;
   font-weight: bold;
 }

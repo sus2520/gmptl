@@ -31,28 +31,23 @@
 }
 
 
-/* Watermark Background */
+
+
+/* Watermark */
 .welcome-bg-image {
-  position: absolute;
-  top: 160px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 720px;
+  width: 100%;
   height: 400px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.05;
+  opacity: 0.06;
+  margin-bottom: -300px; /* overlay effect */
   z-index: 0;
+  pointer-events: none;
 }
 
 /* Activities Container */
 .activities-container {
-  position: absolute;
-  top: 300px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
   background-color: #ffffff;
   border: 1px solid #cccccc;
   border-radius: 12px;
@@ -60,6 +55,8 @@
   width: 640px;
   max-width: 90%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  margin-bottom: 40px;
 }
 
 /* Title */
@@ -80,7 +77,6 @@
   padding: 0 10px;
 }
 
-/* Row Labels */
 .activity-label,
 .activity-duration,
 .activity-status {

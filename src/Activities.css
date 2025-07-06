@@ -20,28 +20,40 @@ html, body {
 }
 
 /* 3. Diagonal Header Bar */
+/* Diagonal Header Bar (Figma: Group 20937) */
 .header-bar {
   position: absolute;
   width: 1440px;
   height: 31.44px;
   left: 0;
   top: 0;
-  background: #1B577E; /* Blue */
   z-index: 10;
-  overflow: hidden;
+  transform: rotateY(180deg); /* This is the same as matrix(-1, 0, 0, 1, 0, 0) */
 }
 
-.header-bar::after {
-  content: '';
+/* Blue part: Rectangle 746 */
+.header-bar .blue-bar {
+  position: absolute;
+  width: 720px;
+  height: 31.44px;
+  right: 720px;
+  top: 0;
+  background: #1B577E;
+  z-index: 11;
+}
+
+/* Orange diagonal part: Rectangle 745 */
+.header-bar .orange-bar {
   position: absolute;
   width: 744.67px;
   height: 31.44px;
   left: 695.33px;
   top: 0;
-  background: #EB5617; /* Orange */
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); /* Diagonal split */
-  z-index: 11;
+  background: #EB5617;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  z-index: 12;
 }
+
 
 /* 4. Logo */
 .welcome-logo {

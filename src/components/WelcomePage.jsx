@@ -19,8 +19,13 @@ function WelcomePage() {
 
   return (
     <div className="welcome-page">
-      <div className="header-bar"></div>
+      {/* 🔷 Diagonal Header Bar */}
+      <div className="header-bar">
+        <div className="blue-bar"></div>
+        <div className="orange-bar"></div>
+      </div>
 
+      {/* 🔷 Logo */}
       <div
         className="welcome-logo"
         style={{
@@ -30,6 +35,7 @@ function WelcomePage() {
         }}
       ></div>
 
+      {/* 🔷 Background Watermark */}
       <div
         className="welcome-bg-image"
         style={{
@@ -39,6 +45,7 @@ function WelcomePage() {
         }}
       ></div>
 
+      {/* 🔷 Main Content */}
       <div className="welcome-container">
         <h1 className="welcome-title">Bienvenido a Plataforma de Gamificación</h1>
 

@@ -38,7 +38,8 @@ html, body {
   width: 50%;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  /* Subtle diagonal */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
   z-index: 11;
 }
 

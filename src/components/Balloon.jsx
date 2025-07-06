@@ -2,7 +2,8 @@
 import React from 'react';
 import '../balloon.css'; // Ensure this file matches your latest styles
 import logo from '../assets/image19.png';
-import balloonImage from '../assets/image-upscaled.png'; // Replace with actual path
+import balloonImage from '../assets/ballon.png';
+
 
 export default function Balloon() {
   return (

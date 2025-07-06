@@ -1,8 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../Activities.css';
-import logoImage from '../assets/image19.png'; // Logo image
-import watermarkImage from '../assets/watermark.png'; // Watermark image
+import logoImage from '../assets/image19.png';
+import watermarkImage from '../assets/watermark.png';
+
+// Replace or import additional images if available
 import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
@@ -17,21 +19,47 @@ import image10 from '../assets/image10.png';
 export default function Activities() {
   const navigate = useNavigate();
 
-  const activities = [
-    { title: 'Globos Asesinos', duration: '7 minutos', status: 'OK', statusColor: '#00B050', link: '/game/globos', img: image1 },
-    { title: 'Sanguijuelas Voladoras', duration: '5 minutos', status: 'OK', statusColor: '#00B050', link: '/game/sanguijuelas', img: image2 },
-    { title: 'Orcas Insanas', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000', link: '/game/orcas', img: image3 },
-    { title: 'Platillos Voladores', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000', link: '/game/platillos', img: image4 },
-    { title: 'La Venganza', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000', link: '/game/venganza', img: image5 },
-    { title: 'Siniestro', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000', link: '/game/siniestro', img: image6 },
-    { title: 'Casa del Terror', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000', link: '/game/casa', img: image7 },
-    { title: 'Raimundo', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000', link: '/game/raimundo', img: image8 },
-    { title: 'Leviatán', duration: '7 minutos', status: 'Pendiente', statusColor: '#FF0000', link: '/game/leviatan', img: image9 },
-    { title: 'Insensatos', duration: '5 minutos', status: 'Pendiente', statusColor: '#FF0000', link: '/game/insensatos', img: image10 },
+  const titles = [
+    'Balloon Analogue Risk Task (BART)',
+    'Digit Symbol Substitution Test',
+    'Go/No-Go Task',
+    'Iowa Gambling Task (IGT)',
+    'Mental Rotation',
+    'N-Back Task',
+    'Negative Feedback Arithmetic Task',
+    'Wisconsin Card Sorting Test (WCST)',
+    'Emotion Recognition Task',
+    'Reading the Mind in the Eyes',
+    'Wechsler Arithmetic Subtest',
+    'Numerical Sequences',
+    'Delay Discounting Task',
+    'Raven’s Progressive Matrices',
+    'Visual Cancellation Test',
+    'Modified Ultimatum Game',
+    'Stop-Signal Task',
+    'Rapid Verbal Fluency (Benton)',
+    'Eriksen Flanker Task',
+    'Token Test',
   ];
 
+  const images = [
+    image1, image2, image3, image4, image5,
+    image6, image7, image8, image9, image10,
+    image1, image2, image3, image4, image5,
+    image6, image7, image8, image9, image10,
+  ];
+
+  const activities = titles.map((title, i) => ({
+    title,
+    duration: i % 2 === 0 ? '7 minutos' : '5 minutos',
+    status: i < 2 ? 'OK' : 'Pendiente',
+    statusColor: i < 2 ? '#00B050' : '#FF0000',
+    link: `/game/game${i + 1}`,
+    img: images[i],
+  }));
+
   const handleExit = () => {
-    navigate('/'); // Redirect to welcome page or home
+    navigate('/');
   };
 
   return (

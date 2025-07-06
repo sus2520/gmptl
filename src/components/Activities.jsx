@@ -1,5 +1,5 @@
 import React from 'react';
-import '../activities.css';
+import '../Activities.css';
 
 
 import logoImage from '../assets/image19.png';

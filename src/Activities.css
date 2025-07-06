@@ -145,12 +145,17 @@ html, body {
 }
 
 .activity-name {
+  font-family: 'Montserrat', sans-serif;
   font-size: 18.06px;
-  flex: 1;
-  margin-right: 40px; /* Adds space between name and duration */
-  text-align: justify;
+  flex: 2; /* Give more space for wrapping */
+  line-height: 22px; /* Tighter line-height for better wrapping */
+  text-align: left; /* Align to left for readability */
   color: #333333;
+  margin-right: 40px;
+  word-wrap: break-word;
+  white-space: normal; /* Allow wrapping */
 }
+
 
 .activity-duration {
   font-size: 18.06px;

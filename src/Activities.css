@@ -7,8 +7,8 @@ body, html {
   overflow: hidden;
 }
 
-/* 2. Wrapper */
-.welcome-page {
+/* 2. Wrapper for Whole Page */
+.activities-wrapper {
   position: relative;
   width: 1440px;
   height: 1024px;
@@ -21,14 +21,14 @@ body, html {
   position: absolute;
   width: 1440px;
   height: 31.44px;
-  top: 0;
   left: 0;
+  top: 0;
   background: #E35F21;
-  transform: rotate(180deg); /* Same as matrix(-1, 0, 0, 1, 0, 0) */
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Mirrored like Figma */
 }
 
-/* 4. Logo */
-.welcome-logo {
+/* 4. Logo Image */
+.activities-logo {
   position: absolute;
   top: calc(50% - 160.19px / 2);
   left: 60px;
@@ -36,35 +36,18 @@ body, html {
   height: 160.19px;
 }
 
-.welcome-logo img {
+.activities-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* 5. Optional Watermark */
-.welcome-bg-image {
-  position: absolute;
-  top: 260px;
-  left: 450px;
-  opacity: 0.06;
-  width: 540px;
-  height: 540px;
-  z-index: 0;
-}
-
-.welcome-bg-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* 6. Main Box */
+/* 5. Container Box */
 .activities-container {
   position: absolute;
   width: 727px;
-  height: 606px;
-  top: 198px;
+  height: 605.97px;
+  top: 198.42px;
   left: 356.5px;
   background: #FFFFFF;
   border: 1px solid #1E4473;
@@ -72,20 +55,19 @@ body, html {
   padding: 32px;
   box-sizing: border-box;
   overflow-y: auto;
-  z-index: 1;
 }
 
-/* 7. Title */
+/* 6. Title */
 .activities-title {
   font-size: 24px;
   font-weight: 700;
-  color: #E35F21;
-  text-align: center;
+  color: #1E4473;
   margin-bottom: 24px;
+  text-align: center;
 }
 
-/* 8. Header Row */
-.activities-row-header {
+/* 7. Table Header */
+.activities-header {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
@@ -96,10 +78,9 @@ body, html {
   margin-bottom: 8px;
 }
 
-/* 9. Activity Row */
-.activity-row {
+/* 8. Table Rows */
+.activities-row {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 10px 0;
   font-size: 14px;
@@ -107,41 +88,22 @@ body, html {
   color: #1E1E1E;
 }
 
-.activity-icon {
-  width: 32px;
-  height: 32px;
-  background-color: #ccc;
-  margin-right: 12px;
-  border-radius: 4px;
-  flex-shrink: 0;
-}
-
-/* Each column */
-.activity-name {
-  flex: 2;
+.activities-row span {
+  flex: 1;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  padding-left: 8px;
 }
 
-.activity-duration {
-  flex: 1;
-  text-align: center;
-}
-
-.activity-status {
-  flex: 1;
-  font-weight: bold;
-  text-align: right;
-}
-
-.activity-status.ok {
+/* 9. Status Colors */
+.status-ok {
   color: green;
+  font-weight: bold;
 }
 
-.activity-status.pending {
+.status-pending {
   color: red;
+  font-weight: bold;
 }
 
 /* 10. Exit Button */

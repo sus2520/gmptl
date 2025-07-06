@@ -18,15 +18,28 @@ html, body {
   overflow: hidden;
 }
 
-/* 3. Diagonal Header Bar */
+/* 3. Diagonal Header Bar (with true diagonal divider) */
 .header-bar {
   position: absolute;
   top: 0;
   left: 0;
   width: 1440px;
   height: 31.44px;
-  background: linear-gradient(to right, #1B577E 50%, #EB5617 50%);
+  background: #1B577E; /* Base color: blue */
   z-index: 10;
+  overflow: hidden;
+}
+
+.header-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #EB5617;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  z-index: 11;
 }
 
 /* 4. Logo */
@@ -101,8 +114,7 @@ html, body {
   gap: 10px;
   width: 592.87px;
   height: 30.97px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
 }
 
 .checkbox {

@@ -20,7 +20,7 @@ body, html {
 .activities-container {
   position: absolute;
   width: 727px;
-  top: 100px; /* Adjusted for better centering */
+  top: 100px;
   left: 356.5px;
   background: #FFFFFF;
   border: 1px solid #1E4473;
@@ -67,6 +67,7 @@ body, html {
   font-size: 14px;
   border-bottom: 1px solid #e0e0e0;
   color: #1E1E1E;
+  gap: 15px; /* Adds 15px space between columns */
 }
 
 /* 8. Row Children */
@@ -77,21 +78,21 @@ body, html {
   margin-right: 12px;
 }
 
-/* activity text (2nd column) - 45% of container width */
+/* activity text (1st column) */
 .activities-row .activity {
-  flex: 0 0 45%;
+  flex: 0 0 55%; /* Maintained at 55% as per previous adjustment */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-/* duration (3rd column) - adjusted proportionally */
+/* duration (2nd column) */
 .activities-row .duration {
   flex: 0 0 20%;
   text-align: left;
 }
 
-/* status (4th column) - adjusted proportionally */
+/* status (3rd column) */
 .activities-row .status {
   flex: 0 0 15%;
   text-align: left;

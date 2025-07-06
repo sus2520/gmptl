@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../Activities.css';
-
 import logoImage from '../assets/image19.png';
 import watermarkImage from '../assets/watermark.png';
 
+// Replace or import additional images if available
 import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
@@ -13,6 +13,7 @@ import image5 from '../assets/image5.png';
 import image6 from '../assets/image6.png';
 import image7 from '../assets/image7.png';
 import image8 from '../assets/image8.png';
+
 
 export default function Activities() {
   const navigate = useNavigate();
@@ -26,11 +27,12 @@ export default function Activities() {
     'N-Back Task',
     'Negative Feedback Arithmetic Task',
     'Wisconsin Card Sorting Test (WCST)',
+
   ];
 
   const images = [
     image1, image2, image3, image4, image5,
-    image6, image7, image8,
+    image6, image7, image8, 
   ];
 
   const activities = titles.map((title, i) => ({
@@ -53,14 +55,14 @@ export default function Activities() {
       <div
         className="welcome-logo"
         style={{
-          backgroundImage: `url(${logoImage})`,
+          backgroundImage: logoImage ? `url(${logoImage})` : 'none',
         }}
       ></div>
 
       <div
         className="welcome-bg-image"
         style={{
-          backgroundImage: `url(${watermarkImage})`,
+          backgroundImage: watermarkImage ? `url(${watermarkImage})` : 'none',
         }}
       ></div>
 
@@ -78,14 +80,10 @@ export default function Activities() {
         {activities.map((act, index) => (
           <div
             key={index}
-            className={`activity-row row-${index + 1}`}
+            className="activity-row clickable-row"
             onClick={() => navigate(act.link)}
           >
-            <img
-              src={act.img}
-              alt={`${act.title} icon`}
-              className="activity-icon"
-            />
+            <img src={act.img} alt={`${act.title} icon`} className="activity-icon" />
             <div className="activity-name">{act.title}</div>
             <div className="activity-duration">{act.duration}</div>
             <div className="activity-status" style={{ color: act.statusColor }}>

@@ -68,20 +68,32 @@
   margin-bottom: 24px;
 }
 
-/* Row Header */
 .activities-row-header {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
-  color: #003366;
-  padding: 0 10px;
+  align-items: center;
+  padding: 0 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1B577E;
+  margin-bottom: 8px;
+}
+.activity-label {
+  width: 118px;
+  text-align: left;
 }
 
-.activity-label,
-.activity-duration,
+.activity-duration {
+  width: 113px;
+  text-align: center;
+}
+
 .activity-status {
-  flex: 1;
-  text-align: left;
+  width: 91px;
+  text-align: right;
 }
 
 /* Divider */

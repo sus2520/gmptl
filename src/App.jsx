@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import Activities from './components/Activities';
-import Balloon from './pages/Balloon'; // ✅ import Balloon
+import Balloon from './components/Balloon'; // ✅ Corrected path
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/activities" element={<Activities />} />
-          <Route path="/balloon" element={<Balloon />} /> {/* ✅ new route */}
+          <Route path="/balloon" element={<Balloon />} /> {/* ✅ New route */}
         </Routes>
       </div>
     </Router>

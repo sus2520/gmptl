@@ -1,0 +1,162 @@
+/* src/welcome.css */
+
+/* Desktop Container */
+body {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: #FFFFFF;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Background Image (Overlay) */
+.welcome-bg-image {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px / 2);
+  top: calc(50% - 437.58px / 2);
+  background: url('/src/assets/image (19).png');
+  opacity: 0.5;
+  background-size: cover; /* Ensure image fits */
+}
+
+/* Logo Image */
+.welcome-logo {
+  position: absolute;
+  width: 181.76px;
+  height: 160.19px;
+  left: 116.27px;
+  top: 68.99px;
+  background: url('/src/assets/image (19).png');
+  background-size: contain; /* Preserve aspect ratio */
+}
+
+/* Main Content Container */
+.welcome-container {
+  box-sizing: border-box;
+  position: absolute;
+  width: 778.52px;
+  height: 810.81px;
+  left: calc(50% - 778.52px / 2);
+  top: calc(50% - 810.81px / 2);
+  border: 0.5px solid #2C51A1;
+  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 20px; /* Add padding for content */
+}
+
+/* Welcome Title */
+.welcome-title {
+  position: relative;
+  width: 727px;
+  height: 41px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #EE581B;
+  text-align: center;
+}
+
+/* Welcome Content */
+.welcome-content {
+  position: relative;
+  width: 600.74px;
+  height: 320px;
+  margin: 20px auto;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+}
+
+/* Checkbox Container */
+.checkbox-container {
+  position: relative;
+  width: 592.87px;
+  height: 30.97px;
+  margin: 20px auto;
+}
+
+.checkbox-label {
+  position: relative;
+  width: 549px;
+  height: 22px;
+  margin-left: 40px; /* Adjust for checkbox alignment */
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18.063px;
+  line-height: 22px;
+  color: #333333;
+}
+
+.checkbox {
+  position: absolute;
+  width: 30.97px;
+  height: 30.97px;
+  left: 0;
+  top: 0;
+  border: 1px solid #333333; /* Default checkbox style */
+}
+
+/* Accept Button */
+.accept-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  position: relative;
+  width: 217.98px;
+  height: 42px;
+  margin: 20px auto;
+  background: #1B5680;
+  border-radius: 11.9606px;
+  cursor: pointer;
+}
+
+.accept-button-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FEE9E7;
+  text-align: center;
+}
+
+/* Header Bar */
+.header-bar {
+  position: absolute;
+  width: 1440px;
+  height: 31.44px;
+  top: 0;
+  left: 0;
+}
+
+.header-left {
+  position: absolute;
+  width: 720px;
+  height: 31.44px;
+  right: 720px;
+  top: 0;
+  background: #1B577E;
+}
+
+.header-right {
+  position: absolute;
+  width: 744.67px;
+  height: 31.44px;
+  left: 695.33px;
+  top: 0;
+  background: #EB5617;
+}

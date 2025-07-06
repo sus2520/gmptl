@@ -1,6 +1,7 @@
 import React from 'react';
 import '../activities.css';
 
+
 import logoImage from '../assets/image19.png';
 
 const activities = [

@@ -1,36 +1,21 @@
-/* Desktop Container */
-body {
-  position: relative;
-  width: 1440px;
-  min-height: 1024px; /* Changed from height to min-height to allow vertical scrolling */
+/* Allow scrolling on entire page */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh; /* Allow content to extend beyond viewport */
   background: #FFFFFF;
+  overflow: auto; /* Enable both horizontal and vertical scrolling */
+}
+
+/* Desktop Container */
+.welcome-page {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
   margin: 0 auto;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: auto; /* Enable vertical scrolling */
-}
-
-/* Header Bar */
-.header-bar {
-  position: fixed; /* Fix header at top */
-  width: 1440px;
-  height: 31.44px;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%); /* Center without flipping */
-  display: flex;
-  z-index: 10; /* Ensure header stays above content */
-}
-
-.header-left {
-  width: 720px; /* Half of 1440px */
-  height: 31.44px;
-  background: #1B577E;
-}
-
-.header-right {
-  width: 720px; /* Adjusted to split evenly */
-  height: 31.44px;
-  background: #EB5617;
+  padding-top: 31.44px; /* Offset for fixed header */
 }
 
 /* Background Image */
@@ -38,10 +23,12 @@ body {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
-  left: calc(50% - 496.49px / 2);
-  top: calc(50% - 437.58px / 2);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
   background-size: cover;
   opacity: 0.5;
+  z-index: 1; /* Behind content */
 }
 
 /* Logo Image */
@@ -52,32 +39,31 @@ body {
   left: 116.27px;
   top: 68.99px;
   background-size: contain;
+  z-index: 2; /* Above background */
 }
 
 /* Main Content Container */
 .welcome-container {
   box-sizing: border-box;
-  position: absolute;
-  width: 778.52px;
-  height: 810.81px;
-  left: calc(50% - 778.52px / 2);
-  top: calc(50% - 810.81px / 2);
+  position: relative;
+  width: min(90%, 778.52px);
+  min-height: 810.81px;
+  margin: 50px auto; /* Margin for spacing, allows scrolling */
   border: 0.5px solid #2C51A1;
   box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   padding: 20px;
+  z-index: 3; /* Above images */
 }
 
 /* Welcome Title */
 .welcome-title {
-  position: relative;
-  width: 727px;
-  height: 41px;
+  width: 100%;
+  max-width: 727px;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 600;
-  font-size: 34px;
+  font-size: clamp(24px, 5vw, 34px);
   line-height: 41px;
   color: #EE581B;
   text-align: center;
@@ -85,14 +71,12 @@ body {
 
 /* Welcome Content */
 .welcome-content {
-  position: relative;
-  width: 600.74px;
-  height: 320px;
+  width: 100%;
+  max-width: 600.74px;
   margin: 20px auto;
   font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: clamp(18px, 4vw, 24px);
   line-height: 40px;
   text-align: justify;
   color: #333333;
@@ -100,48 +84,40 @@ body {
 
 /* Checkbox Container */
 .checkbox-container {
-  position: relative;
-  width: 592.87px;
-  height: 30.97px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 592.87px;
   margin: 20px auto;
 }
 
 .checkbox-label {
-  position: relative;
-  width: 549px;
-  height: 22px;
-  margin-left: 40px;
+  margin-left: 10px;
   font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 500;
-  font-size: 18.063px;
+  font-size: clamp(14px, 3vw, 18.063px);
   line-height: 22px;
   color: #333333;
 }
 
 .checkbox {
-  position: absolute;
   width: 30.97px;
   height: 30.97px;
-  left: 0;
-  top: 0;
+  cursor: pointer;
 }
 
 /* Accept Button */
 .accept-button {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  gap: 8px;
-  position: relative;
-  width: 217.98px;
+  width: min(90%, 217.98px);
   height: 42px;
   margin: 20px auto;
   background: #1B5680;
   border-radius: 11.9606px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .accept-button:hover {
@@ -150,15 +126,38 @@ body {
 
 .accept-button-text {
   font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 100%;
   color: #FEE9E7;
 }
 
+/* Header Bar (Assuming "diagnot bar") */
+.header-bar {
+  position: fixed; /* Stays at top during scroll */
+  width: 100%;
+  max-width: 1440px;
+  height: 31.44px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 10; /* Above all content */
+}
+
+.header-left {
+  width: 50%;
+  height: 100%;
+  background: #1B577E;
+}
+
+.header-right {
+  width: 50%;
+  height: 100%;
+  background: #EB5617;
+}
+
 /* Responsive Design */
-@media (max-width: 1440px) {
+@media (max-width: 768px) {
   .welcome-logo {
     width: 120px;
     height: 106px;
@@ -172,25 +171,22 @@ body {
   }
 
   .welcome-container {
-    width: 90%;
     padding: 15px;
+    width: min(95%, 700px);
+    min-height: 700px;
+    margin: 40px auto;
   }
 
   .welcome-title {
-    font-size: 24px;
-    width: 100%;
+    font-size: clamp(20px, 4vw, 28px);
   }
 
   .welcome-content {
-    font-size: 18px;
-    width: 100%;
+    font-size: clamp(16px, 3.5vw, 20px);
+    line-height: 32px;
   }
 
-  .checkbox-label {
-    font-size: 14px;
-  }
-
-  .accept-button {
-    width: 180px;
+  .checkbox-container {
+    max-width: 90%;
   }
 }

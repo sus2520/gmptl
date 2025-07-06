@@ -18,14 +18,14 @@ html, body {
   overflow: hidden;
 }
 
-/* 3. Diagonal Header Bar (with true diagonal divider) */
+/* 3. Diagonal Header Bar */
 .header-bar {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 1440px;
   height: 31.44px;
-  background: #1B577E; /* Base color: blue */
+  left: 0;
+  top: 0;
+  background: #1B577E; /* Blue */
   z-index: 10;
   overflow: hidden;
 }
@@ -33,13 +33,12 @@ html, body {
 .header-bar::after {
   content: '';
   position: absolute;
+  width: 744.67px;
+  height: 31.44px;
+  left: 695.33px;
   top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: #EB5617;
-  /* Subtle diagonal */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+  background: #EB5617; /* Orange */
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); /* Diagonal split */
   z-index: 11;
 }
 

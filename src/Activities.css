@@ -4,55 +4,63 @@
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
   height: 100vh;
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow: hidden;
 }
 
 /* Header Bar */
 .header-bar {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   height: 12px;
   background: linear-gradient(to right, #003366 50%, #F05A28 50%);
+  z-index: 3;
 }
 
 /* Logo */
 .welcome-logo {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 180px;
   height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin-bottom: 20px;
+  z-index: 3;
 }
 
-/* Watermark */
+/* Watermark Background */
 .welcome-bg-image {
   position: absolute;
-  top: 180px;
-  width: 100%;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px;
   height: 400px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.06;
+  opacity: 0.05;
   z-index: 0;
 }
 
 /* Activities Container */
 .activities-container {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
   background-color: #ffffff;
   border: 1px solid #cccccc;
   border-radius: 12px;
   padding: 40px;
   width: 640px;
   max-width: 90%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* Title */
@@ -73,12 +81,15 @@
   padding: 0 10px;
 }
 
-.activity-label, .activity-duration, .activity-status {
+/* Row Labels */
+.activity-label,
+.activity-duration,
+.activity-status {
   flex: 1;
   text-align: left;
 }
 
-/* Divider Line */
+/* Divider */
 .activities-divider {
   height: 2px;
   background-color: #cccccc;
@@ -126,7 +137,7 @@
 
 /* Exit Button */
 .exit-button {
-  margin-top: 20px;
+  margin-top: 24px;
   background-color: #1a4374;
   color: #ffffff;
   padding: 12px 24px;
@@ -135,6 +146,9 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .exit-button:hover {

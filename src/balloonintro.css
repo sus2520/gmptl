@@ -49,17 +49,19 @@
   z-index: 0;
 }
 
-/* Balloon image on top of watermark */
 .balloon-image {
   position: absolute;
   width: 600.74px;
   height: 609.36px;
   left: 419.63px;
   top: calc(50% - 609.36px / 2 - 12.29px);
+  background: url('../assets/balloon.png');
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   z-index: 1;
 }
+
 
 /* White content box */
 .intro-box {

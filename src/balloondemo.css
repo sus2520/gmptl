@@ -126,7 +126,7 @@
   width: 778.52px;
   height: 510.86px;
   left: calc(50% - 778.52px/2);
-  top: calc(50% - 510.86px/2 + 20.37px);
+  top: calc(50% - 510.86px/2 + 20.37px); /* Centered with offset */
   border: 0.5px solid #2C51A1;
   box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
@@ -135,6 +135,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  z-index: 5; /* Ensure it’s above other elements but below buttons if needed */
 }
 
 /* Group 20909 - Text Elements (inside .rectangle-744) */
@@ -155,7 +156,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: center; /* Changed to center for image alignment */
+  text-align: center;
   color: #333333;
 }
 
@@ -169,7 +170,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: center; /* Changed to center */
+  text-align: center;
   color: #333333;
 }
 
@@ -183,7 +184,7 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: center; /* Changed to center */
+  text-align: center;
   color: #333333;
 }
 
@@ -197,20 +198,84 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: center; /* Changed to center */
+  text-align: center;
   color: #333333;
 }
 
-/* Group 20934 - Button Container (adjusted for image) */
+/* Group 20934 - Button Container (adjusted to be below .rectangle-744) */
 .group-20934 {
   position: absolute;
   width: 535.95px;
   height: 42px;
   left: calc(50% - 535.95px/2);
-  top: 650px; /* Adjusted to be below content, approximate based on image */
+  top: 600px; /* Moved below .rectangle-744, adjust based on layout */
   z-index: 10;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+/* Button Danger - Pump */
+.button-danger {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  width: 217.98px;
+  height: 42px;
+  background: #1B5680;
+  border-radius: 11.9606px;
+  box-sizing: border-box;
+  z-index: 11;
+  order: 1;
+}
+
+.button-danger .button-text {
+  width: 188px;
+  height: 18px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FEE9E7;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  white-space: nowrap;
+}
+
+/* Button Collect */
+.button-collect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  width: 217.98px;
+  height: 42px;
+  border: 1px solid #1B5680;
+  border-radius: 11.9606px;
+  box-sizing: border-box;
+  z-index: 11;
+  order: 2;
+}
+
+.button-collect .button-text {
+  width: 107px;
+  height: 18px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #1B5680;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
 /* Group 20934 - Button Container */

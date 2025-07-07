@@ -47,7 +47,7 @@ const BalloonDemo = () => {
       </div>
       <div className="group-20934">
         <button className="button-danger" onClick={handlePump}>
-          <span className="button-text">Pump the balloon</span> {/* Updated text to match image */}
+          <span className="button-text">Pump the balloon</span>
         </button>
         <button className="button-collect" onClick={handleCollect}>
           <span className="button-text">Collect £££</span>

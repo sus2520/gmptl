@@ -14,11 +14,7 @@ export default function BalloonDemo() {
   return (
     <div className="balloondemo-page">
       {/* Diagonal header with orange and blue bars */}
-      <div className="header-bar">
-        <div className="blue" />
-        <div className="orange" />
-      </div>
-
+      <div className="header-bar"></div>
       {/* Watermark background image */}
       <div
         className="watermark-image"

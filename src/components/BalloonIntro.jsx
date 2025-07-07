@@ -10,11 +10,7 @@ export default function BalloonIntro() {
   return (
     <div className="balloon-intro-page">
       {/* Diagonal top bar */}
-      <div className="header-bar">
-        <div className="blue" />
-        <div className="orange" />
-      </div>
-
+      <div className="header-bar"></div>
 
       {/* Top-left logo */}
       <div

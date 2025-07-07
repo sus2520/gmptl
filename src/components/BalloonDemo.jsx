@@ -13,14 +13,36 @@ const BalloonDemo = () => {
   const generateRandomMaxPumps = () => Math.floor(Math.random() * 10) + 1;
 
   const handleStartGame = () => {
+    if (balloonNumber > 30) {
+      alert('Game over! All 30 balloons used.');
+      return;
+    }
+    const randomPumps = Math.floor(Math.random() * 10) + 1; // Random pumps 1-10
+    const newMaxPumps = generateRandomMaxPumps(); // Random pop limit 1-10
     setGameStarted(true);
-    setPumps(5);
-    setEarnings(2.5);
-    setMaxPumps(generateRandomMaxPumps());
+    setMaxPumps(newMaxPumps);
+
+    if (randomPumps > newMaxPumps) {
+      alert(`Balloon popped after ${newMaxPumps} pumps! Moving to next balloon.`);
+      setPumps(0);
+      setEarnings(0);
+      setBalloonNumber(balloonNumber + 1);
+      setMaxPumps(generateRandomMaxPumps());
+    } else {
+      setPumps(randomPumps);
+      setEarnings(randomPumps * 0.5);
+    }
   };
 
   const handlePump = () => {
-    if (!gameStarted) return;
+    if (!gameStarted) {
+      alert('Please start the game first!');
+      return;
+    }
+    if (balloonNumber > 30) {
+      alert('Game over! All 30 balloons used.');
+      return;
+    }
     if (pumps < maxPumps) {
       setPumps(pumps + 1);
       setEarnings(earnings + 0.5);
@@ -34,7 +56,14 @@ const BalloonDemo = () => {
   };
 
   const handleCollect = () => {
-    if (!gameStarted) return;
+    if (!gameStarted) {
+      alert('Please start the game first!');
+      return;
+    }
+    if (balloonNumber > 30) {
+      alert('Game over! All 30 balloons used.');
+      return;
+    }
     alert(`Collected £${earnings.toFixed(2)}! Moving to next balloon.`);
     setPumps(0);
     setEarnings(0);
@@ -60,20 +89,17 @@ const BalloonDemo = () => {
         </div>
       </div>
       <div className="group-20934">
-        {!gameStarted ? (
-          <button className="button-start" onClick={handleStartGame}>
-            <span className="button-text">Start Game</span>
-          </button>
-        ) : (
-          <>
-            <button className="button-danger" onClick={handlePump}>
-              <span className="button-text">Pump the balloon</span>
-            </button>
-            <button className="button-collect" onClick={handleCollect}>
-              <span className="button-text">Collect £££</span>
-            </button>
-          </>
-        )}
+        <button className="button-danger" onClick={handlePump}>
+          <span className="button-text">Pump the balloon</span>
+        </button>
+        <button className="button-collect" onClick={handleCollect}>
+          <span className="button-text">Collect £££</span>
+        </button>
+      </div>
+      <div className="start-button-container" style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <button className="button-start" onClick={handleStartGame}>
+          <span className="button-text">Start Game</span>
+        </button>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../balloondemo.css';
 import image19 from '../assets/image19.png';
-import balloonImage from '../assets/image [Background removed] [Upscaled].png'; // Updated path
+import balloonImage from '../assets/image [Background removed] [Upscaled].png';
 
 const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
@@ -37,8 +37,7 @@ const BalloonDemo = () => {
       <div className="image-19-1" style={{ backgroundImage: `url(${image19})` }}></div>
       <div className="image-19-2" style={{ backgroundImage: `url(${image19})` }}></div>
       <div className="image-4" style={{ backgroundImage: `url(${balloonImage})` }}></div>
-      <div className="rectangle-744"></div>
-      <div className="group-20911">
+      <div className="rectangle-744">
         <div className="group-20909">
           <div className="balloon-number">Balloon number: {balloonNumber} of 30</div>
           <div className="potential-earnings">Potential earnings: £{earnings.toFixed(2)}</div>
@@ -48,7 +47,7 @@ const BalloonDemo = () => {
       </div>
       <div className="group-20934">
         <button className="button-danger" onClick={handlePump}>
-          <span className="button-text">Pump up the balloon</span>
+          <span className="button-text">Pump the balloon</span> {/* Updated text to match image */}
         </button>
         <button className="button-collect" onClick={handleCollect}>
           <span className="button-text">Collect £££</span>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../balloondemo.css'; // Assumes balloondemo.css is in src/
+import '../balloondemo.css';
 import Image19 from '../assets/image19.png';
 import Balloon from '../assets/balloon.png';
 

@@ -34,18 +34,35 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
+.image-19-1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  left: 50px;
+  background-size: cover;
+  z-index: 10;
+}
+
 .image-19-2 {
-  background: url('/assets/image19.png');
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50px;
+  left: 200px;
   background-size: cover;
   opacity: 0.5;
+  z-index: 10;
 }
-.image-19-1 {
-  background: url('/assets/image19.png');
-  background-size: cover;
-}
+
 .image-4 {
-  background: url('/assets/balloon.png');
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50px;
+  left: 50px;
   background-size: cover;
+  z-index: 10;
 }
 
 .rectangle-744 {
@@ -67,8 +84,6 @@
   left: 452.02px;
   top: calc(50% - 327.28px/2 + 24.76px);
 }
-
-
 
 .group-20909 {
   position: absolute;

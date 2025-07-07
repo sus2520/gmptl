@@ -34,6 +34,9 @@ const BalloonDemo = () => {
     setIsPopped(false);
   };
 
+  // Calculate scale based on pumps (e.g., 1.0 to 2.0 over maxPumps)
+  const balloonScale = isPopped ? 1 : 1 + (pumps / maxPumps) * 1; // Scales from 1x to 2x
+
   return (
     <div className="desktop">
       <div className="group-20937">
@@ -42,7 +45,14 @@ const BalloonDemo = () => {
       </div>
       <div className="image-19-1" style={{ backgroundImage: `url(${image19})` }}></div>
       <div className="image-19-2" style={{ backgroundImage: `url(${image19})` }}></div>
-      <div className="image-4" style={{ backgroundImage: `url(${isPopped ? poppedBalloonImage : balloonImage})` }}></div>
+      <div
+        className="image-4"
+        style={{
+          backgroundImage: `url(${isPopped ? poppedBalloonImage : balloonImage})`,
+          transform: `scale(${balloonScale})`,
+          transition: 'transform 0.3s ease', // Smooth scaling animation
+        }}
+      ></div>
       {isPopped && (
         <div className="popped-message">
           Balloon Popped!

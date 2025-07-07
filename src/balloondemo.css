@@ -14,7 +14,9 @@
   left: calc(50% - 496.49px/2);
   top: calc(50% - 437.58px/2 + 0px);
   background: url('../assets/image19.png');
-  opacity: 0.9;
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Image (19) 1 - Logo */
@@ -27,8 +29,6 @@
   background: url('../assets/image19.png');
   background-size: cover;
   background-repeat: no-repeat;
-  visibility: visible;
-  opacity: 1;
 }
 
 /* Image 4 - Balloon */
@@ -36,8 +36,8 @@
   position: absolute;
   width: 207.18px;
   height: 250.92px;
-  top: 373.12px;
   left: 412.02px;
+  top: 373.12px;
   background: url('../assets/balloon.png');
   opacity: 1;
   transform: rotate(0deg);
@@ -173,8 +173,20 @@
   top: 658.4px;
   background: #1B5680;
   border-radius: 11.9606px;
+  box-sizing: border-box;
 }
 
+/* Star (Pump Button) - Hidden */
+.button-danger .star {
+  display: none;
+  width: 25.46px;
+  height: 25.46px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Pump up the balloon - Text */
 .button-danger .button-text {
   width: 188px;
   height: 18px;
@@ -186,6 +198,16 @@
   color: #FEE9E7;
   flex: none;
   order: 1;
+  flex-grow: 0;
+}
+
+/* X (Pump Button) - Hidden */
+.button-danger .x {
+  display: none;
+  width: 25.46px;
+  height: 25.46px;
+  flex: none;
+  order: 2;
   flex-grow: 0;
 }
 
@@ -204,8 +226,20 @@
   top: 658.4px;
   border: 1px solid #1B5680;
   border-radius: 11.9606px;
+  box-sizing: border-box;
 }
 
+/* Star (Collect Button) - Hidden */
+.button-collect .star {
+  display: none;
+  width: 25.46px;
+  height: 25.46px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Collect £££ - Text */
 .button-collect .button-text {
   width: 107px;
   height: 18px;
@@ -217,6 +251,16 @@
   color: #1B5680;
   flex: none;
   order: 1;
+  flex-grow: 0;
+}
+
+/* X (Collect Button) - Hidden */
+.button-collect .x {
+  display: none;
+  width: 25.46px;
+  height: 25.46px;
+  flex: none;
+  order: 2;
   flex-grow: 0;
 }
 

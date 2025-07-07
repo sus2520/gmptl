@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../balloondemo.css'; // Matches src/balloondemo.css
+import './balloondemo.css'; // Ensure this path matches your project structure
 import image19 from '../assets/image19.png'; // Logo
-import balloonImage from '../assets/image [Background removed] [Upscaled].png'; // Balloon
+import balloonImage from '../assets/balloon.png'; // Balloon
 
 const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
@@ -30,7 +30,7 @@ const BalloonDemo = () => {
 
   return (
     <div className="desktop">
-      <div className="top-bar">
+      <div className="group-20937">
         <div className="rectangle-746"></div>
         <div className="rectangle-745"></div>
       </div>
@@ -47,10 +47,10 @@ const BalloonDemo = () => {
         </div>
       </div>
       <div className="group-20934">
-        <button className="button-danger">
+        <button className="button-danger" onClick={handlePump}>
           <span className="button-text">Pump up the balloon</span>
         </button>
-        <button className="button-collect">
+        <button className="button-collect" onClick={handleCollect}>
           <span className="button-text">Collect £££</span>
         </button>
       </div>

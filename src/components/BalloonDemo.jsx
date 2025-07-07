@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import '../balloonGame.css';
+import '../balloondemo.css';
 
 const App = () => {
   const [pumps, setPumps] = useState(0);

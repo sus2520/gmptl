@@ -37,7 +37,7 @@ export default function BalloonIntro() {
             <div
               className="pump-button"
               onClick={() => navigate('/balloon')}
-              aria-label="Start Game"
+              aria-label="Practice Game"
               role="button"
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && navigate('/balloon')}

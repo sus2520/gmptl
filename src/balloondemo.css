@@ -70,68 +70,95 @@
 }
 
 /* == BALLOON IMAGE == */
+/* == BALLOON IMAGE == */
 .balloon-image {
   position: absolute;
   width: 207.18px;
   height: 250.92px;
-  left: 412.02px;
   top: 373.12px;
+  left: 412.02px;
+  opacity: 1;
+  transform: rotate(0deg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-/* == STATS TEXT == */
+
+/* == BALLOON TEXT DETAILS == */
+
+/* Group Container (Group 20909) – optional wrapper */
+.group-20909 {
+  position: absolute;
+  width: 303px;
+  height: 223.22px;
+  left: 773.49px;
+  top: 373.12px;
+}
+
+/* Balloon number */
 .balloon-number {
   position: absolute;
   width: 270px;
   height: 40px;
-  left: calc(50% - 270px / 2 + 188.49px);
-  top: 273.12px;
+  left: calc(50% - 135px + 188.49px);
+  top: 373.12px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  color: #333;
   text-align: justify;
+  color: #333333;
 }
 
+/* Potential earnings */
 .potential-earnings {
   position: absolute;
   width: 303px;
   height: 40px;
-  left: calc(50% - 303px / 2 + 204.99px);
-  top: 334.19px;
+  left: calc(50% - 151.5px + 204.99px);
+  top: 434.19px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  color: #333;
   text-align: justify;
+  color: #333333;
 }
 
+/* Number of pumps */
 .number-of-pumps {
   position: absolute;
   width: 253px;
   height: 40px;
-  left: calc(50% - 253px / 2 + 179.99px);
-  top: 395.26px;
+  left: calc(50% - 126.5px + 179.99px);
+  top: 495.26px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  color: #333;
   text-align: justify;
+  color: #333333;
 }
 
+/* Total Winnings */
 .total-winnings {
   position: absolute;
   width: 263px;
   height: 40px;
-  left: calc(50% - 263px / 2 + 184.99px);
-  top: 456.34px;
+  left: calc(50% - 131.5px + 184.99px);
+  top: 556.34px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  color: #333;
   text-align: justify;
+  color: #333333;
 }
+
 
 /* == BUTTON ROW (Pump & Collect) == */
 .button-row {

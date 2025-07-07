@@ -1,5 +1,6 @@
-/* Base page */
-.balloon-page {
+/* balloon-demo.css */
+
+.balloondemo-page {
   position: relative;
   width: 1440px;
   height: 1024px;
@@ -7,46 +8,16 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Diagonal header bar (blue + orange) */
-.header-bar {
-  position: absolute;
-  width: 1440px;
-  height: 31.44px;
-  left: 0;
-  top: 0;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  z-index: 2;
-}
-.header-bar .blue-bar {
-  position: absolute;
-  width: 720px;
-  height: 31.44px;
-  right: 720px;
-  top: 0;
-  background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-.header-bar .orange-bar {
-  position: absolute;
-  width: 744.67px;
-  height: 31.44px;
-  left: 695.33px;
-  top: 0;
-  background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-/* Watermark image (background centered) */
+/* Top watermark background image */
 .watermark-image {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
   left: calc(50% - 248.245px);
   top: calc(50% - 218.79px);
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 0.5;
-  z-index: 0;
+  background-repeat: no-repeat;
 }
 
 /* Top-left logo */
@@ -56,186 +27,152 @@
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  z-index: 3;
 }
 
-/* Main white box */
+/* Main white balloon container */
 .balloon-box {
   position: absolute;
   width: 778.52px;
   height: 510.86px;
   left: calc(50% - 389.26px);
   top: calc(50% - 255.43px + 20.37px);
-  background: #fff;
   border: 0.5px solid #2C51A1;
-  border-radius: 10px;
   box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
-  z-index: 1;
+  border-radius: 10px;
 }
 
-/* Balloon stats text */
-.balloon-number,
-.potential-earnings,
-.total-winnings,
-.number-of-pumps {
-  position: absolute;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  color: #333333;
-  text-align: justify;
-}
-
-/* Balloon number: 1 of 30 */
+/* Balloon text info */
 .balloon-number {
   position: absolute;
   width: 270px;
   height: 40px;
-  left: calc(50% - 270px / 2 + 188.49px);
+  left: calc(50% - 135px + 188.49px);
   top: 373.12px;
-
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: justify;
   color: #333333;
+  text-align: justify;
 }
 
-/* Potential earnings: £0.00 */
 .potential-earnings {
   position: absolute;
   width: 303px;
   height: 40px;
-  left: calc(50% - 303px / 2 + 204.99px);
+  left: calc(50% - 151.5px + 204.99px);
   top: 434.19px;
-
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: justify;
   color: #333333;
+  text-align: justify;
 }
 
-/* Number of pumps: 0 */
 .number-of-pumps {
   position: absolute;
   width: 253px;
   height: 40px;
-  left: calc(50% - 253px / 2 + 179.99px);
+  left: calc(50% - 126.5px + 179.99px);
   top: 495.26px;
-
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: justify;
   color: #333333;
+  text-align: justify;
 }
 
-/* Total Winnings: £0.00 */
 .total-winnings {
   position: absolute;
   width: 263px;
   height: 40px;
-  left: calc(50% - 263px / 2 + 184.99px);
+  left: calc(50% - 131.5px + 184.99px);
   top: 556.34px;
-
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: justify;
   color: #333333;
+  text-align: justify;
 }
 
-
 /* Balloon image */
-/* balloon-container - Centered balloon as per Figma spec */
 .balloon-image {
   position: absolute;
   width: 207.18px;
   height: 250.92px;
   left: 412.02px;
   top: 373.12px;
-  background-image: url('../assets/balloon.png'); /* Adjust path if needed */
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
 }
 
-
-/* Button group */
+/* Buttons Row */
 .button-row {
   position: absolute;
-  top: 658.4px;
   width: 535.95px;
+  height: 42px;
   left: calc(50% - 267.975px);
+  top: 658.4px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  z-index: 3;
 }
 
-/* Pump Button - Styled per Figma */
+/* Pump Button */
 .pump-button {
-  position: absolute;
   width: 217.98px;
   height: 42px;
-  left: calc(50% - 217.98px/2 - 158.99px); /* Align left within Group 20934 */
-  top: 658.4px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-  gap: 8px;
-
   background: #1B5680;
-  border: none;
-  border-radius: 11.9606px;
-
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
+  color: #FEE9E7;
   font-weight: 700;
   font-size: 18px;
-  line-height: 100%;
-  color: #FEE9E7;
-
+  border-radius: 11.96px;
+  border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Collect Button - Styled per Figma */
+/* Collect Button */
 .collect-button {
-  position: absolute;
   width: 217.98px;
   height: 42px;
-  left: calc(50% - 217.98px/2 + 158.99px); /* Align right within Group 20934 */
-  top: 658.4px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-  gap: 8px;
-
   background: #FFFFFF;
-  border: 1px solid #1B5680;
-  border-radius: 11.9606px;
-
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
+  color: #1B5680;
   font-weight: 700;
   font-size: 18px;
-  line-height: 100%;
-  color: #1B5680;
-
+  border-radius: 11.96px;
+  border: 1px solid #1B5680;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Diagonal header bar */
+.header-bar {
+  position: absolute;
+  width: 1440px;
+  height: 31.44px;
+  top: 0px;
+  left: 0px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  display: flex;
+}
+
+.header-bar::before {
+  content: '';
+  width: 720px;
+  height: 31.44px;
+  background: #1B577E;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.header-bar::after {
+  content: '';
+  width: 744.67px;
+  height: 31.44px;
+  background: #EB5617;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }

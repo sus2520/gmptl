@@ -12,7 +12,7 @@
   position: absolute;
   width: 1440px;
   height: 31.44px;
-  left: 45px; /* Moved 30px + 15px = 45px to the right */
+  left: 30px; /* Moved 15px to the right */
   top: 0px;
   transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
@@ -21,7 +21,7 @@
 .group-20937::after {
   content: '';
   position: absolute;
-  width: 2px; /* Exactly 2px thick */
+  width: 2px; /* Exactly 2px thick, as specified */
   height: 40px; /* Covers 31.44px height diagonally */
   background: #000000; /* Black for visibility */
   left: 720px; /* Center of 1440px, adjusted for flip */

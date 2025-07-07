@@ -35,23 +35,16 @@
 }
 
 .image-19-2 {
-  position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: calc(50% - 496.49px/2);
-  top: calc(50% - 437.58px/2);
   background: url('/assets/image19.png');
   background-size: cover;
   opacity: 0.5;
 }
-
 .image-19-1 {
-  position: absolute;
-  width: 181.76px;
-  height: 160.19px;
-  left: 116.27px;
-  top: 68.99px;
   background: url('/assets/image19.png');
+  background-size: cover;
+}
+.image-4 {
+  background: url('/assets/balloon.png');
   background-size: cover;
 }
 
@@ -75,15 +68,7 @@
   top: calc(50% - 327.28px/2 + 24.76px);
 }
 
-.image-4 {
-  position: absolute;
-  width: 207.18px;
-  height: 250.92px;
-  left: 0px;
-  top: 0px;
-  background: url('/assets/balloon.png');
-  background-size: cover;
-}
+
 
 .group-20909 {
   position: absolute;

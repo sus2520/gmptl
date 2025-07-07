@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../balloondemo.css'; // Assumes balloondemo.css is in src/
+import Image19 from '../assets/image19.png';
+import Balloon from '../assets/balloon.png';
 
 const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
@@ -32,11 +34,11 @@ const BalloonDemo = () => {
         <div className="rectangle-746"></div>
         <div className="rectangle-745"></div>
       </div>
-      <div className="image-19-1"></div>
-      <div className="image-19-2"></div>
+      <div className="image-19-1" style={{ backgroundImage: `url(${Image19})` }}></div>
+      <div className="image-19-2" style={{ backgroundImage: `url(${Image19})` }}></div>
       <div className="rectangle-744"></div>
       <div className="group-20911">
-        <div className="image-4"></div>
+        <div className="image-4" style={{ backgroundImage: `url(${Balloon})` }}></div>
         <div className="group-20909">
           <div className="balloon-number">Balloon number: {balloonNumber} of 30</div>
           <div className="potential-earnings">Potential earnings: £{earnings.toFixed(2)}</div>

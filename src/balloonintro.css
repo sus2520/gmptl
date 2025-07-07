@@ -113,7 +113,7 @@
 
 .intro-title {
   position: absolute;
-  top: calc(50% - 509.36px/2 - 12.29px); /* Keeps it vertically centered with custom offset */
+  top: calc(50% - 450.36px/2 - 12.29px); /* Keeps it vertically centered with custom offset */
   left: 50%;
   transform: translateX(-50%); /* Horizontally center */
   
@@ -134,7 +134,7 @@
   width: 217.98px;
   height: 42px;
   left: calc(50% - 217.98px / 2);
-  top: 762.39px; /* ← update this line */
+  top: 862.39px; /* ← update this line */
   display: flex;
   justify-content: center;
   align-items: center;

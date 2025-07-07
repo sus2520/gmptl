@@ -9,28 +9,30 @@
 }
 
 /* === Header Bar (Diagonal Style) === */
+/* === Header Bar (Figma Group 20937) === */
 .header-bar {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 1440px;
   height: 31.44px;
-  z-index: 10;
+  left: 0px;
+  top: 0px;
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips entire bar horizontally */
   display: flex;
+  z-index: 10;
 }
 
 .header-bar .blue {
   width: 720px;
   height: 100%;
   background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips individual segment */
 }
 
 .header-bar .orange {
   width: 744.67px;
   height: 100%;
   background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips individual segment */
 }
 
 

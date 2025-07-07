@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../balloondemo.css'; // Adjusted path; change to '../balloondemo.css' if CSS is one directory up
+import '../balloondemo.css';
 import image19 from '../assets/image19.png';
 import balloonImage from '../assets/image [Background removed] [Upscaled].png';
 
@@ -7,7 +7,6 @@ const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
   const [earnings, setEarnings] = useState(0);
   const [balloonNumber, setBalloonNumber] = useState(1);
-  const [totalWinnings, setTotalWinnings] = useState(0); // Added state for total winnings
   const maxPumps = 10;
 
   const handlePump = () => {
@@ -23,7 +22,6 @@ const BalloonDemo = () => {
   };
 
   const handleCollect = () => {
-    setTotalWinnings(totalWinnings + earnings); // Update total winnings
     alert(`Collected £${earnings.toFixed(2)}! Moving to next balloon.`);
     setPumps(0);
     setEarnings(0);
@@ -44,14 +42,14 @@ const BalloonDemo = () => {
           <div className="balloon-number">Balloon number: {balloonNumber} of 30</div>
           <div className="potential-earnings">Potential earnings: £{earnings.toFixed(2)}</div>
           <div className="number-pumps">Number of pumps: {pumps}</div>
-          <div className="total-winnings">Total Winnings: £{totalWinnings.toFixed(2)}</div>
+          <div className="total-winnings">Total Winnings: £0.00</div>
         </div>
       </div>
       <div className="group-20934">
-        <button className="button-danger" onClick={handlePump} aria-label="Pump the balloon">
+        <button className="button-danger" onClick={handlePump}>
           <span className="button-text">Pump the balloon</span>
         </button>
-        <button className="button-collect" onClick={handleCollect} aria-label="Collect earnings">
+        <button className="button-collect" onClick={handleCollect}>
           <span className="button-text">Collect £££</span>
         </button>
       </div>

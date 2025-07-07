@@ -17,20 +17,6 @@
   transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
 
-/* Diagonal Divider Line (Backslash \) */
-.group-20937::after {
-  content: '';
-  position: absolute;
-  width: 2px; /* Exactly 2px thick, as specified */
-  height: 40px; /* Covers 31.44px height diagonally */
-  background: #000000; /* Black for visibility */
-  left: 720px; /* Center of 1440px, adjusted for flip */
-  top: -4px; /* Centered vertically */
-  transform: rotate(45deg); /* Backslash (\) orientation */
-  transform-origin: center;
-  z-index: 3; /* Above both rectangles */
-}
-
 /* Rectangle 746 - Blue Section */
 .rectangle-746 {
   position: absolute;
@@ -40,20 +26,21 @@
   top: 0px;
   background: #1B577E;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-  z-index: 1;
+  z-index: 1; /* Below .rectangle-745 in overlap */
 }
 
 /* Rectangle 745 - Orange Section */
 .rectangle-745 {
   position: absolute;
-  width: 720px; /* Adjusted to avoid overlap */
+  width: 744.67px;
   height: 31.44px;
-  left: 0px; /* Start at left */
+  left: 695.33px;
   top: 0px;
   background: #EB5617;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-  z-index: 2;
+  z-index: 2; /* Above .rectangle-746 in overlap */
 }
+
 /* Group 20909 - Text Container */
 .group-20909 {
   position: absolute;

@@ -1,59 +1,96 @@
-/* balloon-demo.css */
-
+/* == BASE PAGE == */
 .balloondemo-page {
   position: relative;
   width: 1440px;
   height: 1024px;
   background: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
-/* Top watermark background image */
+/* == HEADER (already correct) == */
+.header-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 31.44px;
+  display: flex;
+  z-index: 10;
+}
+
+.header-bar .blue-bar {
+  width: 720px;
+  height: 100%;
+  background: #1B577E;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.header-bar .orange-bar {
+  width: 744.67px;
+  height: 100%;
+  background: #EB5617;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* == WATERMARK == */
 .watermark-image {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
-  left: calc(50% - 248.245px);
-  top: calc(50% - 218.79px);
-  background-size: cover;
-  opacity: 0.5;
+  left: calc(50% - 496.49px / 2);
+  top: calc(50% - 437.58px / 2);
+  background-size: contain;
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 
-/* Top-left logo */
+/* == LOGO (top-left) == */
 .logo-image {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
-/* Main white balloon container */
+/* == MAIN WHITE BOX == */
 .balloon-box {
   position: absolute;
   width: 778.52px;
   height: 510.86px;
-  left: calc(50% - 389.26px);
-  top: calc(50% - 255.43px + 20.37px);
+  left: calc(50% - 778.52px / 2);
+  top: calc(50% - 510.86px / 2 + 20.37px);
+  background: white;
   border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 5.93px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
 }
 
-/* Balloon text info */
+/* == BALLOON IMAGE == */
+.balloon-image {
+  position: absolute;
+  width: 207.18px;
+  height: 250.92px;
+  left: 412.02px;
+  top: 373.12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* == STATS TEXT == */
 .balloon-number {
   position: absolute;
   width: 270px;
   height: 40px;
-  left: calc(50% - 135px + 188.49px);
+  left: calc(50% - 270px / 2 + 188.49px);
   top: 373.12px;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  color: #333333;
+  color: #333;
   text-align: justify;
 }
 
@@ -61,12 +98,12 @@
   position: absolute;
   width: 303px;
   height: 40px;
-  left: calc(50% - 151.5px + 204.99px);
+  left: calc(50% - 303px / 2 + 204.99px);
   top: 434.19px;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  color: #333333;
+  color: #333;
   text-align: justify;
 }
 
@@ -74,12 +111,12 @@
   position: absolute;
   width: 253px;
   height: 40px;
-  left: calc(50% - 126.5px + 179.99px);
+  left: calc(50% - 253px / 2 + 179.99px);
   top: 495.26px;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  color: #333333;
+  color: #333;
   text-align: justify;
 }
 
@@ -87,32 +124,21 @@
   position: absolute;
   width: 263px;
   height: 40px;
-  left: calc(50% - 131.5px + 184.99px);
+  left: calc(50% - 263px / 2 + 184.99px);
   top: 556.34px;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  color: #333333;
+  color: #333;
   text-align: justify;
 }
 
-/* Balloon image */
-.balloon-image {
-  position: absolute;
-  width: 207.18px;
-  height: 250.92px;
-  left: 412.02px;
-  top: 373.12px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Buttons Row */
+/* == BUTTON ROW (Pump & Collect) == */
 .button-row {
   position: absolute;
   width: 535.95px;
   height: 42px;
-  left: calc(50% - 267.975px);
+  left: calc(50% - 535.95px / 2);
   top: 658.4px;
   display: flex;
   justify-content: space-between;
@@ -148,31 +174,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Diagonal header bar */
-.header-bar {
-  position: absolute;
-  width: 1440px;
-  height: 31.44px;
-  top: 0px;
-  left: 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  display: flex;
-}
-
-.header-bar::before {
-  content: '';
-  width: 720px;
-  height: 31.44px;
-  background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-.header-bar::after {
-  content: '';
-  width: 744.67px;
-  height: 31.44px;
-  background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
 }

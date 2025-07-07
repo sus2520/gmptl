@@ -43,21 +43,21 @@
   width: 600.74px;
   height: 609.36px;
   left: 419.63px;
-  top: calc(50% - 609.36px / 2 - 12.29px);
-  background: url('../assets/image19.png');
-  background-repeat: no-repeat;
+  top: calc(50% - 609.36px/2 - 12.29px);
+  background: url('../assets/watermark.png') no-repeat center;
   background-size: contain;
   opacity: 0.5;
   z-index: 0;
 }
 
-/* Balloon image at top */
+
+/* Balloon image (overlayed in same position as watermark) */
 .balloon-image {
   position: absolute;
-  width: 106.37px;
-  height: 94.2px;
-  left: 423.5px;
-  top: 168.44px;
+  width: 600.74px;
+  height: 609.36px;
+  left: 419.63px;
+  top: calc(50% - 609.36px / 2 - 12.29px);
   background: url('../assets/balloon.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -76,7 +76,7 @@
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   background: #fff;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Game Title */
@@ -89,6 +89,7 @@
   font-weight: 600;
   color: #EE581B;
   text-align: center;
+  white-space: nowrap;
 }
 
 /* Game Rules */

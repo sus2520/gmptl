@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../balloondemo.css';
 import logo from '../assets/image19.png';
 import watermark from '../assets/watermark.png';
-import balloonImage from '../assets/balloon.png';
+
 
 
 export default function BalloonGame() {

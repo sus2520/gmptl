@@ -1,0 +1,137 @@
+/* === Page Wrapper === */
+.balloon-page {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: #FFFFFF;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === Top Bar === */
+.header-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 31.44px;
+  display: flex;
+}
+
+.header-bar::before,
+.header-bar::after {
+  content: '';
+  height: 100%;
+}
+
+.header-bar::before {
+  flex: 0 0 720px;
+  background: #1B577E;
+}
+
+.header-bar::after {
+  flex: 1;
+  background: #EB5617;
+}
+
+/* === Watermark Image (background) === */
+.watermark-image {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* === Logo Image (top left) === */
+.logo-image {
+  position: absolute;
+  width: 181.76px;
+  height: 160.19px;
+  top: 68.99px;
+  left: 116.27px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+/* === Content Box === */
+.balloon-box {
+  position: absolute;
+  width: 778.52px;
+  height: 810.81px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  border: 0.5px solid #2C51A1;
+  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 40px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+/* === Heading === */
+.status-text h2 {
+  font-size: 34px;
+  font-weight: 600;
+  color: #EE581B;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+/* === Subheading === */
+.status-text h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1B577E;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* === Game Rules List === */
+.status-text ul {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #333333;
+  text-align: justify;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+/* === List Items === */
+.status-text li {
+  margin-bottom: 12px;
+}
+
+/* === Button Group === */
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pump-button {
+  background: #1B5680;
+  color: #FEE9E7;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+.pump-button:hover {
+  background: #123a5a;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../balloon.css';
+import '../balloonintro.css';
 import logo from '../assets/image19.png';
 import watermark from '../assets/watermark.png';
 

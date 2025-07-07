@@ -43,13 +43,7 @@ export default function Activities() {
 
   return (
     <div className="welcome-page">
-
-    <div className="balloon-intro-page">
-      {/* Diagonal Top Bar */}
-      <div className="header-bar">
-        <div className="blue"></div>
-        <div className="orange"></div>
-      </div>
+      <div className="header-bar"></div>
       <div
         className="welcome-logo"
         style={{

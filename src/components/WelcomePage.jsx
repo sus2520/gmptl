@@ -19,10 +19,10 @@ function WelcomePage() {
 
   return (
     <div className="welcome-page">
-      {/* Diagonal Top Bar */}
+      {/* 🔷 Diagonal Header Bar */}
       <div className="header-bar">
-        <div className="blue"></div>
-        <div className="orange"></div>
+        <div className="blue-bar"></div>
+        <div className="orange-bar"></div>
       </div>
 
       {/* 🔷 Logo */}

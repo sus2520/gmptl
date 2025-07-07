@@ -1,3 +1,4 @@
+/* Main container */
 .balloon-intro-page {
   position: relative;
   width: 1440px;
@@ -6,6 +7,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Header Bar */
 .header-bar {
   position: absolute;
   width: 100%;
@@ -24,6 +26,7 @@
   background-color: #EB5617;
 }
 
+/* Top Left Logo */
 .logo-image {
   position: absolute;
   width: 181.76px;
@@ -34,8 +37,34 @@
   background-size: contain;
 }
 
+/* Watermark center faded */
+.watermark-image {
+  position: absolute;
+  width: 600.74px;
+  height: 609.36px;
+  left: 419.63px;
+  top: calc(50% - 609.36px / 2 - 12.29px);
+  background: url('../assets/image19.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: 0;
+}
 
+/* Balloon image at top */
+.balloon-image {
+  position: absolute;
+  width: 106.37px;
+  height: 94.2px;
+  left: 423.5px;
+  top: 168.44px;
+  background: url('../assets/balloon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
 
+/* Main White Box */
 .intro-box {
   position: absolute;
   width: 778.52px;
@@ -47,8 +76,10 @@
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   background: #fff;
+  z-index: 1;
 }
 
+/* Game Title */
 .intro-title {
   position: absolute;
   top: 40px;
@@ -60,6 +91,7 @@
   text-align: center;
 }
 
+/* Game Rules */
 .intro-description {
   position: absolute;
   width: 600.74px;
@@ -73,43 +105,20 @@
   text-align: justify;
 }
 
-/* Watermark (image19.png faded) */
-.watermark-image {
+/* Start Button */
+.start-btn {
   position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: calc(50% - 496.49px / 2);
-  top: calc(50% - 437.58px / 2);
-  background: url('../assets/image19.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.5;
+  width: 220px;
+  height: 42px;
+  left: calc(50% - 220px / 2);
+  top: 420px;
+  background-color: #1B5680;
+  color: #FEE9E7;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 42px;
 }
-
-/* Balloon image (balloon.png at top like image 3) */
-.balloon-image {
-  position: absolute;
-  width: 106.37px;
-  height: 94.2px;
-  left: 423.5px;
-  top: 168.44px;
-  background: url('../assets/balloon.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.start-button {
-  position: absolute;
-  width: 600.74px;
-  height: 609.36px;
-  left: 419.63px;
-  top: calc(50% - 609.36px / 2 - 12.29px);
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-
-  padding-bottom: 40px; /* spacing inside the box */
-  box-sizing: border-box;
-}
-

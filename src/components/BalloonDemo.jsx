@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './balloondemo.css';
+import '../balloondemo.css';
 import logoImage from './assets/image19.png';
 import balloonImage from './assets/balloon.png';
 

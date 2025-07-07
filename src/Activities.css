@@ -23,7 +23,6 @@ html, body {
   background: #FFFFFF;
 }
 
-/* === Header Bar with Light Diagonal Shape === */
 .header-bar {
   position: absolute;
   top: 0;
@@ -32,26 +31,21 @@ html, body {
   height: 31.44px;
   z-index: 10;
   display: flex;
-  overflow: hidden;
 }
 
-/* Blue section (slightly diagonal) */
 .header-bar .blue {
   width: 720px;
   height: 100%;
-  background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 98.5% 100%, 0% 100%);
+  background: rgba(27, 87, 126, 0.2); /* Light blue */
+  clip-path: polygon(0 0, 100% 0, 99% 100%, 0% 100%);
 }
 
-/* Orange section (slightly diagonal) */
 .header-bar .orange {
   width: 744.67px;
   height: 100%;
-  background: #EB5617;
-  clip-path: polygon(1.5% 0, 100% 0, 100% 100%, 0% 100%);
+  background: rgba(235, 86, 23, 0.2); /* Light orange */
+  clip-path: polygon(1% 0, 100% 1%, 100% 100%, 0% 100%);
 }
-
-
 
 /* === Logo === */
 .welcome-logo {

@@ -150,16 +150,23 @@ html, body {
 }
 
 /* Header columns */
-.activity-duration-header,
+.activity-duration-header {
+  margin-left: 7px;
+}
+
 .activity-status-header {
   margin-left: 10px;
 }
 
 /* Content rows */
-.activity-duration,
+.activity-duration {
+  margin-left: 7px;
+}
+
 .activity-status {
   margin-left: 10px;
 }
+
 
 
 /* === Divider Line === */

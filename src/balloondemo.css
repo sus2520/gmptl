@@ -9,14 +9,13 @@
 }
 
 /* === Header Bar (Diagonal Style) === */
-/* === Header Bar (Figma Group 20937) === */
 .header-bar {
   position: absolute;
   width: 1440px;
   height: 31.44px;
   left: 0px;
   top: 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips entire bar horizontally */
+  transform: matrix(-1, 0, 0, 1, 0, 0);
   display: flex;
   z-index: 10;
 }
@@ -25,14 +24,14 @@
   width: 720px;
   height: 100%;
   background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips individual segment */
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .header-bar .orange {
   width: 744.67px;
   height: 100%;
   background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips individual segment */
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 /* == WATERMARK == */
@@ -45,7 +44,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.5;
-  background-image: url('image (19).png');
+  background-image: url('../assets/watermark.png');
 }
 
 /* == LOGO (top-left) == */
@@ -57,7 +56,7 @@
   top: 68.99px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('image (19).png');
+  background-image: url('../assets/image19.png');
 }
 
 /* == MAIN WHITE BOX == */
@@ -71,6 +70,10 @@
   border: 0.5px solid #2C51A1;
   box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* == BALLOON IMAGE == */
@@ -78,31 +81,31 @@
   position: absolute;
   width: 207.18px;
   height: 250.92px;
-  left: 412.02px;
-  top: 373.12px;
+  left: 20px;
+  top: 0px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('image [Background removed] [Upscaled].png');
+  background-image: url('../assets/balloon.png');
 }
 
+/* == BALLOON INFO WRAPPER == */
 .balloon-info-wrapper {
   position: absolute;
   width: 624.47px;
   height: 327.28px;
-  left: 452.02px;
-  top: calc(50% - 327.28px / 2 + 24.76px);
+  left: 250px;
+  top: 0px;
   background: white;
   border-radius: 11.96px;
   box-shadow: 0 0 5.93px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 /* == BALLOON TEXT DETAILS == */
 .balloon-number {
-  position: absolute;
-  width: 270px;
-  height: 40px;
-  left: calc(50% - 270px / 2 + 188.49px);
-  top: 373.12px;
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -111,11 +114,6 @@
 }
 
 .potential-earnings {
-  position: absolute;
-  width: 303px;
-  height: 40px;
-  left: calc(50% - 303px / 2 + 204.99px);
-  top: 434.19px;
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -124,11 +122,6 @@
 }
 
 .number-of-pumps {
-  position: absolute;
-  width: 253px;
-  height: 40px;
-  left: calc(50% - 253px / 2 + 179.99px);
-  top: 495.26px;
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -137,11 +130,6 @@
 }
 
 .total-winnings {
-  position: absolute;
-  width: 263px;
-  height: 40px;
-  left: calc(50% - 263px / 2 + 184.99px);
-  top: 556.34px;
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -154,7 +142,7 @@
   position: absolute;
   width: 535.95px;
   height: 42px;
-  left: calc(50% - 535.95px / 2 + 0px);
+  left: calc(50% - 535.95px / 2);
   top: 658.4px;
   display: flex;
   justify-content: space-between;

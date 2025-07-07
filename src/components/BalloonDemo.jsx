@@ -39,12 +39,12 @@ export default function BalloonDemo() {
           style={{ backgroundImage: `url(${balloonImg})` }}
         ></div>
 
-        {/* Grouped balloon + stats */}
+        {/* Balloon info wrapper */}
         <div className="balloon-info-wrapper">
-          <div className="balloon-number">Balloon #: 5</div>
-          <div className="potential-earnings">Potential: $0.25</div>
-          <div className="number-of-pumps">Pumps: 3</div>
-          <div className="total-winnings">Total: ${totalWinnings}</div>
+          <div className="balloon-number">Balloon number: 1 of 30</div>
+          <div className="potential-earnings">Potential earnings: £0.00</div>
+          <div className="number-of-pumps">Number of pumps: 0</div>
+          <div className="total-winnings">Total Winnings: £0.00</div>
         </div>
       </div>
 

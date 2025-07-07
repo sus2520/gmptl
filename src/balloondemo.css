@@ -17,6 +17,7 @@
   left:45px
 }
 
+/* Blue section with subtle diagonal right edge */
 .rectangle-746 {
   position: absolute;
   width: 720px;
@@ -25,8 +26,12 @@
   top: 0px;
   background: #1B577E;
   z-index: 1;
+
+  /* Diagonal right edge */
+  clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
 }
 
+/* Orange section with matching subtle diagonal left edge */
 .rectangle-745 {
   position: absolute;
   width: 744.67px;
@@ -35,7 +40,11 @@
   top: 0px;
   background: #EB5617;
   z-index: 2;
+
+  /* Diagonal left edge */
+  clip-path: polygon(2% 0, 100% 0, 100% 100%, 0% 100%);
 }
+
 
 /* === Logo Image === */
 .image-19-1 {

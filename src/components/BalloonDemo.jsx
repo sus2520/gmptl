@@ -43,12 +43,6 @@ const BalloonDemo = () => {
           <div className="number-pumps">Number of pumps: {pumps}</div>
           <div className="total-winnings">Total Winnings: £0.00</div>
         </div>
-        <div className="group-20910">
-          <div className="balloon-number">Balloon number: {balloonNumber} of 30</div>
-          <div className="potential-earnings">Potential earnings: £{earnings.toFixed(2)}</div>
-          <div className="number-pumps">Number of pumps: {pumps}</div>
-          <div className="total-winnings">Total Winnings: £0.00</div>
-        </div>
       </div>
       <div className="group-20934">
         <button className="button-danger" onClick={handlePump}>

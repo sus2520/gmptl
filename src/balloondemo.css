@@ -40,7 +40,7 @@
   height: 437.58px;
   left: calc(50% - 496.49px/2);
   top: calc(50% - 437.58px/2);
-  background: url('../assets/image19.png'); /* Corrected to match other paths */
+  background: url('/assets/image19.png');
   background-size: cover;
   opacity: 0.5;
 }
@@ -51,7 +51,7 @@
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background: url('../assets/image-19.png'); /* Consistent naming */
+  background: url('/assets/image19.png');
   background-size: cover;
 }
 
@@ -81,7 +81,7 @@
   height: 250.92px;
   left: 0px;
   top: 0px;
-  background: url('../assets/balloon.png'); /* Consistent with provided CSS */
+  background: url('/assets/balloon.png');
   background-size: cover;
 }
 
@@ -93,16 +93,7 @@
   top: 0px;
 }
 
-.group-20910 {
-  position: absolute;
-  width: 303px;
-  height: 223.22px;
-  left: 773.49px;
-  top: 373.12px;
-}
-
-.group-20909 .balloon-number,
-.group-20910 .balloon-number {
+.group-20909 .balloon-number {
   position: absolute;
   width: 270px;
   height: 40px;
@@ -118,8 +109,7 @@
   color: #333333;
 }
 
-.group-20909 .potential-earnings,
-.group-20910 .potential-earnings {
+.group-20909 .potential-earnings {
   position: absolute;
   width: 303px;
   height: 40px;
@@ -135,8 +125,7 @@
   color: #333333;
 }
 
-.group-20909 .number-pumps,
-.group-20910 .number-pumps {
+.group-20909 .number-pumps {
   position: absolute;
   width: 253px;
   height: 40px;
@@ -152,8 +141,7 @@
   color: #333333;
 }
 
-.group-20909 .total-winnings,
-.group-20910 .total-winnings {
+.group-20909 .total-winnings {
   position: absolute;
   width: 263px;
   height: 40px;

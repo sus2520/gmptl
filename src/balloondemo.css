@@ -40,7 +40,7 @@
   height: 437.58px;
   left: calc(50% - 496.49px/2);
   top: calc(50% - 437.58px/2);
-  background: url('image-19.png'); /* Replace with actual balloon image URL */
+  background: url('../assets/image19.png'); /* Corrected to match other paths */
   background-size: cover;
   opacity: 0.5;
 }
@@ -51,7 +51,7 @@
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background: url('../assets/image19.png'); /* Replace with actual balloon image URL */
+  background: url('../assets/image-19.png'); /* Consistent naming */
   background-size: cover;
 }
 
@@ -81,7 +81,7 @@
   height: 250.92px;
   left: 0px;
   top: 0px;
-  background: url('../assets/balloon.png'); /* Replace with actual balloon image URL */
+  background: url('../assets/balloon.png'); /* Consistent with provided CSS */
   background-size: cover;
 }
 
@@ -93,7 +93,16 @@
   top: 0px;
 }
 
-.balloon-number {
+.group-20910 {
+  position: absolute;
+  width: 303px;
+  height: 223.22px;
+  left: 773.49px;
+  top: 373.12px;
+}
+
+.group-20909 .balloon-number,
+.group-20910 .balloon-number {
   position: absolute;
   width: 270px;
   height: 40px;
@@ -101,13 +110,16 @@
   top: 0px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  font-style: normal;
   font-size: 24px;
   line-height: 40px;
+  letter-spacing: 0%;
   text-align: justify;
   color: #333333;
 }
 
-.potential-earnings {
+.group-20909 .potential-earnings,
+.group-20910 .potential-earnings {
   position: absolute;
   width: 303px;
   height: 40px;
@@ -115,13 +127,16 @@
   top: 61.07px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  font-style: normal;
   font-size: 24px;
   line-height: 40px;
+  letter-spacing: 0%;
   text-align: justify;
   color: #333333;
 }
 
-.number-pumps {
+.group-20909 .number-pumps,
+.group-20910 .number-pumps {
   position: absolute;
   width: 253px;
   height: 40px;
@@ -129,13 +144,16 @@
   top: 122.14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  font-style: normal;
   font-size: 24px;
   line-height: 40px;
+  letter-spacing: 0%;
   text-align: justify;
   color: #333333;
 }
 
-.total-winnings {
+.group-20909 .total-winnings,
+.group-20910 .total-winnings {
   position: absolute;
   width: 263px;
   height: 40px;
@@ -143,8 +161,10 @@
   top: 183.22px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  font-style: normal;
   font-size: 24px;
   line-height: 40px;
+  letter-spacing: 0%;
   text-align: justify;
   color: #333333;
 }

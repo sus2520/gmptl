@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../balloonintro.css';
-import logo from '../assets/image19.png';
-import watermark from '../assets/watermark.png';
+import logo from '../assets/image19.png';        // Top-left logo
+import watermark from '../assets/baloon.png';    // Center faded watermark (renamed as per your instruction)
 
 export default function BalloonIntro() {
   const navigate = useNavigate();
@@ -10,14 +10,17 @@ export default function BalloonIntro() {
   return (
     <div className="balloon-page">
       <div className="header-bar"></div>
+
       <div
         className="watermark-image"
         style={{ backgroundImage: `url(${watermark})` }}
       ></div>
+
       <div
         className="logo-image"
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
+
       <div className="balloon-box">
         <div className="status-text intro-text">
           <h2>Balloon Analogue Risk Task</h2>

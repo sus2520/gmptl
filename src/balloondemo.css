@@ -72,14 +72,15 @@
 /* === Balloon Image === */
 .image-4 {
   position: absolute;
-  width: 207.18px;
-  height: 250.92px;
+  width: 155.39px;   /* 75% of 207.18px */
+  height: 188.19px;  /* 75% of 250.92px */
   left: 452.02px;
   top: 373.12px;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 4;
+  z-index: 1;
 }
+
 .popped-message {
   position: absolute;
   top: 50%;

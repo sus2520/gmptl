@@ -12,13 +12,12 @@
 /* === Header Bar (Figma Group 20937) === */
 .header-bar {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 1440px;
   height: 31.44px;
-  left: 0px;
-  top: 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips entire bar horizontally */
-  display: flex;
   z-index: 10;
+  display: flex;
 }
 
 .header-bar .blue {
@@ -91,8 +90,8 @@
   position: absolute;
   width: 624.47px;
   height: 327.28px;
-  left: 252.02px;
-  top: calc(50% - 327.28px / 2 + 24.76px);
+  left: 190.02px;
+  top: calc(50% - 307.28px / 2 + 24.76px);
   background: white;
   border-radius: 11.96px;
   box-shadow: 0 0 5.93px rgba(0, 0, 0, 0.08);
@@ -104,7 +103,7 @@
   width: 270px;
   height: 40px;
   left: calc(50% - 270px / 2 + 188.49px);
-  top: 373.12px;
+  top: 273.12px;
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;

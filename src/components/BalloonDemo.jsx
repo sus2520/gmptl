@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../balloondemo.css';
-import logoImage from './assets/image19.png';
-import balloonImage from './assets/balloon.png';
+import logoImage from '../assets/image19.png';
+import balloonImage from '../assets/balloon.png';
 
 const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);

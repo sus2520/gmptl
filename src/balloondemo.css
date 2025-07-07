@@ -1,23 +1,21 @@
-/* Desktop - 5 */
+/* === Base Desktop Layout === */
 .desktop {
   position: relative;
   width: 1440px;
   height: 1024px;
   background: #FFFFFF;
   overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Group 20937 - Top Bar */
+/* === Top Bar === */
 .group-20937 {
   position: absolute;
   width: 1440px;
   height: 31.44px;
-  left: 30px; /* Moved 15px to the right */
   top: 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
 
-/* Rectangle 746 - Blue Section */
 .rectangle-746 {
   position: absolute;
   width: 720px;
@@ -25,11 +23,9 @@
   right: 720px;
   top: 0px;
   background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  z-index: 1; /* Below .rectangle-745 in overlap */
+  z-index: 1;
 }
 
-/* Rectangle 745 - Orange Section */
 .rectangle-745 {
   position: absolute;
   width: 744.67px;
@@ -37,133 +33,45 @@
   left: 695.33px;
   top: 0px;
   background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  z-index: 2; /* Above .rectangle-746 in overlap */
+  z-index: 2;
 }
 
-/* Group 20909 - Text Container */
-.group-20909 {
-  position: absolute;
-  width: 303px;
-  height: 223.22px;
-  left: 773.49px;
-  top: 373.12px;
-  z-index: 6;
-}
-
-/* Text Elements */
-.balloon-number {
-  position: absolute;
-  width: 270px;
-  height: 40px;
-  left: calc(50% - 270px / 2 + 188.49px);
-  top: 373.12px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center; /* Changed from justify */
-  color: #333333;
-}
-
-.potential-earnings {
-  position: absolute;
-  width: 303px;
-  height: 40px;
-  left: calc(50% - 303px / 2 + 204.99px);
-  top: 434.19px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center; /* Changed from justify */
-  color: #333333;
-}
-
-.number-pumps {
-  position: absolute;
-  width: 253px;
-  height: 40px;
-  left: calc(50% - 253px / 2 + 179.99px);
-  top: 495.26px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center; /* Changed from justify */
-  color: #333333;
-}
-
-.total-winnings {
-  position: absolute;
-  width: 263px;
-  height: 40px;
-  left: calc(50% - 263px / 2 + 184.99px);
-  top: 556.34px;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center; /* Changed from justify */
-  color: #333333;
-}
-/* Rest of the CSS remains unchanged */
-.image-19-2 {
-  position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: calc(50% - 496.49px/2);
-  top: calc(50% - 437.58px/2 + 0px);
-  background: url('../assets/image19.png');
-  opacity: 0.5;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Image (19) 2 - Background Overlay */
-.image-19-2 {
-  position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: calc(50% - 496.49px/2);
-  top: calc(50% - 437.58px/2 + 0px);
-  background: url('../assets/image19.png');
-  opacity: 0.5;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Image (19) 1 - Logo */
+/* === Logo Image === */
 .image-19-1 {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background: url('../assets/image19.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* Image 4 - Balloon */
+/* === Background Overlay Image === */
+.image-19-2 {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px/2);
+  top: calc(50% - 437.58px/2);
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* === Balloon Image === */
 .image-4 {
   position: absolute;
   width: 207.18px;
   height: 250.92px;
-  left: 412.02px;
+  left: 452.02px;
   top: 373.12px;
-  background: url('../assets/image [Background removed] [Upscaled].png');
-  opacity: 1;
-  transform: rotate(0deg);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 4;
 }
 
-/* Rectangle 744 - Main Content Box */
+/* === Main Content Box === */
 .rectangle-744 {
   box-sizing: border-box;
   position: absolute;
@@ -172,128 +80,52 @@
   left: calc(50% - 778.52px/2);
   top: calc(50% - 510.86px/2 + 20.37px);
   border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-}
-
-/* Group 20911 - Text Container */
-.group-20911 {
-  position: absolute;
-  width: 624.47px;
-  height: 327.28px;
-  left: 452.02px;
-  top: calc(50% - 327.28px/2 + 24.76px);
-}
-
-/* Group 20910 */
-.group-20910 {
-  position: absolute;
-  width: 303px;
-  height: 223.22px;
-  left: 773.49px;
-  top: 373.12px;
-}
-
-/* Rectangle 744 - Main Content Box */
-.rectangle-744 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 778.52px;
-  height: 510.86px;
-  left: calc(50% - 778.52px/2);
-  top: calc(50% - 510.86px/2 + 20.37px); /* Centered with offset */
-  border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  z-index: 5; /* Ensure it’s above other elements but below buttons if needed */
+  z-index: 5;
 }
 
-/* Group 20909 - Text Elements (inside .rectangle-744) */
+/* === Text Container inside Box === */
 .group-20909 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   width: 100%;
   max-width: 303px;
-  height: auto;
   text-align: center;
 }
 
-/* Balloon Number: 1 of 30 */
-.balloon-number {
-  width: 270px;
-  height: 40px;
-  margin-bottom: 10px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center;
-  color: #333333;
-}
-
-/* Potential Earnings: £0.00 */
-.potential-earnings {
-  width: 303px;
-  height: 40px;
-  margin-bottom: 10px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center;
-  color: #333333;
-}
-
-/* Number of Pumps: 0 */
-.number-pumps {
-  width: 253px;
-  height: 40px;
-  margin-bottom: 10px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: center;
-  color: #333333;
-}
-
-/* Total Winnings: £0.00 */
+/* === Text Styles === */
+.balloon-number,
+.potential-earnings,
+.number-pumps,
 .total-winnings {
-  width: 263px;
-  height: 40px;
-  margin-bottom: 10px;
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
-  text-align: center;
   color: #333333;
 }
 
-/* Group 20934 - Button Container (adjusted to be below .rectangle-744) */
+/* === Button Container === */
 .group-20934 {
   position: absolute;
   width: 535.95px;
   height: 42px;
   left: calc(50% - 535.95px/2);
-  top: 600px; /* Moved below .rectangle-744, adjust based on layout */
+  top: 658.4px;
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Button Danger - Pump */
+/* === Pump Button === */
 .button-danger {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 12px;
@@ -301,31 +133,21 @@
   width: 217.98px;
   height: 42px;
   background: #1B5680;
-  border-radius: 11.9606px;
+  border-radius: 11.96px;
   box-sizing: border-box;
-  z-index: 11;
-  order: 1;
+  cursor: pointer;
 }
 
 .button-danger .button-text {
-  width: 188px;
-  height: 18px;
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 100%;
   color: #FEE9E7;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
   white-space: nowrap;
 }
 
-/* Button Collect */
+/* === Collect Button === */
 .button-collect {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 12px;
@@ -333,135 +155,14 @@
   width: 217.98px;
   height: 42px;
   border: 1px solid #1B5680;
-  border-radius: 11.9606px;
+  border-radius: 11.96px;
   box-sizing: border-box;
-  z-index: 11;
-  order: 2;
+  cursor: pointer;
 }
 
 .button-collect .button-text {
-  width: 107px;
-  height: 18px;
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 100%;
   color: #1B5680;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-/* Group 20934 - Button Container */
-.group-20934 {
-  position: absolute;
-  width: 535.95px;
-  height: 42px;
-  left: calc(50% - 535.95px/2 + 0px);
-  top: 658.4px;
-  z-index: 10; /* Ensures it stays above other elements */
-}
-
-/* Button Danger - Pump */
-.button-danger {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-  gap: 8px;
-  position: absolute;
-  width: 217.98px;
-  height: 42px;
-  left: calc(50% - 217.98px/2 - 158.99px);
-  top: 0; /* Relative to .group-20934 */
-  background: #1B5680;
-  border-radius: 11.9606px;
-  box-sizing: border-box;
-  z-index: 11; /* Above .group-20934 */
-}
-
-.button-danger .star {
-  display: none;
-  width: 25.46px;
-  height: 25.46px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.button-danger .button-text {
-  width: 188px;
-  height: 18px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 100%;
-  color: #FEE9E7;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  white-space: nowrap; /* Keeps "Pump up the balloon" in one line */
-}
-
-.button-danger .x {
-  display: none;
-  width: 25.46px;
-  height: 25.46px;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-}
-
-/* Button Collect */
-.button-collect {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-  gap: 8px;
-  position: absolute;
-  width: 217.98px;
-  height: 42px;
-  left: calc(50% - 217.98px/2 + 158.99px);
-  top: 0; /* Relative to .group-20934 */
-  border: 1px solid #1B5680;
-  border-radius: 11.9606px;
-  box-sizing: border-box;
-  z-index: 11; /* Above .group-20934 */
-}
-
-.button-collect .star {
-  display: none;
-  width: 25.46px;
-  height: 25.46px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.button-collect .button-text {
-  width: 107px;
-  height: 18px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 100%;
-  color: #1B5680;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-
-.button-collect .x {
-  display: none;
-  width: 25.46px;
-  height: 25.46px;
-  flex: none;
-  order: 2;
-  flex-grow: 0;
+  white-space: nowrap;
 }

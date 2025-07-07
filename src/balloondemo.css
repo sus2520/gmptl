@@ -4,6 +4,7 @@
   width: 1440px;
   height: 1024px;
   background: #FFFFFF;
+  overflow: hidden;
 }
 
 /* Group 20937 - Top Bar */
@@ -13,7 +14,7 @@
   height: 31.44px;
   left: 0px;
   top: 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip for the entire group */
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
 
 /* Rectangle 746 - Blue Section */
@@ -21,21 +22,23 @@
   position: absolute;
   width: 720px;
   height: 31.44px;
-  right: 720px; /* Positions blue section on the right before flip */
+  right: 720px;
   top: 0px;
   background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 1; /* Below .rectangle-745 in overlap */
 }
 
 /* Rectangle 745 - Orange Section */
 .rectangle-745 {
   position: absolute;
-  width: 720px; /* Adjusted to match total width with .rectangle-746 */
+  width: 744.67px;
   height: 31.44px;
-  left: 0px; /* Positions orange section on the left before flip */
+  left: 695.33px;
   top: 0px;
   background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 2; /* Above .rectangle-746 in overlap */
 }
 
 /* Group 20909 - Text Container */

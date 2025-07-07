@@ -18,15 +18,17 @@
   display: flex;
 }
 
+/* Left Blue Diagonal */
 .header-bar .blue {
-  width: 720px;
+  flex: 0 0 50%; /* Equivalent to 720px of 1440px */
   height: 100%;
   background: rgba(27, 87, 126, 0.2); /* Light blue */
   clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
+/* Right Orange Diagonal */
 .header-bar .orange {
-  width: 744.67px;
+  flex: 0 0 50%; /* Equivalent to 720px of 1440px */
   height: 100%;
   background: rgba(235, 86, 23, 0.2); /* Light orange */
   clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);

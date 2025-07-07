@@ -4,6 +4,9 @@
   height: 1024px;
   background: #FFFFFF;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-bar {
@@ -36,175 +39,114 @@
 
 .image-19-1 {
   position: absolute;
-  width: 181.76px;
-  height: 160.19px;
-  left: 116.27px;
-  top: 68.99px;
-  background-size: cover;
-  z-index: 10;
-}
-
-.image-19-2 {
-  position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: calc(50% - 496.49px/2);
-  top: calc(50% - 437.58px/2);
-  background-size: cover;
-  opacity: 0.5;
+  width: 200px; /* Adjusted to fit logo from image */
+  height: 200px; /* Adjusted to fit logo from image */
+  left: 50px;
+  top: 50px;
+  background-size: contain; /* Ensure logo scales properly */
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: 10;
 }
 
 .image-4 {
   position: absolute;
-  width: 207.18px;
-  height: 250.92px;
-  left: 412.02px;
-  top: 373.12px;
-  background-size: cover;
+  width: 150px; /* Adjusted to match Figma balloon size */
+  height: 200px; /* Adjusted to match Figma balloon size */
+  left: 300px; /* Positioned right of logo */
+  top: 150px; /* Centered vertically with logo */
+  background-size: contain; /* Ensure balloon scales properly */
+  background-repeat: no-repeat;
+  background-position: center;
   z-index: 10;
 }
 
 .rectangle-744 {
   box-sizing: border-box;
   position: absolute;
-  width: 778.52px;
-  height: 510.86px;
-  left: calc(50% - 778.52px/2);
-  top: calc(50% - 510.86px/2 + 20.37px);
-  border: 0.5px solid #2C51A1;
+  width: 400px; /* Adjusted to fit content */
+  height: 400px; /* Adjusted to fit content */
+  left: calc(50% - 200px); /* Centered */
+  top: calc(50% - 200px); /* Centered */
+  border: 1px solid #2C51A1;
   box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-}
-
-.group-20911 {
-  position: absolute;
-  width: 624.47px;
-  height: 327.28px;
-  left: 452.02px;
-  top: calc(50% - 327.28px/2 + 24.76px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #FFFFFF;
 }
 
 .group-20909 {
-  position: absolute;
-  width: 303px;
-  height: 223.22px;
-  left: 773.49px;
-  top: 373.12px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .group-20909 .balloon-number {
-  position: absolute;
-  width: 270px;
-  height: 40px;
-  left: calc(50% - 270px/2 + 188.49px);
-  top: 373.12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: justify;
+  font-size: 20px;
   color: #333333;
+  margin-bottom: 10px;
 }
 
 .group-20909 .potential-earnings {
-  position: absolute;
-  width: 303px;
-  height: 40px;
-  left: calc(50% - 303px/2 + 204.99px);
-  top: 434.19px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: justify;
+  font-size: 20px;
   color: #333333;
+  margin-bottom: 10px;
 }
 
 .group-20909 .number-pumps {
-  position: absolute;
-  width: 253px;
-  height: 40px;
-  left: calc(50% - 253px/2 + 179.99px);
-  top: 495.26px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: justify;
+  font-size: 20px;
   color: #333333;
+  margin-bottom: 10px;
 }
 
 .group-20909 .total-winnings {
-  position: absolute;
-  width: 263px;
-  height: 40px;
-  left: calc(50% - 263px/2 + 184.99px);
-  top: 556.34px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 40px;
-  text-align: justify;
+  font-size: 20px;
   color: #333333;
+  margin-bottom: 20px;
 }
 
 .group-20934 {
-  position: absolute;
-  width: 535.95px;
-  height: 42px;
-  left: calc(50% - 535.95px/2);
-  top: 658.4px;
+  display: flex;
+  gap: 10px;
 }
 
 .button-danger {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  gap: 8px;
-  position: absolute;
-  width: 217.98px;
-  height: 42px;
-  left: calc(50% - 217.98px/2 - 158.99px);
-  top: 658.4px;
-  background: #1B5680;
-  border-radius: 11.9606px;
+  padding: 10px 20px;
+  background: #1B577E;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FEE9E7;
 }
 
 .button-collect {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  gap: 8px;
-  position: absolute;
-  width: 217.98px;
-  height: 42px;
-  left: calc(50% - 217.98px/2 + 158.99px);
-  top: 658.4px;
-  border: 1px solid #1B5680;
-  border-radius: 11.9606px;
+  padding: 10px 20px;
   background: transparent;
+  border: 1px solid #1B577E;
+  border-radius: 5px;
   cursor: pointer;
-}
-
-.button-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-  color: #FEE9E7;
-}
-
-.button-collect .button-text {
-  color: #1B5680;
+  font-size: 16px;
+  color: #1B577E;
 }

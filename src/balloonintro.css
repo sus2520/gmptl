@@ -7,7 +7,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* === Header Bar with Light Diagonal Shape === */
+/* Header Bar with Light Diagonal Shape */
 .header-bar {
   position: absolute;
   top: 0;
@@ -35,7 +35,6 @@
   clip-path: polygon(1.5% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-
 /* Logo top-left */
 .logo-image {
   position: absolute;
@@ -47,8 +46,6 @@
   background-size: contain;
 }
 
-
-
 /* Balloon image */
 .balloon-image {
   position: absolute;
@@ -56,11 +53,11 @@
   height: 94.2px;
   left: 423.5px;
   top: 140.33px;
-  background-image: url('../assets/balloon.png'); /* Updated path */
+  background-image: url('../assets/balloon.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  z-index: 3; /* Above .intro-box (z-index: 2) */
+  z-index: 3;
 }
 
 /* Watermark image */
@@ -70,12 +67,13 @@
   height: 437.58px;
   left: calc(50% - 496.49px / 2);
   top: calc(50% - 437.58px / 2);
-  background-image: url('../assets/watermark.png'); /* Update with correct path */
+  background-image: url('../assets/image19.png');
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 1; /* Above default but below .intro-box */
-  opacity: 0.5; /* Keep faded effect */
+  z-index: 1;
+  opacity: 0.5;
 }
+
 /* Main white content box */
 .intro-box {
   position: absolute;
@@ -90,6 +88,23 @@
   z-index: 2;
 }
 
+/* Title (two lines) */
+.intro-title {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #EE581B;
+  text-align: center;
+  margin: 0;
+  white-space: normal;
+  max-width: 600px;
+}
 
 /* Description */
 .intro-description {
@@ -107,30 +122,13 @@
   color: #333333;
 }
 
-.intro-title {
-  position: absolute;
-  top: calc(50% - 580.36px/2 - 12.29px); /* Keeps it vertically centered with custom offset */
-  left: 50%;
-  transform: translateX(-50%); /* Horizontally center */
-  
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 41px;
-  color: #EE581B;
-  white-space: nowrap;
-  text-align: center;
-  margin: 0;
-}
-
 /* Start Button */
 .start-btn {
   position: absolute;
   width: 217.98px;
   height: 42px;
   left: calc(50% - 217.98px / 2);
-  top: 662.39px; /* ← update this line */
+  top: 662.39px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,4 +144,9 @@
   color: #FEE9E7;
   cursor: pointer;
   z-index: 3;
+}
+
+/* Hover effect for button */
+.start-btn:hover {
+  background: #2C51A1;
 }

@@ -30,7 +30,7 @@ export default function BalloonIntro() {
       <div
         className="watermark-image"
         style={{ backgroundImage: `url(${logo})` }}
-        aria-hidden="true" // Watermark is decorative, so hide from screen readers
+        aria-hidden="true" // Watermark is decorative
       ></div>
 
       {/* Small thumbnail balloon */}
@@ -42,15 +42,17 @@ export default function BalloonIntro() {
 
       {/* Main white box */}
       <div className="intro-box">
-        <h1 className="intro-title">Balloon Analogue Risk Task</h1>
+        <h1 className="intro-title">
+          Balloon Analogue<br />Risk Task
+        </h1>
         <p className="intro-description">
-          In this task, you will inflate balloons to earn points. Each pump increases your potential earnings, but if the balloon explodes, you lose the points. Balloons can explode at any moment. This game helps assess risk-taking behavior. Try a practice round first.
+          Ready to test your risk-taking skills? Pump balloons to rack up points, but beware—each pump could make them pop! The bigger the balloon, the higher the reward, but one wrong move could cost you everything. Dive into this exciting challenge to see how bold you can be. Start with a practice round now!
         </p>
         <button
           className="start-btn"
           onClick={handleStartPractice}
           onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === 'Space') {
+            if (e.key === 'Enter' || e.key === ' ') {
               handleStartPractice();
             }
           }}

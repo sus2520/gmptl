@@ -43,7 +43,10 @@ export default function Activities() {
 
   return (
     <div className="welcome-page">
-      <div className="header-bar"></div>
+      <div className="header-bar">
+        <div className="blue-bar"></div>
+        <div className="orange-bar"></div>
+      </div>
       <div
         className="welcome-logo"
         style={{

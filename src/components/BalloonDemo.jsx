@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
-import '../balloondemo.css';
+import '../balloonGame.css'; // Ensure this CSS file exists in src/components/
 
-const App = () => {
+const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
   const [earnings, setEarnings] = useState(0);
   const [balloonNumber, setBalloonNumber] = useState(1);
-  const maxPumps = 10; // Arbitrary limit to simulate balloon pop risk
+  const maxPumps = 10;
 
   const handlePump = () => {
     if (pumps < maxPumps) {
       setPumps(pumps + 1);
-      setEarnings(earnings + 0.5); // Increment earnings by £0.50 per pump
+      setEarnings(earnings + 0.5); // £0.50 per pump
     } else {
       alert('Balloon popped! Moving to next balloon.');
       setPumps(0);
@@ -57,5 +56,4 @@ const App = () => {
   );
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+export default BalloonDemo;

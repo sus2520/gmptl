@@ -134,7 +134,7 @@
   width: 217.98px;
   height: 42px;
   left: calc(50% - 217.98px / 2);
-  top: 862.39px; /* ← update this line */
+  top: 662.39px; /* ← update this line */
   display: flex;
   justify-content: center;
   align-items: center;

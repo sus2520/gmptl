@@ -1,58 +1,48 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import '../balloondemo.css';
-
-import logo from '../assets/image19.png';
-import watermark from '../assets/watermark.png';
-import balloonImg from '../assets/balloon.png';
+import './balloondemo.css';
 
 export default function BalloonDemo() {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const totalWinnings = location.state?.totalWinnings || 0;
-
   return (
     <div className="balloondemo-page">
-      {/* Diagonal header with orange and blue bars */}
-      <div className="header-bar"></div>
       {/* Watermark background image */}
-      <div
-        className="watermark-image"
-        style={{ backgroundImage: `url(${watermark})` }}
-      ></div>
+      <div className="image19-2" />
 
-      {/* Logo at top-left */}
-      <div
-        className="logo-image"
-        style={{ backgroundImage: `url(${logo})` }}
-      ></div>
+      {/* Logo image */}
+      <div className="image19-1" />
 
-      {/* Main white box container */}
-      <div className="balloon-box">
-        {/* Balloon image */}
-        <div
-          className="balloon-image"
-          style={{ backgroundImage: `url(${balloonImg})` }}
-        ></div>
+      {/* Main container */}
+      <div className="rectangle744">
+        {/* Group 20911 */}
+        <div className="group20911">
+          {/* Balloon Image */}
+          <div className="balloon-image" />
+        </div>
 
-        {/* Balloon info wrapper */}
-        <div className="balloon-info-wrapper">
-          <div className="balloon-number">Balloon number: 1 of 30</div>
-          <div className="potential-earnings">Potential earnings: £0.00</div>
-          <div className="number-of-pumps">Number of pumps: 0</div>
-          <div className="total-winnings">Total Winnings: £0.00</div>
+        {/* Group 20910 and 20909 (overlapping or duplicates?) */}
+        <div className="group20910" />
+        <div className="group20909" />
+
+        {/* Text elements */}
+        <div className="balloon-number">Balloon number: 1 of 30</div>
+        <div className="potential-earnings">Potential earnings: £0.00</div>
+        <div className="number-of-pumps">Number of pumps: 0</div>
+        <div className="total-winnings">Total Winnings: £0.00</div>
+
+        {/* Button container */}
+        <div className="group20934">
+          <button className="button-danger-pump" type="button">
+            Pump up the balloon
+          </button>
+          <button className="button-danger-collect" type="button">
+            Collect £££
+          </button>
         </div>
       </div>
 
-      {/* Buttons */}
-      <div className="button-row">
-        <button className="pump-button">Pump up the balloon</button>
-        <button
-          className="collect-button"
-          onClick={() => navigate('/activities')}
-        >
-          Collect £££
-        </button>
+      {/* Header Bar */}
+      <div className="group20937">
+        <div className="rectangle746" />
+        <div className="rectangle745" />
       </div>
     </div>
   );

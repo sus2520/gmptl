@@ -7,29 +7,31 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Diagonal Header */
+/* === Header Bar (Light Diagonal Style) === */
 .header-bar {
   position: absolute;
-  width: 1440px;
-  height: 31.44px;
   top: 0;
   left: 0;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: 1440px;
+  height: 31.44px;
+  z-index: 10;
   display: flex;
-  z-index: 3;
 }
 
-.blue-bar {
+.header-bar .blue {
   width: 720px;
-  height: 31.44px;
-  background: #1B577E;
+  height: 100%;
+  background: rgba(27, 87, 126, 0.2); /* Light blue */
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
-.orange-bar {
+.header-bar .orange {
   width: 744.67px;
-  height: 31.44px;
-  background: #EB5617;
+  height: 100%;
+  background: rgba(235, 86, 23, 0.2); /* Light orange */
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
 }
+
 
 /* Logo top-left */
 .logo-image {

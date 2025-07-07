@@ -51,7 +51,7 @@
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background: url('image-19.png'); /* Replace with actual balloon image URL */
+  background: url('../assets/image19.png'); /* Replace with actual balloon image URL */
   background-size: cover;
 }
 
@@ -81,7 +81,7 @@
   height: 250.92px;
   left: 0px;
   top: 0px;
-  background: url('image-background-removed-upscaled.png'); /* Replace with actual balloon image URL */
+  background: url('../assets/balloon.png'); /* Replace with actual balloon image URL */
   background-size: cover;
 }
 

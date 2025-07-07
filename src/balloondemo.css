@@ -24,25 +24,27 @@
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background: url('../assets/image19.png'); /* Corrected path */
-  background-size: cover; /* Ensures the image fits the container */
-  background-repeat: no-repeat; /* Prevents tiling */
-  visibility: visible; /* Explicitly sets visibility */
-  opacity: 1; /* Ensures full opacity */
+  background: url('../assets/image19.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  visibility: visible;
+  opacity: 1;
 }
+
 /* Image 4 - Balloon */
 .image-4 {
   position: absolute;
-  width: 207.18px; /* Rounded for consistency */
-  height: 250.92px; /* Rounded for consistency */
+  width: 207.18px;
+  height: 250.92px;
   top: 373.12px;
   left: 412.02px;
-  background: url('../assets/balloon.png'); /* Assuming correct path from earlier context */
+  background: url('../assets/balloon.png');
   opacity: 1;
-  transform: rotate(0deg); /* Replaced invalid 'angle' with transform */
-  background-size: cover; /* Ensures the image fits the container */
-  background-repeat: no-repeat; /* Prevents tiling */
+  transform: rotate(0deg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 /* Rectangle 744 - Main Content Box */
 .rectangle-744 {
   box-sizing: border-box;
@@ -215,6 +217,8 @@
   color: #1B5680;
   flex: none;
   order: 1;
+  flex-grow: 0;
+}
 
 /* Group 20937 - Top Bar */
 .group-20937 {

@@ -72,13 +72,26 @@
 /* === Balloon Image === */
 .image-4 {
   position: absolute;
-  width: 107.18px;
+  width: 207.18px;
   height: 250.92px;
   left: 452.02px;
   top: 373.12px;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 4;
+}
+.popped-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1000;
 }
 
 /* === Main Content Box === */
@@ -110,19 +123,7 @@
   position: relative;
   left: 160px; /* Shift left by 40px */
 }
-.popped-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  z-index: 1000;
-}
+
 /* === Text Styles === */
 .balloon-number,
 .potential-earnings,

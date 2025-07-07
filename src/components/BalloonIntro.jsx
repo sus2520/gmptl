@@ -1,16 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../balloonintro.css';
-import logo from '../assets/image19.png';        // Top-left logo
-import watermark from '../assets/baloon.png';    // Center faded watermark (renamed as per your instruction)
+
+import logo from '../assets/image19.png';         // Top-left logo
+import watermark from '../assets/watermark.png'; // Center faded watermark
+import balloonImage from '../assets/balloon.png'; // 🎈 Balloon image (new)
 
 export default function BalloonIntro() {
   const navigate = useNavigate();
 
   return (
     <div className="balloon-page">
+      {/* Top Diagonal Bar */}
       <div className="header-bar"></div>
 
+      {/* Background Images */}
       <div
         className="watermark-image"
         style={{ backgroundImage: `url(${watermark})` }}
@@ -21,6 +25,13 @@ export default function BalloonIntro() {
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
 
+      {/* 🎈 Balloon as per Figma position */}
+      <div
+        className="balloon-image"
+        style={{ backgroundImage: `url(${balloonImage})` }}
+      ></div>
+
+      {/* Game Instruction Box */}
       <div className="balloon-box">
         <div className="status-text intro-text">
           <h2>Balloon Analogue Risk Task</h2>
@@ -33,11 +44,11 @@ export default function BalloonIntro() {
             <li>You can collect the temporary bank at any time to add it to your permanent total and move to the next balloon.</li>
             <li>After all 30 balloons, your total earnings will be displayed.</li>
           </ul>
+
           <div className="button-group">
             <div
               className="pump-button"
               onClick={() => navigate('/balloon')}
-              aria-label="Practice Game"
               role="button"
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && navigate('/balloon')}

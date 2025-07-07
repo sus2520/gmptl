@@ -113,3 +113,17 @@
   width: 220px;
   text-align: center;
 }
+
+/* balloon.png image styled exactly like Figma Desktop - 3 */
+.balloon-image {
+  position: absolute;
+  width: 106.37px;
+  height: 94.2px;
+  left: 423.5px;
+  top: 168.44px;
+  background: url('../assets/balloon.png'); /* ✅ Make sure this path is correct */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}

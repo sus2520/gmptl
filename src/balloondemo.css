@@ -113,16 +113,19 @@
 }
 
 /* Balloon image */
+/* balloon-container - Centered balloon as per Figma spec */
 .balloon-image {
   position: absolute;
   width: 207.18px;
   height: 250.92px;
   left: 412.02px;
   top: 373.12px;
-  background-size: contain;
+  background-image: url('../assets/balloon.png'); /* Adjust path if needed */
   background-repeat: no-repeat;
-  z-index: 2;
+  background-size: contain;
+  background-position: center;
 }
+
 
 /* Button group */
 .button-row {
@@ -136,30 +139,58 @@
   z-index: 3;
 }
 
-/* Pump Button */
+/* Pump Button - Styled per Figma */
 .pump-button {
+  position: absolute;
   width: 217.98px;
   height: 42px;
+  left: calc(50% - 217.98px/2 - 158.99px); /* Align left within Group 20934 */
+  top: 658.4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px;
+  gap: 8px;
+
   background: #1B5680;
-  color: #FEE9E7;
+  border: none;
+  border-radius: 11.9606px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  border-radius: 11.96px;
-  border: none;
+  line-height: 100%;
+  color: #FEE9E7;
+
   cursor: pointer;
 }
 
-/* Collect Button */
+/* Collect Button - Styled per Figma */
 .collect-button {
+  position: absolute;
   width: 217.98px;
   height: 42px;
+  left: calc(50% - 217.98px/2 + 158.99px); /* Align right within Group 20934 */
+  top: 658.4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px;
-  background: white;
-  color: #1B5680;
+  gap: 8px;
+
+  background: #FFFFFF;
+  border: 1px solid #1B5680;
+  border-radius: 11.9606px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  border-radius: 11.96px;
-  border: 1px solid #1B5680;
+  line-height: 100%;
+  color: #1B5680;
+
   cursor: pointer;
 }

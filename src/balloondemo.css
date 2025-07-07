@@ -1,27 +1,23 @@
-/* balloon.css - Desktop Layout */
-
+/* Base page */
 .balloon-page {
   position: relative;
   width: 1440px;
   height: 1024px;
   background: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
 }
 
-/* Top Diagonal Bars */
+/* Diagonal header bar (blue + orange) */
 .header-bar {
   position: absolute;
   width: 1440px;
   height: 31.44px;
-  top: 0;
   left: 0;
-  background: none;
-  z-index: 1;
+  top: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: 2;
 }
-
-.header-bar::before {
-  content: "";
+.header-bar .blue-bar {
   position: absolute;
   width: 720px;
   height: 31.44px;
@@ -30,9 +26,7 @@
   background: #1B577E;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
-
-.header-bar::after {
-  content: "";
+.header-bar .orange-bar {
   position: absolute;
   width: 744.67px;
   height: 31.44px;
@@ -42,71 +36,46 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-/* Watermark Image */
+/* Watermark image (background centered) */
 .watermark-image {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
-  left: calc(50% - 496.49px / 2);
-  top: calc(50% - 437.58px / 2);
-  background-repeat: no-repeat;
+  left: calc(50% - 248.245px);
+  top: calc(50% - 218.79px);
   background-size: contain;
+  background-repeat: no-repeat;
   opacity: 0.5;
-  pointer-events: none;
+  z-index: 0;
 }
 
-/* Logo */
+/* Top-left logo */
 .logo-image {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background-repeat: no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3;
 }
 
-/* Rectangle Box */
+/* Main white box */
 .balloon-box {
   position: absolute;
   width: 778.52px;
   height: 510.86px;
-  left: calc(50% - 778.52px / 2);
-  top: calc(50% - 510.86px / 2 + 20.37px);
+  left: calc(50% - 389.26px);
+  top: calc(50% - 255.43px + 20.37px);
+  background: #fff;
   border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-  box-sizing: border-box;
-  padding: 32px;
-  background: white;
-  z-index: 2;
+  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
+  z-index: 1;
 }
 
-/* Status Group */
-.status-text {
-  position: absolute;
-  width: 624.47px;
-  height: 327.28px;
-  left: 452.02px;
-  top: calc(50% - 327.28px / 2 + 24.76px);
-  font-size: 24px;
-  line-height: 40px;
-  color: #333333;
-}
-
-.status-text h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1B577E;
-  margin-bottom: 16px;
-}
-
-.status-text p {
-  margin: 12px 0;
-  font-weight: 500;
-}
-
-/* Stat Values */
+/* Balloon stats text */
 .balloon-number,
 .potential-earnings,
 .total-winnings,
@@ -121,33 +90,29 @@
 
 .balloon-number {
   width: 270px;
-  height: 40px;
-  left: calc(50% - 270px / 2 + 188.49px);
+  left: calc(50% - 135px + 188.49px);
   top: 373.12px;
 }
 
 .potential-earnings {
   width: 303px;
-  height: 40px;
-  left: calc(50% - 303px / 2 + 204.99px);
+  left: calc(50% - 151.5px + 204.99px);
   top: 434.19px;
 }
 
 .number-of-pumps {
   width: 253px;
-  height: 40px;
-  left: calc(50% - 253px / 2 + 179.99px);
+  left: calc(50% - 126.5px + 179.99px);
   top: 495.26px;
 }
 
 .total-winnings {
   width: 263px;
-  height: 40px;
-  left: calc(50% - 263px / 2 + 184.99px);
+  left: calc(50% - 131.5px + 184.99px);
   top: 556.34px;
 }
 
-/* Balloon Image */
+/* Balloon image */
 .balloon-image {
   position: absolute;
   width: 207.18px;
@@ -156,46 +121,45 @@
   top: 373.12px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  z-index: 2;
 }
 
-/* Button Row */
+/* Button group */
 .button-row {
   position: absolute;
-  width: 535.95px;
-  height: 42px;
-  left: calc(50% - 535.95px / 2);
   top: 658.4px;
+  width: 535.95px;
+  left: calc(50% - 267.975px);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  z-index: 3;
 }
 
+/* Pump Button */
 .pump-button {
   width: 217.98px;
   height: 42px;
+  padding: 12px;
   background: #1B5680;
-  border-radius: 11.96px;
   color: #FEE9E7;
   font-weight: 700;
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 11.96px;
   border: none;
   cursor: pointer;
 }
 
+/* Collect Button */
 .collect-button {
   width: 217.98px;
   height: 42px;
-  background: transparent;
-  border: 1px solid #1B5680;
-  border-radius: 11.96px;
+  padding: 12px;
+  background: white;
   color: #1B5680;
   font-weight: 700;
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 11.96px;
+  border: 1px solid #1B5680;
   cursor: pointer;
 }

@@ -1,7 +1,7 @@
 // BalloonDemo.jsx
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import '../balloon.css';
+import '../balloondemo.css'; // ✅ Updated CSS import
 
 import logo from '../assets/image19.png';
 import watermark from '../assets/watermark.png';
@@ -14,22 +14,25 @@ export default function BalloonDemo() {
 
   return (
     <div className="balloon-page">
-      {/* Diagonal header */}
-      <div className="header-bar"></div>
+      {/* Diagonal header with blue and orange bars */}
+      <div className="header-bar">
+        <div className="blue-bar"></div>
+        <div className="orange-bar"></div>
+      </div>
 
-      {/* Watermark background image */}
+      {/* Watermark background */}
       <div
         className="watermark-image"
         style={{ backgroundImage: `url(${watermark})` }}
       ></div>
 
-      {/* Logo in top-left */}
+      {/* Top-left logo */}
       <div
         className="logo-image"
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
 
-      {/* Main balloon box */}
+      {/* Main white box */}
       <div className="balloon-box">
         <div className="balloon-number">Balloon number: 1 of 30</div>
         <div className="potential-earnings">Potential earnings: £0.00</div>
@@ -38,13 +41,13 @@ export default function BalloonDemo() {
           Total Winnings: £{totalWinnings.toFixed(2)}
         </div>
 
-        {/* Balloon image */}
+        {/* Balloon thumbnail */}
         <div
           className="balloon-image"
           style={{ backgroundImage: `url(${balloonImg})` }}
         ></div>
 
-        {/* Buttons */}
+        {/* Action buttons */}
         <div className="button-row">
           <button className="pump-button">Pump up the balloon</button>
           <button

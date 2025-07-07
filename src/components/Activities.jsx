@@ -16,14 +16,14 @@ export default function Activities() {
   const navigate = useNavigate();
 
   const titles = [
-    'Balloon Analogue Risk Task',
-    'Digit Symbol Substitution Test',
-    'Go/No-Go Task',
-    'Iowa Gambling Task',
-    'Mental Rotation',
-    'N-Back Task',
-    'Negative Feedback Arithmetic Task',
-    'Wisconsin Card Sorting Test',
+    'Tarea de Riesgo Análogo con Globos',
+    'Prueba de Sustitución de Símbolos de Dígitos',
+    'Tarea de Ir/No-Ir',
+    'Tarea de Apuestas de Iowa',
+    'Rotación Mental',
+    'Tarea N-Back',
+    'Tarea Aritmética de Retroalimentación Negativa',
+    'Prueba de Clasificación de Cartas de Wisconsin',
   ];
 
   const images = [image1, image2, image3, image4, image5, image6, image7, image8];

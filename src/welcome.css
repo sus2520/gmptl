@@ -29,18 +29,18 @@ html, body {
   overflow: hidden;
 }
 
-/* Blue bar with RIGHT-TO-LEFT subtle diagonal */
+/* Blue bar: slants from top-right downward to left */
 .blue-bar {
   flex: 1;
   background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
 }
 
-/* Orange bar with LEFT-TO-RIGHT subtle diagonal */
+/* Orange bar: slants from top-left downward to right */
 .orange-bar {
   width: 750px;
   background: #EB5617;
-  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
 }
 
 

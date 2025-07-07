@@ -127,14 +127,32 @@ html, body {
   padding: 0 12px; /* Align with activity rows */
 }
 
-.activities-row-header div {
-  flex: 1;
-  text-align: center;
+.activities-row-header {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-weight: 600;
+  font-size: 18.06px;
+  color: #1B577E;
+  margin-bottom: 16px;
 }
 
-.activities-duration,
-.activities-status {
-  margin-left: 5px;
+.activity-icon-placeholder {
+  width: 54px;
+  height: 45px;
+  margin-right: 12px;
+}
+
+.activity-name-header {
+  flex: 2;
+  text-align: left;
+  margin-right: 40px;
+}
+
+.activity-duration-header,
+.activity-status-header {
+  flex: 1;
+  text-align: center;
 }
 
 

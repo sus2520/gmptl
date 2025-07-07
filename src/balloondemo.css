@@ -88,29 +88,74 @@
   text-align: justify;
 }
 
+/* Balloon number: 1 of 30 */
 .balloon-number {
+  position: absolute;
   width: 270px;
-  left: calc(50% - 135px + 188.49px);
+  height: 40px;
+  left: calc(50% - 270px / 2 + 188.49px);
   top: 373.12px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
 }
 
+/* Potential earnings: £0.00 */
 .potential-earnings {
+  position: absolute;
   width: 303px;
-  left: calc(50% - 151.5px + 204.99px);
+  height: 40px;
+  left: calc(50% - 303px / 2 + 204.99px);
   top: 434.19px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
 }
 
+/* Number of pumps: 0 */
 .number-of-pumps {
+  position: absolute;
   width: 253px;
-  left: calc(50% - 126.5px + 179.99px);
+  height: 40px;
+  left: calc(50% - 253px / 2 + 179.99px);
   top: 495.26px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
 }
 
+/* Total Winnings: £0.00 */
 .total-winnings {
+  position: absolute;
   width: 263px;
-  left: calc(50% - 131.5px + 184.99px);
+  height: 40px;
+  left: calc(50% - 263px / 2 + 184.99px);
   top: 556.34px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
 }
+
 
 /* Balloon image */
 /* balloon-container - Centered balloon as per Figma spec */

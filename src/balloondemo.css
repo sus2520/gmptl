@@ -1,35 +1,61 @@
-/* Desktop - 5 */
-.balloondemo-page {
+.desktop {
   position: relative;
   width: 1440px;
   height: 1024px;
   background: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
-/* image (19) 2 - Watermark */
-.image19-2 {
+.top-bar {
+  position: absolute;
+  width: 1440px;
+  height: 31.44px;
+  left: 0px;
+  top: 0px;
+}
+
+.rectangle-746 {
+  position: absolute;
+  width: 720px;
+  height: 31.44px;
+  right: 720px;
+  top: 0px;
+  background: #1B577E;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.rectangle-745 {
+  position: absolute;
+  width: 744.67px;
+  height: 31.44px;
+  left: 695.33px;
+  top: 0px;
+  background: #EB5617;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.image-19-2 {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
   left: calc(50% - 496.49px/2);
-  top: calc(50% - 437.58px/2 + 0px);
-  background: url('image (19).png') no-repeat center/contain;
+  top: calc(50% - 437.58px/2);
+  background: url('image-19.png'); /* Replace with actual balloon image URL */
+  background-size: cover;
   opacity: 0.5;
 }
 
-/* image (19) 1 - Logo */
-.image19-1 {
+.image-19-1 {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background: url('image (19).png') no-repeat center/contain;
+  background: url('image-19.png'); /* Replace with actual balloon image URL */
+  background-size: cover;
 }
 
-/* Rectangle 744 - Main container */
-.rectangle744 {
+.rectangle-744 {
   box-sizing: border-box;
   position: absolute;
   width: 778.52px;
@@ -37,13 +63,11 @@
   left: calc(50% - 778.52px/2);
   top: calc(50% - 510.86px/2 + 20.37px);
   border: 0.5px solid #2C51A1;
-  box-shadow: 0 0 5.93385px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-  background: white;
 }
 
-/* Group 20911 */
-.group20911 {
+.group-20911 {
   position: absolute;
   width: 624.47px;
   height: 327.28px;
@@ -51,182 +75,132 @@
   top: calc(50% - 327.28px/2 + 24.76px);
 }
 
-/* Group 20910 & 20909 (same positioning) */
-.group20910,
-.group20909 {
+.image-4 {
+  position: absolute;
+  width: 207.18px;
+  height: 250.92px;
+  left: 0px;
+  top: 0px;
+  background: url('image-background-removed-upscaled.png'); /* Replace with actual balloon image URL */
+  background-size: cover;
+}
+
+.group-20909 {
   position: absolute;
   width: 303px;
   height: 223.22px;
-  left: 773.49px;
-  top: 373.12px;
+  left: 321.47px;
+  top: 0px;
 }
 
-/* Balloon number: 1 of 30 */
 .balloon-number {
   position: absolute;
   width: 270px;
   height: 40px;
-  left: calc(50% - 270px/2 + 188.49px);
-  top: 373.12px;
+  left: 0px;
+  top: 0px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
   text-align: justify;
   color: #333333;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
 }
 
-/* Potential earnings: £0.00 */
 .potential-earnings {
   position: absolute;
   width: 303px;
   height: 40px;
-  left: calc(50% - 303px/2 + 204.99px);
-  top: 434.19px;
+  left: 16.5px;
+  top: 61.07px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
   text-align: justify;
   color: #333333;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
 }
 
-/* Number of pumps: 0 */
-.number-of-pumps {
+.number-pumps {
   position: absolute;
   width: 253px;
   height: 40px;
-  left: calc(50% - 253px/2 + 179.99px);
-  top: 495.26px;
+  left: 11.5px;
+  top: 122.14px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
   text-align: justify;
   color: #333333;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
 }
 
-/* Total Winnings: £0.00 */
 .total-winnings {
   position: absolute;
   width: 263px;
   height: 40px;
-  left: calc(50% - 263px/2 + 184.99px);
-  top: 556.34px;
+  left: 6.5px;
+  top: 183.22px;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
   text-align: justify;
   color: #333333;
-  font-family: 'Montserrat', sans-serif;
-  font-style: normal;
 }
 
-/* Group 20934 - Button container */
-.group20934 {
+.group-20934 {
   position: absolute;
   width: 535.95px;
   height: 42px;
-  left: calc(50% - 535.95px/2 + 0px);
+  left: calc(50% - 535.95px/2);
   top: 658.4px;
 }
 
-/* Pump Button */
-.button-danger-pump {
-  box-sizing: border-box;
+.button-danger {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 12px;
   gap: 8px;
-
   position: absolute;
   width: 217.98px;
   height: 42px;
-  left: calc(50% - 217.98px/2 - 158.99px);
-  top: 658.4px;
-
+  left: 0px;
+  top: 0px;
   background: #1B5680;
   border-radius: 11.9606px;
   border: none;
   cursor: pointer;
-  color: #FEE9E7;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 100%;
-  font-family: 'Montserrat', sans-serif;
 }
 
-/* Collect Button */
-.button-danger-collect {
-  box-sizing: border-box;
+.button-collect {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 12px;
   gap: 8px;
-
   position: absolute;
   width: 217.98px;
   height: 42px;
-  left: calc(50% - 217.98px/2 + 158.99px);
-  top: 658.4px;
-
+  left: 317.97px;
+  top: 0px;
   border: 1px solid #1B5680;
   border-radius: 11.9606px;
-  background: #FFFFFF;
+  background: transparent;
   cursor: pointer;
-  color: #1B5680;
+}
+
+.button-text {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 100%;
-  font-family: 'Montserrat', sans-serif;
+  line-height: 18px;
+  color: #FEE9E7;
 }
 
-/* Balloon image */
-.balloon-image {
-  position: absolute;
-  width: 207.18px;
-  height: 250.92px;
-  left: 412.02px;
-  top: 373.12px;
-  background: url('image [Background removed] [Upscaled].png') no-repeat center/contain;
-}
-
-/* Group 20937 - Header Bar Container */
-.group20937 {
-  position: absolute;
-  width: 1440px;
-  height: 31.44px;
-  left: 0;
-  top: 0;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  display: flex;
-}
-
-/* Rectangle 746 - Blue Header */
-.rectangle746 {
-  position: absolute;
-  width: 720px;
-  height: 31.44px;
-  right: 720px;
-  top: 0;
-  background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-/* Rectangle 745 - Orange Header */
-.rectangle745 {
-  position: absolute;
-  width: 744.67px;
-  height: 31.44px;
-  left: 695.33px;
-  top: 0;
-  background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+.button-collect .button-text {
+  color: #1B5680;
 }

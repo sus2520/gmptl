@@ -81,7 +81,7 @@
   height: 250.92px;
   left: 412.02px;
   top: 373.12px;
-  background: url('../assets/balloon.png');
+  background: url('../assets/image [Background removed] [Upscaled].png');
   opacity: 1;
   transform: rotate(0deg);
   background-size: cover;
@@ -128,13 +128,13 @@
   top: 373.12px;
 }
 
-/* Balloon Number */
+/* Balloon Number: 1 of 30 */
 .balloon-number {
   position: absolute;
   width: 270px;
   height: 40px;
-  left: calc(50% - 270px/2 + 188.49px);
-  top: 373.12px;
+  left: calc(50% - 270px/2 + 188.49px - 773.49px); /* Adjusted relative to .group-20909 */
+  top: 0px; /* Relative to .group-20909 top */
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -144,13 +144,13 @@
   color: #333333;
 }
 
-/* Potential Earnings */
+/* Potential Earnings: £0.00 */
 .potential-earnings {
   position: absolute;
   width: 303px;
   height: 40px;
-  left: calc(50% - 303px/2 + 204.99px);
-  top: 434.19px;
+  left: calc(50% - 303px/2 + 204.99px - 773.49px); /* Adjusted relative to .group-20909 */
+  top: 61.07px; /* 434.19px - 373.12px */
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -160,13 +160,13 @@
   color: #333333;
 }
 
-/* Number of Pumps */
+/* Number of Pumps: 0 */
 .number-pumps {
   position: absolute;
   width: 253px;
   height: 40px;
-  left: calc(50% - 253px/2 + 179.99px);
-  top: 495.26px;
+  left: calc(50% - 253px/2 + 179.99px - 773.49px); /* Adjusted relative to .group-20909 */
+  top: 122.14px; /* 495.26px - 373.12px */
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
@@ -176,13 +176,13 @@
   color: #333333;
 }
 
-/* Total Winnings */
+/* Total Winnings: £0.00 */
 .total-winnings {
   position: absolute;
   width: 263px;
   height: 40px;
-  left: calc(50% - 263px/2 + 184.99px);
-  top: 556.34px;
+  left: calc(50% - 263px/2 + 184.99px - 773.49px); /* Adjusted relative to .group-20909 */
+  top: 183.22px; /* 556.34px - 373.12px */
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;

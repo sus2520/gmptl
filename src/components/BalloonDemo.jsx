@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../balloondemo.css';
 import image19 from '../assets/image19.png';
-import balloonImage from '../assets/balloon.png';
+import balloonImage from '../assets/image [Background removed] [Upscaled].png'; // Updated path
 
 const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);

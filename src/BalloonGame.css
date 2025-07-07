@@ -1,6 +1,6 @@
-/* balloon.css - Desktop Layout */
+/* BalloonGame.css */
 
-.balloon-page {
+.balloon-game-container {
   position: relative;
   width: 1440px;
   height: 1024px;
@@ -9,109 +9,63 @@
   overflow: hidden;
 }
 
-/* Top Diagonal Bars */
-.header-bar {
-  position: absolute;
-  width: 1440px;
-  height: 31.44px;
-  top: 0;
-  left: 0;
-  background: none;
-  z-index: 1;
-}
-
-.header-bar::before {
-  content: "";
+/* Diagonal Header */
+.diagonal-header-left {
   position: absolute;
   width: 720px;
   height: 31.44px;
   right: 720px;
-  top: 0;
+  top: 0px;
   background: #1B577E;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.header-bar::after {
-  content: "";
+.diagonal-header-right {
   position: absolute;
   width: 744.67px;
   height: 31.44px;
   left: 695.33px;
-  top: 0;
+  top: 0px;
   background: #EB5617;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-/* Watermark Image */
-.watermark-image {
-  position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: calc(50% - 496.49px / 2);
-  top: calc(50% - 437.58px / 2);
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-/* Logo */
-.logo-image {
+/* Top Left Logo */
+.logo-top-left {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
-/* Rectangle Box */
-.balloon-box {
+/* Watermark */
+.watermark-logo {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px / 2);
+  top: calc(50% - 437.58px / 2);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Game Box */
+.game-box {
   position: absolute;
   width: 778.52px;
   height: 510.86px;
   left: calc(50% - 778.52px / 2);
   top: calc(50% - 510.86px / 2 + 20.37px);
   border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-  box-sizing: border-box;
-  padding: 32px;
-  background: white;
-  z-index: 2;
 }
 
-/* Status Group */
-.status-text {
+/* Info Texts */
+.info-text {
   position: absolute;
-  width: 624.47px;
-  height: 327.28px;
-  left: 452.02px;
-  top: calc(50% - 327.28px / 2 + 24.76px);
-  font-size: 24px;
-  line-height: 40px;
-  color: #333333;
-}
-
-.status-text h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1B577E;
-  margin-bottom: 16px;
-}
-
-.status-text p {
-  margin: 12px 0;
-  font-weight: 500;
-}
-
-/* Stat Values */
-.balloon-number,
-.potential-earnings,
-.total-winnings,
-.number-of-pumps {
-  position: absolute;
+  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
@@ -122,28 +76,28 @@
 .balloon-number {
   width: 270px;
   height: 40px;
-  left: calc(50% - 270px / 2 + 188.49px);
+  left: calc(50% - 270px/2 + 188.49px);
   top: 373.12px;
 }
 
 .potential-earnings {
   width: 303px;
   height: 40px;
-  left: calc(50% - 303px / 2 + 204.99px);
+  left: calc(50% - 303px/2 + 204.99px);
   top: 434.19px;
 }
 
 .number-of-pumps {
   width: 253px;
   height: 40px;
-  left: calc(50% - 253px / 2 + 179.99px);
+  left: calc(50% - 253px/2 + 179.99px);
   top: 495.26px;
 }
 
 .total-winnings {
   width: 263px;
   height: 40px;
-  left: calc(50% - 263px / 2 + 184.99px);
+  left: calc(50% - 263px/2 + 184.99px);
   top: 556.34px;
 }
 
@@ -154,48 +108,45 @@
   height: 250.92px;
   left: 412.02px;
   top: 373.12px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* Button Row */
 .button-row {
   position: absolute;
-  width: 535.95px;
-  height: 42px;
-  left: calc(50% - 535.95px / 2);
+  width: 100%;
   top: 658.4px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 32px;
 }
 
+/* Buttons */
 .pump-button {
   width: 217.98px;
   height: 42px;
   background: #1B5680;
-  border-radius: 11.96px;
   color: #FEE9E7;
   font-weight: 700;
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 12px;
   border: none;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat';
 }
 
 .collect-button {
   width: 217.98px;
   height: 42px;
-  background: transparent;
   border: 1px solid #1B5680;
-  border-radius: 11.96px;
   color: #1B5680;
+  background: transparent;
   font-weight: 700;
   font-size: 18px;
+  border-radius: 12px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
+  align-items: center;
+  font-family: 'Montserrat';
 }

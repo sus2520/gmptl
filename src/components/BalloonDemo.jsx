@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../balloonGame.css'; // Ensure this CSS file exists in src/components/
+import '../balloondemo.css'; // Ensure this CSS file exists in src/components/
 
 const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);

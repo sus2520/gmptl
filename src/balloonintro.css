@@ -1,13 +1,12 @@
-/* Main container */
 .balloon-intro-page {
   position: relative;
   width: 1440px;
   height: 1024px;
-  background: #FFFFFF;
+  background: #ffffff;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Header Bar */
+/* Header bar: blue and orange */
 .header-bar {
   position: absolute;
   width: 100%;
@@ -26,7 +25,7 @@
   background-color: #EB5617;
 }
 
-/* Top Left Logo */
+/* Top-left logo */
 .logo-image {
   position: absolute;
   width: 181.76px;
@@ -37,34 +36,32 @@
   background-size: contain;
 }
 
-/* Watermark center faded */
+/* Center watermark (faded image) */
 .watermark-image {
   position: absolute;
   width: 600.74px;
   height: 609.36px;
   left: 419.63px;
-  top: calc(50% - 609.36px/2 - 12.29px);
-  background: url('../assets/watermark.png') no-repeat center;
+  top: calc(50% - 609.36px / 2 - 12.29px);
+  background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.5;
   z-index: 0;
 }
 
-
-/* Balloon image (overlayed in same position as watermark) */
+/* Balloon image on top of watermark */
 .balloon-image {
   position: absolute;
   width: 600.74px;
   height: 609.36px;
   left: 419.63px;
   top: calc(50% - 609.36px / 2 - 12.29px);
-  background: url('../assets/balloon.png');
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
 }
 
-/* Main White Box */
+/* White content box */
 .intro-box {
   position: absolute;
   width: 778.52px;
@@ -79,7 +76,7 @@
   z-index: 2;
 }
 
-/* Game Title */
+/* Title */
 .intro-title {
   position: absolute;
   top: 40px;
@@ -92,7 +89,7 @@
   white-space: nowrap;
 }
 
-/* Game Rules */
+/* Game description */
 .intro-description {
   position: absolute;
   width: 600.74px;
@@ -106,7 +103,7 @@
   text-align: justify;
 }
 
-/* Start Button */
+/* Practice Button */
 .start-btn {
   position: absolute;
   width: 220px;

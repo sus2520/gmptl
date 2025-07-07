@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../balloonintro.css';
-import logo from '../assets/image19.png'; // Top-left logo
-import balloon from '../assets/balloon.png'; // Top floating balloon
+import logo from '../assets/image19.png';     // Top-left logo and watermark
+import balloon from '../assets/balloon.png'; // Balloon graphic
 
 export default function BalloonIntro() {
   const navigate = useNavigate();
@@ -21,19 +21,19 @@ export default function BalloonIntro() {
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
 
-      {/* Center watermark (faded) */}
+      {/* Center watermark */}
       <div
         className="watermark-image"
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
 
-      {/* Balloon Image at top center */}
+      {/* Balloon overlay on same position */}
       <div
         className="balloon-image"
         style={{ backgroundImage: `url(${balloon})` }}
       ></div>
 
-      {/* Central Box */}
+      {/* Main content box */}
       <div className="intro-box">
         <div className="intro-title">Balloon Analogue Risk Task</div>
         <div className="intro-description">

@@ -7,42 +7,9 @@ const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
   const [earnings, setEarnings] = useState(0);
   const [balloonNumber, setBalloonNumber] = useState(1);
-  const [gameStarted, setGameStarted] = useState(false);
-  const [maxPumps, setMaxPumps] = useState(0);
-
-  const generateRandomMaxPumps = () => Math.floor(Math.random() * 10) + 1;
-
-  const handleStartGame = () => {
-    if (balloonNumber > 30) {
-      alert('Game over! All 30 balloons used.');
-      return;
-    }
-    const randomPumps = Math.floor(Math.random() * 10) + 1; // Random pumps 1-10
-    const newMaxPumps = generateRandomMaxPumps(); // Random pop limit 1-10
-    setGameStarted(true);
-    setMaxPumps(newMaxPumps);
-
-    if (randomPumps > newMaxPumps) {
-      alert(`Balloon popped after ${newMaxPumps} pumps! Moving to next balloon.`);
-      setPumps(0);
-      setEarnings(0);
-      setBalloonNumber(balloonNumber + 1);
-      setMaxPumps(generateRandomMaxPumps());
-    } else {
-      setPumps(randomPumps);
-      setEarnings(randomPumps * 0.5);
-    }
-  };
+  const maxPumps = 10;
 
   const handlePump = () => {
-    if (!gameStarted) {
-      alert('Please start the game first!');
-      return;
-    }
-    if (balloonNumber > 30) {
-      alert('Game over! All 30 balloons used.');
-      return;
-    }
     if (pumps < maxPumps) {
       setPumps(pumps + 1);
       setEarnings(earnings + 0.5);
@@ -51,24 +18,14 @@ const BalloonDemo = () => {
       setPumps(0);
       setEarnings(0);
       setBalloonNumber(balloonNumber + 1);
-      setMaxPumps(generateRandomMaxPumps());
     }
   };
 
   const handleCollect = () => {
-    if (!gameStarted) {
-      alert('Please start the game first!');
-      return;
-    }
-    if (balloonNumber > 30) {
-      alert('Game over! All 30 balloons used.');
-      return;
-    }
     alert(`Collected £${earnings.toFixed(2)}! Moving to next balloon.`);
     setPumps(0);
     setEarnings(0);
     setBalloonNumber(balloonNumber + 1);
-    setMaxPumps(generateRandomMaxPumps());
   };
 
   return (
@@ -94,11 +51,6 @@ const BalloonDemo = () => {
         </button>
         <button className="button-collect" onClick={handleCollect}>
           <span className="button-text">Collect £££</span>
-        </button>
-      </div>
-      <div className="start-button-container" style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-        <button className="button-start" onClick={handleStartGame}>
-          <span className="button-text">Start Game</span>
         </button>
       </div>
     </div>

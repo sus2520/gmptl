@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../balloonintro.css';
-import logo from '../assets/image19.png';       // Using the same logo path as your code
-import balloon from '../assets/balloon.png';    // Using the same balloon path as your code
+import logo from '../assets/image19.png';       // Top-left logo and watermark
+import balloon from '../assets/balloon.png';    // Thumbnail balloon
 
-export default function GameIntro() {
+export default function BalloonIntro() {
   const navigate = useNavigate();
 
   return (
@@ -27,24 +27,24 @@ export default function GameIntro() {
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
 
-      {/* Small thumbnail balloon */}
+      {/* 🎈 Small thumbnail balloon (image 3 in Figma) */}
       <div
         className="balloon-image"
         style={{ backgroundImage: `url(${balloon})` }}
       ></div>
 
-      {/* Main white box */}
+      {/* 📦 Main white box */}
       <div className="intro-box">
-        <div className="intro-title">My Awesome Game</div>
+        <div className="intro-title">Balloon Analogue Risk Task</div>
         <div className="intro-description">
-          In this game, you will face exciting challenges to earn rewards. Each action increases your score, but beware of unexpected twists that could reset your progress. This game tests your strategy and luck. Try a practice round to get started!
+          In this task, you will inflate balloons to earn points. Each pump increases your potential earnings, but if the balloon explodes, you lose the points. Balloons can explode at any moment. This game helps assess risk-taking behavior. Try a practice round first.
         </div>
         <div
           className="start-btn"
-          onClick={() => navigate('/game')}
+          onClick={() => navigate('/balloon')}
           role="button"
           tabIndex={0}
-          onKeyDown={(e) => e.key === 'Enter' && navigate('/game')}
+          onKeyDown={(e) => e.key === 'Enter' && navigate('/balloon')}
         >
           Practice
         </div>

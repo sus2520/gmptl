@@ -74,6 +74,7 @@
 }
 
 /* == BALLOON IMAGE == */
+/* == BALLOON IMAGE == */
 .balloon-image {
   position: absolute;
   width: 207.18px;
@@ -83,6 +84,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('image [Background removed] [Upscaled].png');
+  z-index: 15; /* Ensures balloon image is above the pump button */
 }
 
 .balloon-info-wrapper {

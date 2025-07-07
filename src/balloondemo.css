@@ -8,28 +8,29 @@
   overflow: hidden;
 }
 
-/* Diagonal Header */
+/* === Header Bar (Diagonal Style) === */
 .header-bar {
   position: absolute;
-  width: 1440px;
-  height: 31.44px;
   top: 0;
   left: 0;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: 1440px;
+  height: 31.44px;
+  z-index: 10;
   display: flex;
-  z-index: 3;
 }
 
-.blue-bar {
+.header-bar .blue {
   width: 720px;
-  height: 31.44px;
+  height: 100%;
   background: #1B577E;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.orange-bar {
+.header-bar .orange {
   width: 744.67px;
-  height: 31.44px;
+  height: 100%;
   background: #EB5617;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 

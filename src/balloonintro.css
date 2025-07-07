@@ -21,7 +21,7 @@
   width: 720px;
   height: 100%;
   background: rgba(27, 87, 126, 0.2); /* Light blue */
-  clip-path: polygon(0 0, 100% 0, 99.5% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 0.5% 100%, 0% 100%);
 }
 
 .header-bar .orange {

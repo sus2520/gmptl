@@ -5,18 +5,16 @@
   height: 1024px;
   background: #FFFFFF;
 }
-/* Group 20937 - Top Bar */
+
 .group-20937 {
   position: absolute;
   width: 1440px;
   height: 31.44px;
   left: 0px;
   top: 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips horizontally */
-  z-index: 5; /* Sets a base layer, adjustable if needed */
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
 
-/* Rectangle 746 */
 .rectangle-746 {
   position: absolute;
   width: 720px;
@@ -24,11 +22,9 @@
   right: 720px;
   top: 0px;
   background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips horizontally */
-  z-index: 6; /* Above .group-20937 */
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
 
-/* Rectangle 745 */
 .rectangle-745 {
   position: absolute;
   width: 744.67px;
@@ -36,8 +32,7 @@
   left: 695.33px;
   top: 0px;
   background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips horizontally */
-  z-index: 6; /* Above .group-20937 */
+  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
 /* Image (19) 2 - Background Overlay */
 .image-19-2 {

@@ -13,8 +13,8 @@ function App() {
           <Route path="/" element={<WelcomePage />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/intro" element={<BalloonIntro />} />
-          <Route path="/balloon" element={<BalloonGame />} />
           <Route path="/demo" element={<BalloonDemo />} />
+          <Route path="/balloon" element={<BalloonGame />} />
         </Routes>
       </div>
     </Router>

@@ -47,32 +47,35 @@
   background-size: contain;
 }
 
-/* Watermark faded center */
+
+
+/* Balloon image */
+.balloon-image {
+  position: absolute;
+  width: 106.37px;
+  height: 94.2px;
+  left: 423.5px;
+  top: 140.33px;
+  background-image: url('../assets/balloon.png'); /* Updated path */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 3; /* Above .intro-box (z-index: 2) */
+}
+
+/* Watermark image */
 .watermark-image {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
   left: calc(50% - 496.49px / 2);
   top: calc(50% - 437.58px / 2);
+  background-image: url('../assets/watermark.png'); /* Update with correct path */
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.5;
-  z-index: 0;
+  z-index: 1; /* Above default but below .intro-box */
+  opacity: 0.5; /* Keep faded effect */
 }
-
-/* Balloon image (small floating) */
-.balloon-image {
-  position: absolute;
-  width: 106.37px;
-  height: 94.2px;
-  left: 423.5px;
-  top: 168.44px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  z-index: 1;
-}
-
 /* Main white content box */
 .intro-box {
   position: absolute;

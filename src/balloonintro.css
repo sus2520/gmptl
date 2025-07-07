@@ -111,17 +111,21 @@
   color: #333333;
 }
 
-/* Title styling */
 .intro-title {
+  position: absolute;
+  top: calc(50% - 609.36px/2 - 12.29px); /* Keeps it vertically centered with custom offset */
+  left: 50%;
+  transform: translateX(-50%); /* Horizontally center */
+  
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 34px;
   line-height: 41px;
-  color: #EE581B; /* Orange color matching the image */
+  color: #EE581B;
   white-space: nowrap;
   text-align: center;
-  margin: 0 auto; /* Centers the title horizontally in a flow layout */
+  margin: 0;
 }
 
 /* Start Button */

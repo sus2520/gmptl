@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../balloondemo.css';
 import image19 from '../assets/image19.png';
 import balloonImage from '../assets/image [Background removed] [Upscaled].png';
@@ -7,7 +7,12 @@ const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
   const [earnings, setEarnings] = useState(0);
   const [balloonNumber, setBalloonNumber] = useState(1);
-  const maxPumps = 10;
+  const [maxPumps, setMaxPumps] = useState(Math.floor(Math.random() * 6) + 1); // Random 1-6
+
+  // Reset maxPumps for new balloon
+  useEffect(() => {
+    setMaxPumps(Math.floor(Math.random() * 6) + 1);
+  }, [balloonNumber]);
 
   const handlePump = () => {
     if (pumps < maxPumps) {

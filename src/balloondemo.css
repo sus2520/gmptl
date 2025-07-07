@@ -12,7 +12,7 @@
   position: absolute;
   width: 1440px;
   height: 31.44px;
-  left: 30px; /* Moved 15px + 15px = 30px to the right */
+  left: 45px; /* Moved 30px + 15px = 45px to the right */
   top: 0px;
   transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
@@ -21,12 +21,12 @@
 .group-20937::after {
   content: '';
   position: absolute;
-  width: 2px; /* Exactly 2px thick, as specified */
+  width: 2px; /* Exactly 2px thick */
   height: 40px; /* Covers 31.44px height diagonally */
   background: #000000; /* Black for visibility */
   left: 720px; /* Center of 1440px, adjusted for flip */
   top: -4px; /* Centered vertically */
-  transform: rotate(45deg); /* Backslash (\) orientation, not straight */
+  transform: rotate(45deg); /* Backslash (\) orientation */
   transform-origin: center;
   z-index: 3; /* Above both rectangles */
 }
@@ -54,7 +54,6 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: 2;
 }
-
 /* Group 20909 - Text Container */
 .group-20909 {
   position: absolute;

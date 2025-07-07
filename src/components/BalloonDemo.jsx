@@ -7,7 +7,7 @@ const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
   const [earnings, setEarnings] = useState(0);
   const [balloonNumber, setBalloonNumber] = useState(1);
-  const [totalWinnings, setTotalWinnings] = useState(0);
+  const [totalWinnings, setTotalWinnings] = useState(0); // Added state for total winnings
   const maxPumps = 10;
 
   const handlePump = () => {
@@ -23,7 +23,7 @@ const BalloonDemo = () => {
   };
 
   const handleCollect = () => {
-    setTotalWinnings(totalWinnings + earnings);
+    setTotalWinnings(totalWinnings + earnings); // Update total winnings
     alert(`Collected £${earnings.toFixed(2)}! Moving to next balloon.`);
     setPumps(0);
     setEarnings(0);

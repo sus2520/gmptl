@@ -98,7 +98,8 @@
   width: 100%;
   max-width: 303px;
   text-align: center;
-  padding: 0 45px; /* adds 20px space left & right */
+  position: relative;
+  left: -40px; /* Shift left by 40px */
 }
 
 /* === Text Styles === */

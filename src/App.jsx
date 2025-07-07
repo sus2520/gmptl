@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import Activities from './components/Activities';
-import Balloon from './components/Balloon'; // ✅ Corrected path
+import BalloonIntro from './components/BalloonIntro';
+import BalloonGame from './components/BalloonGame';
+import BalloonDemo from './components/BalloonDemo';
 
 function App() {
   return (
@@ -10,7 +12,9 @@ function App() {
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/activities" element={<Activities />} />
-          <Route path="/balloon" element={<Balloon />} /> {/* ✅ New route */}
+          <Route path="/intro" element={<BalloonIntro />} />
+          <Route path="/balloon" element={<BalloonGame />} />
+          <Route path="/demo" element={<BalloonDemo />} />
         </Routes>
       </div>
     </Router>

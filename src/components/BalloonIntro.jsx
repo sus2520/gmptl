@@ -11,15 +11,15 @@ export default function BalloonIntro() {
     <div className="balloon-page">
       <div className="header-bar"></div>
       <div
-        className="welcome-bg-image"
+        className="watermark-image"
         style={{ backgroundImage: `url(${watermark})` }}
       ></div>
       <div
-        className="welcome-logo"
+        className="logo-image"
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
       <div className="balloon-box">
-        <div className="balloon-text">
+        <div className="status-text intro-text">
           <h2>Balloon Analogue Risk Task</h2>
           <h3>Game Rules</h3>
           <ul>
@@ -30,15 +30,17 @@ export default function BalloonIntro() {
             <li>You can collect the temporary bank at any time to add it to your permanent total and move to the next balloon.</li>
             <li>After all 30 balloons, your total earnings will be displayed.</li>
           </ul>
-          <div
-            className="btn balloon-pump"
-            onClick={() => navigate('/balloon')}
-            aria-label="Start Game"
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && navigate('/balloon')}
-          >
-            Start Game
+          <div className="button-group">
+            <div
+              className="pump-button"
+              onClick={() => navigate('/balloon')}
+              aria-label="Start Game"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && navigate('/balloon')}
+            >
+              Start Game
+            </div>
           </div>
         </div>
       </div>

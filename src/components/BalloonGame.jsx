@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../balloon.css';
 import logo from '../assets/image19.png';
 import watermark from '../assets/watermark.png';
-import balloonImg from '../assets/balloon.png';
+import balloonImg from '../assets/image-upscaled.png';
 
 export default function BalloonGame() {
   const navigate = useNavigate();
@@ -11,11 +11,17 @@ export default function BalloonGame() {
   const [pumps, setPumps] = useState(0);
   const [tempBank, setTempBank] = useState(0);
   const [totalWinnings, setTotalWinnings] = useState(0);
-  const [maxPumps, setMaxPumps] = useState(generateMaxPumps());
-  const [balloonSize, setBalloonSize] = useState(100);
+  const [maxPumps, setMaxPumps] = useState(generateMaxPumps(1));
+  const [balloonSize, setBalloonSize] = useState(207.18); // Match CSS balloon-image width
 
-  function generateMaxPumps() {
-    return Math.floor(Math.random() * 128) + 1; // Random explosion point (1-128)
+  function generateMaxPumps(balloonNumber) {
+    if (balloonNumber <= 10) {
+      return Math.floor(Math.random() * (30 - 10 + 1)) + 10; // 10 to 30
+    } else if (balloonNumber <= 20) {
+      return Math.floor(Math.random() * (50 - 15 + 1)) + 15; // 15 to 50
+    } else {
+      return Math.floor(Math.random() * (30 - 20 + 1)) + 20; // 20 to 30
+    }
   }
 
   const handlePump = () => {
@@ -23,8 +29,8 @@ export default function BalloonGame() {
       // Balloon bursts
       setTempBank(0);
       setPumps(0);
-      setBalloonSize(100);
-      setMaxPumps(generateMaxPumps());
+      setBalloonSize(207.18); // Reset to initial size
+      setMaxPumps(generateMaxPumps(currentBalloon + 1));
       if (currentBalloon < 30) {
         setCurrentBalloon(currentBalloon + 1);
       } else {
@@ -33,7 +39,7 @@ export default function BalloonGame() {
     } else {
       setPumps(pumps + 1);
       setTempBank(tempBank + 0.05);
-      setBalloonSize(balloonSize + 5);
+      setBalloonSize(balloonSize + 10); // Larger increment for visibility
     }
   };
 
@@ -41,8 +47,8 @@ export default function BalloonGame() {
     setTotalWinnings(totalWinnings + tempBank);
     setTempBank(0);
     setPumps(0);
-    setBalloonSize(100);
-    setMaxPumps(generateMaxPumps());
+    setBalloonSize(207.18); // Reset to initial size
+    setMaxPumps(generateMaxPumps(currentBalloon + 1));
     if (currentBalloon < 30) {
       setCurrentBalloon(currentBalloon + 1);
     } else {
@@ -54,39 +60,37 @@ export default function BalloonGame() {
     <div className="balloon-page">
       <div className="header-bar"></div>
       <div
-        className="welcome-bg-image"
+        className="watermark-image"
         style={{ backgroundImage: `url(${watermark})` }}
       ></div>
       <div
-        className="welcome-logo"
+        className="logo-image"
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
       <div className="balloon-box">
         <div
-          className="balloon-graphic"
+          className="balloon-image"
           style={{
             backgroundImage: `url(${balloonImg})`,
             width: `${balloonSize}px`,
-            height: `${balloonSize}px`,
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
+            height: `${balloonSize * (250.92 / 207.18)}px`, // Maintain aspect ratio
           }}
         ></div>
-        <div className="balloon-text balloon-number">
+        <div className="status-text balloon-number">
           Balloon number: {currentBalloon} of 30
         </div>
-        <div className="balloon-text potential">
+        <div className="status-text potential-earnings">
           Potential earnings: ${tempBank.toFixed(2)}
         </div>
-        <div className="balloon-text pumps">
+        <div className="status-text num-pumps">
           Number of pumps: {pumps}
         </div>
-        <div className="balloon-text winnings">
+        <div className="status-text total-winnings">
           Total Winnings: ${totalWinnings.toFixed(2)}
         </div>
-        <div className="balloon-button-group">
+        <div className="button-group">
           <div
-            className="btn balloon-pump"
+            className="pump-button"
             onClick={handlePump}
             aria-label="Pump up the balloon"
             role="button"
@@ -96,7 +100,7 @@ export default function BalloonGame() {
             Pump up the balloon
           </div>
           <div
-            className="btn balloon-collect"
+            className="collect-button"
             onClick={handleCollect}
             aria-label="Collect earnings"
             role="button"

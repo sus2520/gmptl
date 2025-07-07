@@ -41,7 +41,7 @@ export default function BalloonIntro() {
         </div>
         <div
           className="start-btn"
-          onClick={() => navigate('/balloon')}
+          onClick={() => navigate('/demo', { state: { totalWinnings: 0 } })}
           role="button"
           tabIndex={0}
           onKeyDown={(e) => e.key === 'Enter' && navigate('/balloon')}

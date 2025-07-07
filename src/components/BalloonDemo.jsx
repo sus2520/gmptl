@@ -1,5 +1,5 @@
 import React from 'react';
-import './balloondemo.css';
+import '../balloondemo.css';
 
 
 export default function BalloonDemo() {

@@ -18,7 +18,8 @@ html, body {
   overflow: hidden;
 }
 
-/* === Diagonal Header Bar (Group 20937) === */
+/* 3. Diagonal Header Bar (Group 20937) */
+/* 1. Header Bar (Group 20937) */
 .header-bar {
   position: absolute;
   top: 0;
@@ -36,12 +37,9 @@ html, body {
   width: 100%;
   height: 100%;
   background: #1B577E;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
 
-/* Orange overlay with lighter diagonal slash on right */
+/* Orange overlay with diagonal slash */
 .header-bar::after {
   content: '';
   position: absolute;
@@ -50,8 +48,7 @@ html, body {
   right: 0;
   top: 0;
   background: #EB5617;
-  clip-path: polygon(85% 0, 100% 0, 100% 100%, 0% 100%);
-  z-index: 2;
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 

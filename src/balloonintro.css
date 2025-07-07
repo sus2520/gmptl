@@ -57,18 +57,6 @@
   z-index: 0;
 }
 
-/* Balloon image full page background */
-.balloon-background-image {
-  position: absolute;
-  width: 1440px;
-  height: 1024px;
-  top: 0;
-  left: 0;
-  background: url('../assets/balloon.png') no-repeat center center;
-  background-size: contain;
-  z-index: 0;
-}
-
 /* Balloon image (small floating) */
 .balloon-image {
   position: absolute;
@@ -115,7 +103,7 @@
 
 .intro-title {
   position: absolute;
-  top: calc(50% - 450.36px/2 - 12.29px); /* Keeps it vertically centered with custom offset */
+  top: calc(50% - 380.36px/2 - 12.29px); /* Keeps it vertically centered with custom offset */
   left: 50%;
   transform: translateX(-50%); /* Horizontally center */
   

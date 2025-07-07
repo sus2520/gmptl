@@ -36,20 +36,20 @@
 
 .image-19-1 {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 50px;
-  left: 50px;
+  width: 181.76px;
+  height: 160.19px;
+  left: 116.27px;
+  top: 68.99px;
   background-size: cover;
   z-index: 10;
 }
 
 .image-19-2 {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 50px;
-  left: 200px;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px/2);
+  top: calc(50% - 437.58px/2);
   background-size: cover;
   opacity: 0.5;
   z-index: 10;
@@ -57,10 +57,10 @@
 
 .image-4 {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  top: 50px;
-  left: 50px;
+  width: 207.18px;
+  height: 250.92px;
+  left: 412.02px;
+  top: 373.12px;
   background-size: cover;
   z-index: 10;
 }
@@ -89,22 +89,21 @@
   position: absolute;
   width: 303px;
   height: 223.22px;
-  left: 321.47px;
-  top: 0px;
+  left: 773.49px;
+  top: 373.12px;
 }
 
 .group-20909 .balloon-number {
   position: absolute;
   width: 270px;
   height: 40px;
-  left: 0px;
-  top: 0px;
+  left: calc(50% - 270px/2 + 188.49px);
+  top: 373.12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 24px;
   line-height: 40px;
-  letter-spacing: 0%;
   text-align: justify;
   color: #333333;
 }
@@ -113,14 +112,13 @@
   position: absolute;
   width: 303px;
   height: 40px;
-  left: 16.5px;
-  top: 61.07px;
+  left: calc(50% - 303px/2 + 204.99px);
+  top: 434.19px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 24px;
   line-height: 40px;
-  letter-spacing: 0%;
   text-align: justify;
   color: #333333;
 }
@@ -129,14 +127,13 @@
   position: absolute;
   width: 253px;
   height: 40px;
-  left: 11.5px;
-  top: 122.14px;
+  left: calc(50% - 253px/2 + 179.99px);
+  top: 495.26px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 24px;
   line-height: 40px;
-  letter-spacing: 0%;
   text-align: justify;
   color: #333333;
 }
@@ -145,14 +142,13 @@
   position: absolute;
   width: 263px;
   height: 40px;
-  left: 6.5px;
-  top: 183.22px;
+  left: calc(50% - 263px/2 + 184.99px);
+  top: 556.34px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 24px;
   line-height: 40px;
-  letter-spacing: 0%;
   text-align: justify;
   color: #333333;
 }
@@ -175,8 +171,8 @@
   position: absolute;
   width: 217.98px;
   height: 42px;
-  left: 0px;
-  top: 0px;
+  left: calc(50% - 217.98px/2 - 158.99px);
+  top: 658.4px;
   background: #1B5680;
   border-radius: 11.9606px;
   border: none;
@@ -193,8 +189,8 @@
   position: absolute;
   width: 217.98px;
   height: 42px;
-  left: 317.97px;
-  top: 0px;
+  left: calc(50% - 217.98px/2 + 158.99px);
+  top: 658.4px;
   border: 1px solid #1B5680;
   border-radius: 11.9606px;
   background: transparent;

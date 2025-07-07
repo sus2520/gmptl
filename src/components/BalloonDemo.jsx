@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../balloondemo.css';
+import logoImage from '../assets/image19.png';
+import balloonImage from '../assets/balloon.png';
 
 const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
@@ -10,7 +12,7 @@ const BalloonDemo = () => {
   const handlePump = () => {
     if (pumps < maxPumps) {
       setPumps(pumps + 1);
-      setEarnings(earnings + 0.5); // £0.50 per pump
+      setEarnings(earnings + 0.5);
     } else {
       alert('Balloon popped! Moving to next balloon.');
       setPumps(0);
@@ -32,11 +34,11 @@ const BalloonDemo = () => {
         <div className="rectangle-746"></div>
         <div className="rectangle-745"></div>
       </div>
-      <div className="image-19-1" style={{ backgroundImage: `url(/assets/image19.png)` }}></div>
-      <div className="image-19-2" style={{ backgroundImage: `url(/assets/image19.png)` }}></div>
+      <div className="image-19-1" style={{ backgroundImage: `url(${logoImage})` }}></div>
+      <div className="image-19-2" style={{ backgroundImage: `url(${logoImage})` }}></div>
       <div className="rectangle-744"></div>
       <div className="group-20911">
-        <div className="image-4" style={{ backgroundImage: `url(/assets/balloon.png)` }}></div>
+        <div className="image-4" style={{ backgroundImage: `url(${balloonImage})` }}></div>
         <div className="group-20909">
           <div className="balloon-number">Balloon number: {balloonNumber} of 30</div>
           <div className="potential-earnings">Potential earnings: £{earnings.toFixed(2)}</div>

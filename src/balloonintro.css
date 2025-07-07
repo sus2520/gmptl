@@ -12,9 +12,8 @@
   position: absolute;
   width: 1440px;
   height: 31.44px;
-  top: 0;
   left: 0;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  top: 0;
   display: flex;
   z-index: 3;
 }
@@ -38,8 +37,9 @@
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background-repeat: no-repeat;
+  background: url('../assets/logo.png') no-repeat;
   background-size: contain;
+  z-index: 2;
 }
 
 /* Watermark faded center */
@@ -49,13 +49,13 @@
   height: 437.58px;
   left: calc(50% - 496.49px / 2);
   top: calc(50% - 437.58px / 2);
-  background-repeat: no-repeat;
+  background: url('../assets/watermark.png') no-repeat;
   background-size: contain;
   opacity: 0.5;
   z-index: 0;
 }
 
-/* Balloon image full page background */
+/* Balloon background image */
 .balloon-background-image {
   position: absolute;
   width: 1440px;
@@ -67,26 +67,26 @@
   z-index: 0;
 }
 
-/* Balloon image (small floating) */
+/* Small balloon image */
 .balloon-image {
   position: absolute;
-  width: 106.37px;
-  height: 94.2px;
-  left: 423.5px;
-  top: 168.44px;
-  background-repeat: no-repeat;
+  width: 207.18px;
+  height: 250.92px;
+  left: 412.02px;
+  top: 373.12px;
+  background: url('../assets/balloon-small.png') no-repeat;
   background-size: contain;
-  background-position: center;
   z-index: 1;
 }
 
 /* Main white content box */
 .intro-box {
+  box-sizing: border-box;
   position: absolute;
   width: 778.52px;
-  height: 810.81px;
+  height: 510.86px;
   left: calc(50% - 778.52px / 2);
-  top: calc(50% - 810.81px / 2);
+  top: calc(50% - 510.86px / 2 + 20.37px);
   border: 0.5px solid #2C51A1;
   box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
@@ -94,12 +94,27 @@
   z-index: 2;
 }
 
+/* Title styling */
+.intro-title {
+  position: absolute;
+  width: 600px;
+  left: calc(50% - 600px / 2);
+  top: 250px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #EE581B;
+  text-align: center;
+  z-index: 3;
+}
 
-/* Description */
+/* Description text */
 .intro-description {
   position: absolute;
   width: 600.74px;
-  height: 360px;
+  height: 120px;
   left: calc(50% - 600.74px / 2);
   top: 319.42px;
   font-family: 'Montserrat';
@@ -109,39 +124,124 @@
   line-height: 40px;
   text-align: justify;
   color: #333333;
+  z-index: 3;
 }
 
-/* Title styling */
-.intro-title {
-  font-family: 'Montserrat', sans-serif;
+/* Balloon number */
+.balloon-number {
+  position: absolute;
+  width: 270px;
+  height: 40px;
+  left: calc(50% - 270px / 2 + 188.49px);
+  top: 373.12px;
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 41px;
-  color: #EE581B; /* Orange color matching the image */
-  white-space: nowrap;
-  text-align: center;
-  margin: 0 auto; /* Centers the title horizontally in a flow layout */
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+  z-index: 3;
 }
 
-/* Button styling */
-.start-btn {
-  display: inline-flex;
+/* Potential earnings */
+.potential-earnings {
+  position: absolute;
+  width: 303px;
+  height: 40px;
+  left: calc(50% - 303px / 2 + 204.99px);
+  top: 434.19px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+  z-index: 3;
+}
+
+/* Number of pumps */
+.number-pumps {
+  position: absolute;
+  width: 253px;
+  height: 40px;
+  left: calc(50% - 253px / 2 + 179.99px);
+  top: 495.26px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+  z-index: 3;
+}
+
+/* Total winnings */
+.total-winnings {
+  position: absolute;
+  width: 263px;
+  height: 40px;
+  left: calc(50% - 263px / 2 + 184.99px);
+  top: 556.34px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+  z-index: 3;
+}
+
+/* Pump button */
+.pump-btn {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 12px;
   gap: 8px;
-  background: #1B5680; /* Blue color matching the image */
-  border-radius: 11.96px;
-  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  width: 217.98px;
+  height: 42px;
+  left: calc(50% - 217.98px / 2 - 158.99px);
+  top: 658.4px;
+  background: #1B5680;
+  border-radius: 11.9606px;
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
-  color: #FEE9E7; /* Light color for text */
+  color: #FFEEEB;
   cursor: pointer;
-  border: none;
-  margin: 20px auto; /* Adds some space and centers the button */
-  width: 217.98px; /* Matches the button width from the image */
+  z-index: 3;
+}
+
+/* Collect button */
+.collect-btn {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  position: absolute;
+  width: 217.98px;
   height: 42px;
+  left: calc(50% - 217.98px / 2 + 158.99px);
+  top: 658.4px;
+  border: 1px solid #1B5680;
+  border-radius: 11.9606px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #1B5680;
+  cursor: pointer;
+  z-index: 3;
 }

@@ -7,9 +7,20 @@ const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);
   const [earnings, setEarnings] = useState(0);
   const [balloonNumber, setBalloonNumber] = useState(1);
-  const maxPumps = 10;
+  const [gameStarted, setGameStarted] = useState(false);
+  const [maxPumps, setMaxPumps] = useState(0);
+
+  const generateRandomMaxPumps = () => Math.floor(Math.random() * 10) + 1;
+
+  const handleStartGame = () => {
+    setGameStarted(true);
+    setPumps(5);
+    setEarnings(2.5);
+    setMaxPumps(generateRandomMaxPumps());
+  };
 
   const handlePump = () => {
+    if (!gameStarted) return;
     if (pumps < maxPumps) {
       setPumps(pumps + 1);
       setEarnings(earnings + 0.5);
@@ -18,14 +29,17 @@ const BalloonDemo = () => {
       setPumps(0);
       setEarnings(0);
       setBalloonNumber(balloonNumber + 1);
+      setMaxPumps(generateRandomMaxPumps());
     }
   };
 
   const handleCollect = () => {
+    if (!gameStarted) return;
     alert(`Collected £${earnings.toFixed(2)}! Moving to next balloon.`);
     setPumps(0);
     setEarnings(0);
     setBalloonNumber(balloonNumber + 1);
+    setMaxPumps(generateRandomMaxPumps());
   };
 
   return (
@@ -46,12 +60,20 @@ const BalloonDemo = () => {
         </div>
       </div>
       <div className="group-20934">
-        <button className="button-danger" onClick={handlePump}>
-          <span className="button-text">Pump the balloon</span>
-        </button>
-        <button className="button-collect" onClick={handleCollect}>
-          <span className="button-text">Collect £££</span>
-        </button>
+        {!gameStarted ? (
+          <button className="button-start" onClick={handleStartGame}>
+            <span className="button-text">Start Game</span>
+          </button>
+        ) : (
+          <>
+            <button className="button-danger" onClick={handlePump}>
+              <span className="button-text">Pump the balloon</span>
+            </button>
+            <button className="button-collect" onClick={handleCollect}>
+              <span className="button-text">Collect £££</span>
+            </button>
+          </>
+        )}
       </div>
     </div>
   );

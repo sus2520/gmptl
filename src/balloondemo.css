@@ -49,18 +49,16 @@
   z-index: 10;
 }
 
+/* Image 4 - Balloon (corrected styling) */
 .image-4 {
   position: absolute;
-  width: 150px; /* Adjusted to match Figma balloon size */
-  height: 200px; /* Adjusted to match Figma balloon size */
-  left: 300px; /* Positioned right of logo */
-  top: 150px; /* Centered vertically with logo */
-  background-size: contain; /* Ensure balloon scales properly */
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 10;
+  width: 207.18px; /* Adjusted to match your provided value */
+  height: 250.92px; /* Adjusted to match your provided value */
+  top: 373.12px;
+  left: 412.02px;
+  background: url('../assets/balloon.png'); /* Updated to correct image path */
+  opacity: 1;
 }
-
 .rectangle-744 {
   box-sizing: border-box;
   position: absolute;

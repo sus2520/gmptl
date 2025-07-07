@@ -12,7 +12,7 @@
   position: absolute;
   width: 1440px;
   height: 31.44px;
-  left: 0px;
+  left: 15px; /* Moved 15px to the right */
   top: 0px;
   transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }

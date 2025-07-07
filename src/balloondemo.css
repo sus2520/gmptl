@@ -6,33 +6,47 @@
   background: #FFFFFF;
 }
 
+/* Group 20937 - Top Bar */
 .group-20937 {
   position: absolute;
   width: 1440px;
   height: 31.44px;
   left: 0px;
   top: 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
 }
 
+/* Rectangle 746 - Blue Section */
 .rectangle-746 {
   position: absolute;
-  width: 720px;
+  width: 720px; /* Half of 1440px */
   height: 31.44px;
-  right: 720px;
+  left: 0px; /* Align to the left */
   top: 0px;
   background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
+  border-right: 2px solid #FFD700; /* Thicker gold divider for visibility */
 }
 
+/* Rectangle 745 - Orange Section */
 .rectangle-745 {
   position: absolute;
-  width: 744.67px;
+  width: 720px; /* Adjusted to fill the remaining space */
   height: 31.44px;
-  left: 695.33px;
+  left: 720px; /* Start after .rectangle-746 */
   top: 0px;
   background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal flip */
+}
+
+/* Rest of the CSS remains unchanged */
+.image-19-2 {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px/2);
+  top: calc(50% - 437.58px/2 + 0px);
+  background: url('../assets/image19.png');
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Image (19) 2 - Background Overlay */

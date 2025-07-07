@@ -7,7 +7,7 @@ import image1 from '../assets/image1.png';
 import image2 from '../assets/image2.png';
 import image3 from '../assets/image3.png';
 import image4 from '../assets/image4.png';
-import image5 from ' ../assets/image5.png';
+import image5 from '../assets/image5.png';
 import image6 from '../assets/image6.png';
 import image7 from '../assets/image7.png';
 import image8 from '../assets/image8.png';
@@ -33,7 +33,7 @@ export default function Activities() {
     duration: i % 2 === 0 ? '7 minutos' : '5 minutos',
     status: i < 2 ? 'OK' : 'Pendiente',
     statusColor: i < 2 ? '#00B050' : '#FF0000',
-    link: i === 0 ? '/balloon' : `/game/game${i + 1}`, // Set /balloon for Balloon task
+    link: i === 0 ? '/intro' : `/game/game${i + 1}`, // Link to intro for Balloon task
     img: images[i],
   }));
 

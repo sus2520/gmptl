@@ -70,7 +70,7 @@ export default function Activities() {
         <div className="activities-title">Actividades</div>
 
       <div className="activities-row-header">
-        <div className="activity-icon-placeholder"></div> {/* placeholder for icon */}
+        <div className="activity-icon-placeholder"></div>
         <div className="activity-name-header">Actividad</div>
         <div className="activity-duration-header">Duración</div>
         <div className="activity-status-header">Avance</div>

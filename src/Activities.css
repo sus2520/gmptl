@@ -149,10 +149,16 @@ html, body {
   margin-right: 40px;
 }
 
+/* Header columns */
 .activity-duration-header,
 .activity-status-header {
-  flex: 3;
-  text-align: center;
+  margin-left: 10px;
+}
+
+/* Content rows */
+.activity-duration,
+.activity-status {
+  margin-left: 10px;
 }
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './balloondemo.css'; // Ensure this path matches your project structure
+import '../balloondemo.css'; // Ensure this path matches your project structure
 import image19 from '../assets/image19.png'; // Logo
 import balloonImage from '../assets/balloon.png'; // Balloon
 

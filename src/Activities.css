@@ -143,20 +143,16 @@ html, body {
   margin-right: 15px;
 }
 
-.activity-name,
 .activity-name-header {
   flex: 2;
   text-align: left;
   margin-right: 40px;
 }
 
-.activity-duration,
 .activity-duration-header,
-.activity-status,
 .activity-status-header {
-  flex: 1;
+  flex: 3;
   text-align: center;
-  margin: 0 10px; /* ✅ Add space between duration and status columns */
 }
 
 

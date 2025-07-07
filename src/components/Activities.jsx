@@ -69,15 +69,12 @@ export default function Activities() {
       <div className="activities-container">
         <div className="activities-title">Actividades</div>
 
-      <div className="activity-row clickable-row" onClick={() => navigate(act.link)}>
-        <img src={act.img} alt={`${act.title} icon`} className="activity-icon" />
-        <div className="activity-name">{act.title}</div>
-        <div className="activity-duration">{act.duration}</div>
-        <div className="activity-status" style={{ color: act.statusColor }}>
-          {act.status}
-        </div>
+      <div className="activities-row-header">
+        <div className="activity-icon-placeholder"></div> {/* placeholder for icon */}
+        <div className="activity-name-header">Actividad</div>
+        <div className="activity-duration-header">Duración</div>
+        <div className="activity-status-header">Avance</div>
       </div>
-
 
 
 

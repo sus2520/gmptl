@@ -15,10 +15,7 @@ export default function BalloonDemo() {
   return (
     <div className="balloondemo-page">
       {/* Diagonal header with orange and blue bars */}
-      <div className="header-bar">
-        <div className="blue-bar"></div>
-        <div className="orange-bar"></div>
-      </div>
+      <div className="header-bar"></div>
 
       {/* Watermark background image */}
       <div
@@ -32,14 +29,15 @@ export default function BalloonDemo() {
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
 
-      {/* White box container */}
-      <div className="balloon-box">
-        <div className="balloon-number">Balloon number: 1 of 30</div>
-        <div className="potential-earnings">Potential earnings: £0.00</div>
-        <div className="number-of-pumps">Number of pumps: 0</div>
-        <div className="total-winnings">
-          Total Winnings: £{totalWinnings.toFixed(2)}
-        </div>
+      <div className="balloon-info-wrapper">
+        <div className="balloon-image" style={{ backgroundImage: `url(${balloonImg})` }} />
+        <div className="balloon-number">Balloon #: 5</div>
+        <div className="potential-earnings">Potential: $0.25</div>
+        <div className="number-of-pumps">Pumps: 3</div>
+        <div className="total-winnings">Total: $1.50</div>
+      </div>
+
+
 
         {/* Balloon image thumbnail */}
         <div

@@ -4,7 +4,7 @@
   width: 1440px;
   height: 1024px;
   background: #FFFFFF;
-  overflow: hidden;
+  overflow: visible; /* Changed from hidden to prevent clipping */
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -14,7 +14,7 @@
   width: 1440px;
   height: 31.44px;
   top: 0px;
-  left:45px
+  left: 45px;
 }
 
 /* Blue section with subtle diagonal right edge */
@@ -26,8 +26,6 @@
   top: 0px;
   background: #1B577E;
   z-index: 1;
-
-  /* Diagonal right edge */
   clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
 }
 
@@ -40,11 +38,8 @@
   top: 0px;
   background: #EB5617;
   z-index: 2;
-
-  /* Diagonal left edge */
   clip-path: polygon(2% 0, 100% 0, 100% 100%, 0% 100%);
 }
-
 
 /* === Logo Image === */
 .image-19-1 {
@@ -72,15 +67,27 @@
 /* === Balloon Image === */
 .image-4 {
   position: absolute;
-  width: 155.39px;   /* 75% of 207.18px */
-  height: 188.19px;  /* 75% of 250.92px */
+  width: 155.39px; /* 75% of 207.18px */
+  height: 188.19px; /* 75% of 250.92px */
   left: 452.02px;
-  top: 373.12px;
-  background-size: cover;
+  top: 303.12px;
+  background-size: contain; /* Changed to contain to ensure full visibility */
   background-repeat: no-repeat;
-  z-index: 1;
+  background-position: center;
+  transform-origin: center; /* Ensure scaling from center */
+  z-index: 10; /* Increased to ensure visibility over other elements */
 }
 
+/* Popped Balloon Image */
+.image-4.popped {
+  background-size: contain; /* Ensure popped image fits fully */
+  width: 155.39px; /* Match normal balloon size */
+  height: 188.19px; /* Match normal balloon size */
+  transform: scale(1); /* Reset scale for popped image */
+  z-index: 11; /* Slightly higher to ensure visibility */
+}
+
+/* === Popped Message === */
 .popped-message {
   position: absolute;
   top: 50%;

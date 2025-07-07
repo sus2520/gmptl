@@ -29,20 +29,19 @@ html, body {
   overflow: hidden;
 }
 
-/* Subtle diagonal for blue */
+/* Blue bar with RIGHT-TO-LEFT subtle diagonal */
 .blue-bar {
   flex: 1;
   background: #1B577E;
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
-/* Subtle diagonal for orange overlay */
+/* Orange bar with LEFT-TO-RIGHT subtle diagonal */
 .orange-bar {
   width: 750px;
   background: #EB5617;
   clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
 }
-
 
 
 

@@ -1,31 +1,37 @@
+/* Main container */
 .balloon-intro-page {
   position: relative;
   width: 1440px;
   height: 1024px;
-  background: #ffffff;
+  background: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Header bar: blue and orange */
+/* Diagonal Header */
 .header-bar {
   position: absolute;
-  width: 100%;
-  height: 31px;
+  width: 1440px;
+  height: 31.44px;
   top: 0;
+  left: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
   display: flex;
+  z-index: 3;
 }
 
 .blue-bar {
-  width: 50%;
-  background-color: #1B577E;
+  width: 720px;
+  height: 31.44px;
+  background: #1B577E;
 }
 
 .orange-bar {
-  width: 50%;
-  background-color: #EB5617;
+  width: 744.67px;
+  height: 31.44px;
+  background: #EB5617;
 }
 
-/* Top-left logo */
+/* Logo top-left */
 .logo-image {
   position: absolute;
   width: 181.76px;
@@ -36,43 +42,54 @@
   background-size: contain;
 }
 
-/* Center watermark (faded image) */
+/* Watermark faded center */
 .watermark-image {
   position: absolute;
-  width: 600.74px;
-  height: 609.36px;
-  left: 419.63px;
-  top: calc(50% - 609.36px / 2 - 12.29px);
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px / 2);
+  top: calc(50% - 437.58px / 2);
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.5;
   z-index: 0;
 }
 
+/* Balloon image full size background image */
+.balloon-background-image {
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Balloon image (small floating) */
 .balloon-image {
   position: absolute;
-  width: 600.74px;
-  height: 609.36px;
-  left: 419.63px;
-  top: calc(50% - 609.36px / 2 - 12.29px);
-  background: url('../assets/balloon.png');
+  width: 106.37px;
+  height: 94.2px;
+  left: 423.5px;
+  top: 168.44px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   z-index: 1;
 }
 
-
-/* White content box */
+/* Main white content box */
 .intro-box {
   position: absolute;
   width: 778.52px;
-  height: 510.86px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) translateY(20.37px);
+  height: 810.81px;
+  left: calc(50% - 778.52px / 2);
+  top: calc(50% - 810.81px / 2);
   border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   background: #fff;
   z-index: 2;
@@ -81,44 +98,56 @@
 /* Title */
 .intro-title {
   position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 34px;
+  width: 244px;
+  height: 41px;
+  left: calc(50% - 244px / 2);
+  top: 195.03px;
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
   color: #EE581B;
-  text-align: center;
   white-space: nowrap;
+  text-align: center;
 }
 
-/* Game description */
+/* Description */
 .intro-description {
   position: absolute;
   width: 600.74px;
-  left: 50%;
-  top: 120px;
-  transform: translateX(-50%);
-  font-size: 24px;
+  height: 360px;
+  left: calc(50% - 600.74px / 2);
+  top: 319.42px;
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 500;
-  color: #333;
+  font-size: 24px;
   line-height: 40px;
   text-align: justify;
+  color: #333333;
 }
 
-/* Practice Button */
+/* Start Button */
 .start-btn {
   position: absolute;
-  width: 220px;
+  width: 217.98px;
   height: 42px;
-  left: calc(50% - 220px / 2);
-  top: 420px;
-  background-color: #1B5680;
-  color: #FEE9E7;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  left: calc(50% - 217.98px / 2);
+  top: 762.39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  background: #1B5680;
+  border-radius: 11.9606px;
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 700;
-  border-radius: 12px;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FEE9E7;
   cursor: pointer;
-  text-align: center;
-  line-height: 42px;
+  z-index: 3;
 }

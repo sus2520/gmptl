@@ -94,22 +94,6 @@
   z-index: 2;
 }
 
-/* Title */
-.intro-title {
-  position: absolute;
-  width: 244px;
-  height: 41px;
-  left: calc(50% - 244px / 2 + 100px);
-  top: 195.03px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 41px;
-  color: #EE581B;
-  white-space: nowrap;
-  text-align: center;
-}
 
 /* Description */
 .intro-description {
@@ -127,26 +111,37 @@
   color: #333333;
 }
 
-/* Start Button */
+/* Title styling */
+.intro-title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #EE581B; /* Orange color matching the image */
+  white-space: nowrap;
+  text-align: center;
+  margin: 0 auto; /* Centers the title horizontally in a flow layout */
+}
+
+/* Button styling */
 .start-btn {
-  position: absolute;
-  width: 217.98px;
-  height: 42px;
-  left: calc(50% - 217.98px / 2 - 25px);
-  top: 880px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 12px;
   gap: 8px;
-  background: #1B5680;
-  border-radius: 11.9606px;
-  font-family: 'Montserrat';
+  background: #1B5680; /* Blue color matching the image */
+  border-radius: 11.96px;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
-  color: #FEE9E7;
+  color: #FEE9E7; /* Light color for text */
   cursor: pointer;
-  z-index: 3;
+  border: none;
+  margin: 20px auto; /* Adds some space and centers the button */
+  width: 217.98px; /* Matches the button width from the image */
+  height: 42px;
 }

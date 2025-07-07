@@ -100,7 +100,21 @@ html, body {
   color: #EE581B;
   text-align: center;
   margin-bottom: 32px;
+  position: relative; /* Required for the ::after to position correctly */
 }
+
+.activities-title::after {
+  content: '';
+  position: absolute;
+  width: 600.74px;
+  height: 0px;
+  left: 50%;
+  top: 100%; /* Places it right below the title */
+  margin-top: 8px;
+  transform: translateX(-50%);
+  border: 1px solid #1B5680;
+}
+
 
 /* === Row Header === */
 .activities-row-header {
@@ -117,6 +131,12 @@ html, body {
   flex: 1;
   text-align: center;
 }
+
+.activities-duration,
+.activities-status {
+  margin-left: 5px;
+}
+
 
 /* === Divider Line === */
 .activities-divider {

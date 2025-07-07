@@ -19,14 +19,14 @@ export default function Activities() {
   const navigate = useNavigate();
 
   const titles = [
-    'Balloon Analogue Risk Task (BART)',
+    'Balloon Analogue Risk Task ',
     'Digit Symbol Substitution Test',
     'Go/No-Go Task',
-    'Iowa Gambling Task (IGT)',
+    'Iowa Gambling Task',
     'Mental Rotation',
     'N-Back Task',
     'Negative Feedback Arithmetic Task',
-    'Wisconsin Card Sorting Test (WCST)',
+    'Wisconsin Card Sorting Test',
 
   ];
 
@@ -69,11 +69,12 @@ export default function Activities() {
       <div className="activities-container">
         <div className="activities-title">Actividades</div>
 
-        <div className="activities-row-header">
-          <div className="activity-label">Actividad</div>
-          <div className="activity-duration">Duración</div>
-          <div className="activity-status">Avance</div>
-        </div>
+      <div className="activities-row-header">
+        <div className="activity-label">Actividad</div>
+        <div className="activity-duration-header">Duración</div>
+        <div className="activity-status-header">Avance</div>
+      </div>
+
 
         <div className="activities-divider"></div>
 

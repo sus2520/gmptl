@@ -34,17 +34,7 @@
   background-size: contain;
 }
 
-.watermark-image {
-  position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.5;
-}
+
 
 .intro-box {
   position: absolute;
@@ -83,29 +73,43 @@
   text-align: justify;
 }
 
+/* Watermark (image19.png faded) */
+.watermark-image {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px / 2);
+  top: calc(50% - 437.58px / 2);
+  background: url('../assets/image19.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+/* Balloon image (balloon.png at top like image 3) */
 .balloon-image {
   position: absolute;
-  width: 207.18px;
-  height: 250.92px;
-  left: 412.02px;
-  top: 373.12px;
+  width: 106.37px;
+  height: 94.2px;
+  left: 423.5px;
+  top: 168.44px;
+  background: url('../assets/balloon.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .start-button {
   position: absolute;
-  width: 217.98px;
-  height: 42px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 762.39px;
-  background: #1B5680;
-  border-radius: 12px;
-  color: #FEE9E7;
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 42px;
-  cursor: pointer;
+  width: 600.74px;
+  height: 609.36px;
+  left: 419.63px;
+  top: calc(50% - 609.36px / 2 - 12.29px);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  padding-bottom: 40px; /* spacing inside the box */
+  box-sizing: border-box;
 }
+

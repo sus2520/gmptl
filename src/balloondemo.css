@@ -1,22 +1,228 @@
+/* Desktop - 5 */
 .desktop {
   position: relative;
   width: 1440px;
   height: 1024px;
   background: #FFFFFF;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.top-bar {
+/* Image (19) 2 - Background Overlay */
+.image-19-2 {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px/2);
+  top: calc(50% - 437.58px/2 + 0px);
+  background: url('../assets/image19.png');
+  opacity: 0.5;
+}
+
+/* Image (19) 1 - Logo */
+.image-19-1 {
+  position: absolute;
+  width: 181.76px;
+  height: 160.19px;
+  left: 116.27px;
+  top: 68.99px;
+  background: url('../assets/image19.png');
+}
+
+/* Rectangle 744 - Main Content Box */
+.rectangle-744 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 778.52px;
+  height: 510.86px;
+  left: calc(50% - 778.52px/2);
+  top: calc(50% - 510.86px/2 + 20.37px);
+  border: 0.5px solid #2C51A1;
+  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+/* Group 20911 - Text Container */
+.group-20911 {
+  position: absolute;
+  width: 624.47px;
+  height: 327.28px;
+  left: 452.02px;
+  top: calc(50% - 327.28px/2 + 24.76px);
+}
+
+/* Group 20910 */
+.group-20910 {
+  position: absolute;
+  width: 303px;
+  height: 223.22px;
+  left: 773.49px;
+  top: 373.12px;
+}
+
+/* Group 20909 - Text Elements */
+.group-20909 {
+  position: absolute;
+  width: 303px;
+  height: 223.22px;
+  left: 773.49px;
+  top: 373.12px;
+}
+
+/* Balloon Number */
+.balloon-number {
+  position: absolute;
+  width: 270px;
+  height: 40px;
+  left: calc(50% - 270px/2 + 188.49px);
+  top: 373.12px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+}
+
+/* Potential Earnings */
+.potential-earnings {
+  position: absolute;
+  width: 303px;
+  height: 40px;
+  left: calc(50% - 303px/2 + 204.99px);
+  top: 434.19px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+}
+
+/* Number of Pumps */
+.number-pumps {
+  position: absolute;
+  width: 253px;
+  height: 40px;
+  left: calc(50% - 253px/2 + 179.99px);
+  top: 495.26px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+}
+
+/* Total Winnings */
+.total-winnings {
+  position: absolute;
+  width: 263px;
+  height: 40px;
+  left: calc(50% - 263px/2 + 184.99px);
+  top: 556.34px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+}
+
+/* Group 20934 - Button Container */
+.group-20934 {
+  position: absolute;
+  width: 535.95px;
+  height: 42px;
+  left: calc(50% - 535.95px/2 + 0px);
+  top: 658.4px;
+}
+
+/* Button Danger - Pump */
+.button-danger {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  position: absolute;
+  width: 217.98px;
+  height: 42px;
+  left: calc(50% - 217.98px/2 - 158.99px);
+  top: 658.4px;
+  background: #1B5680;
+  border-radius: 11.9606px;
+}
+
+.button-danger .button-text {
+  width: 188px;
+  height: 18px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FEE9E7;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Button Collect */
+.button-collect {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  position: absolute;
+  width: 217.98px;
+  height: 42px;
+  left: calc(50% - 217.98px/2 + 158.99px);
+  top: 658.4px;
+  border: 1px solid #1B5680;
+  border-radius: 11.9606px;
+}
+
+.button-collect .button-text {
+  width: 107px;
+  height: 18px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #1B5680;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Image 4 - Balloon */
+.image-4 {
+  position: absolute;
+  width: 207.18px;
+  height: 250.92px;
+  left: 412.02px;
+  top: 373.12px;
+  background: url('../assets/balloon.png'); /* Updated to correct image path */
+}
+
+/* Group 20937 - Top Bar */
+.group-20937 {
   position: absolute;
   width: 1440px;
   height: 31.44px;
   left: 0px;
   top: 0px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
+/* Rectangle 746 */
 .rectangle-746 {
   position: absolute;
   width: 720px;
@@ -27,6 +233,7 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
+/* Rectangle 745 */
 .rectangle-745 {
   position: absolute;
   width: 744.67px;
@@ -35,116 +242,4 @@
   top: 0px;
   background: #EB5617;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-.image-19-1 {
-  position: absolute;
-  width: 200px; /* Adjusted to fit logo from image */
-  height: 200px; /* Adjusted to fit logo from image */
-  left: 50px;
-  top: 50px;
-  background-size: contain; /* Ensure logo scales properly */
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 10;
-}
-
-/* Image 4 - Balloon (corrected styling) */
-.image-4 {
-  position: absolute;
-  width: 207.18px; /* Adjusted to match your provided value */
-  height: 250.92px; /* Adjusted to match your provided value */
-  top: 373.12px;
-  left: 412.02px;
-  background: url('../assets/balloon.png'); /* Updated to correct image path */
-  opacity: 1;
-}
-.rectangle-744 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 400px; /* Adjusted to fit content */
-  height: 400px; /* Adjusted to fit content */
-  left: calc(50% - 200px); /* Centered */
-  top: calc(50% - 200px); /* Centered */
-  border: 1px solid #2C51A1;
-  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: #FFFFFF;
-}
-
-.group-20909 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.group-20909 .balloon-number {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #333333;
-  margin-bottom: 10px;
-}
-
-.group-20909 .potential-earnings {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #333333;
-  margin-bottom: 10px;
-}
-
-.group-20909 .number-pumps {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #333333;
-  margin-bottom: 10px;
-}
-
-.group-20909 .total-winnings {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #333333;
-  margin-bottom: 20px;
-}
-
-.group-20934 {
-  display: flex;
-  gap: 10px;
-}
-
-.button-danger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-  background: #1B577E;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #FEE9E7;
-}
-
-.button-collect {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-  background: transparent;
-  border: 1px solid #1B577E;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #1B577E;
 }

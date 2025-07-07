@@ -99,7 +99,7 @@
   position: absolute;
   width: 244px;
   height: 41px;
-  left: calc(50% - 244px / 2 + 80px);
+  left: calc(50% - 244px / 2 + 100px);
   top: 195.03px;
   font-family: 'Montserrat';
   font-style: normal;
@@ -132,7 +132,7 @@
   position: absolute;
   width: 217.98px;
   height: 42px;
-  left: calc(50% - 217.98px / 2);
+  left: calc(50% - 217.98px / 2 - 25px);
   top: 880px;
   display: flex;
   justify-content: center;

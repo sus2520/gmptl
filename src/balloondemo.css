@@ -156,6 +156,7 @@
   height: 42px;
   left: calc(50% - 535.95px/2 + 0px);
   top: 658.4px;
+  z-index: 10; /* Ensures it stays above other elements */
 }
 
 /* Button Danger - Pump */
@@ -170,13 +171,13 @@
   width: 217.98px;
   height: 42px;
   left: calc(50% - 217.98px/2 - 158.99px);
-  top: 658.4px;
+  top: 0; /* Relative to .group-20934 */
   background: #1B5680;
   border-radius: 11.9606px;
   box-sizing: border-box;
+  z-index: 11; /* Above .group-20934 */
 }
 
-/* Star (Pump Button) - Hidden */
 .button-danger .star {
   display: none;
   width: 25.46px;
@@ -186,7 +187,6 @@
   flex-grow: 0;
 }
 
-/* Pump up the balloon - Text */
 .button-danger .button-text {
   width: 188px;
   height: 18px;
@@ -201,7 +201,6 @@
   flex-grow: 0;
 }
 
-/* X (Pump Button) - Hidden */
 .button-danger .x {
   display: none;
   width: 25.46px;
@@ -223,13 +222,13 @@
   width: 217.98px;
   height: 42px;
   left: calc(50% - 217.98px/2 + 158.99px);
-  top: 658.4px;
+  top: 0; /* Relative to .group-20934 */
   border: 1px solid #1B5680;
   border-radius: 11.9606px;
   box-sizing: border-box;
+  z-index: 11; /* Above .group-20934 */
 }
 
-/* Star (Collect Button) - Hidden */
 .button-collect .star {
   display: none;
   width: 25.46px;
@@ -239,7 +238,6 @@
   flex-grow: 0;
 }
 
-/* Collect £££ - Text */
 .button-collect .button-text {
   width: 107px;
   height: 18px;
@@ -254,7 +252,6 @@
   flex-grow: 0;
 }
 
-/* X (Collect Button) - Hidden */
 .button-collect .x {
   display: none;
   width: 25.46px;
@@ -263,7 +260,6 @@
   order: 2;
   flex-grow: 0;
 }
-
 /* Group 20937 - Top Bar */
 .group-20937 {
   position: absolute;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../balloondemo.css'; // Ensure this path matches your project structure
-import image19 from '../assets/image19.png'; // Logo
-import balloonImage from '../assets/balloon.png'; // Balloon
+import './balloondemo.css';
+import image19 from '../assets/image19.png';
+import balloonImage from '../assets/balloon.png';
 
 const BalloonDemo = () => {
   const [pumps, setPumps] = useState(0);

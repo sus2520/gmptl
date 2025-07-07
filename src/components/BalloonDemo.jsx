@@ -1,4 +1,3 @@
-// BalloonDemo.jsx
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../balloondemo.css';
@@ -20,7 +19,6 @@ export default function BalloonDemo() {
         <div className="orange" />
       </div>
 
-
       {/* Watermark background image */}
       <div
         className="watermark-image"
@@ -33,16 +31,21 @@ export default function BalloonDemo() {
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
 
-      {/* Grouped balloon + stats */}
-      <div className="balloon-info-wrapper">
+      {/* Main white box container */}
+      <div className="balloon-box">
+        {/* Balloon image */}
         <div
           className="balloon-image"
           style={{ backgroundImage: `url(${balloonImg})` }}
         ></div>
-        <div className="balloon-number">Balloon #: 5</div>
-        <div className="potential-earnings">Potential: $0.25</div>
-        <div className="number-of-pumps">Pumps: 3</div>
-        <div className="total-winnings">Total: ${totalWinnings}</div>
+
+        {/* Grouped balloon + stats */}
+        <div className="balloon-info-wrapper">
+          <div className="balloon-number">Balloon #: 5</div>
+          <div className="potential-earnings">Potential: $0.25</div>
+          <div className="number-of-pumps">Pumps: 3</div>
+          <div className="total-winnings">Total: ${totalWinnings}</div>
+        </div>
       </div>
 
       {/* Buttons */}

@@ -1,45 +1,39 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../balloonintro.css';
-import logo from '../assets/image19.png'; // Logo & Watermark
-import balloon from '../assets/balloon.png'; // Balloon background
+import logo from '../assets/image19.png';       // Top-left logo and watermark
+import balloon from '../assets/balloon.png';    // Thumbnail balloon
 
 export default function BalloonIntro() {
   const navigate = useNavigate();
 
   return (
     <div className="balloon-intro-page">
-      {/* Diagonal header bar */}
+      {/* Diagonal top bar */}
       <div className="header-bar">
         <div className="blue-bar"></div>
         <div className="orange-bar"></div>
       </div>
 
-      {/* Full background balloon */}
-      <div
-        className="balloon-background-image"
-        style={{ backgroundImage: `url(${balloon})` }}
-      ></div>
-
-      {/* Watermark center faded */}
-      <div
-        className="watermark-image"
-        style={{ backgroundImage: `url(${logo})` }}
-      ></div>
-
-      {/* Logo top-left */}
+      {/* Top-left logo */}
       <div
         className="logo-image"
         style={{ backgroundImage: `url(${logo})` }}
       ></div>
 
-      {/* Small balloon image (top center) */}
+      {/* Center watermark */}
+      <div
+        className="watermark-image"
+        style={{ backgroundImage: `url(${logo})` }}
+      ></div>
+
+      {/* 🎈 Small thumbnail balloon (image 3 in Figma) */}
       <div
         className="balloon-image"
         style={{ backgroundImage: `url(${balloon})` }}
       ></div>
 
-      {/* Main box */}
+      {/* 📦 Main white box */}
       <div className="intro-box">
         <div className="intro-title">Balloon Analogue Risk Task</div>
         <div className="intro-description">

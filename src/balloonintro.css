@@ -100,7 +100,7 @@
   position: absolute;
   width: 244px;
   height: 41px;
-  left: calc(50% - 244px / 2);
+  left: calc(50% - 244px / 2 + 10px);
   top: 195.03px;
   font-family: 'Montserrat';
   font-style: normal;

@@ -9,7 +9,6 @@
 }
 
 /* === Header Bar (Diagonal Style) === */
-/* === Header Bar (Figma Group 20937) === */
 .header-bar {
   position: absolute;
   top: 0;
@@ -24,14 +23,14 @@
   width: 720px;
   height: 100%;
   background: #1B577E;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips individual segment */
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .header-bar .orange {
   width: 744.67px;
   height: 100%;
   background: #EB5617;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /* Flips individual segment */
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 /* == WATERMARK == */
@@ -72,29 +71,29 @@
   border-radius: 10px;
 }
 
-/* == BALLOON IMAGE == */
+/* == BALLOON INFO WRAPPER == */
+.balloon-info-wrapper {
+  position: relative; /* Changed to relative to act as positioning context */
+  width: 624.47px;
+  height: 327.28px;
+  left: 160.02px;
+  top: calc(50% - 287.28px / 2 + 24.76px);
+  background: white;
+  border-radius: 11.96px;
+  box-shadow: 0 0 5.93px rgba(0, 0, 0, 0.08);
+}
+
 /* == BALLOON IMAGE == */
 .balloon-image {
   position: absolute;
   width: 207.18px;
   height: 250.92px;
-  left: 412.02px;
-  top: 373.12px;
+  left: 20px; /* Adjusted to position within balloon-info-wrapper */
+  top: 38.18px; /* Adjusted to fit within wrapper height */
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('image [Background removed] [Upscaled].png');
-  z-index: 15; /* Ensures balloon image is above the pump button */
-}
-
-.balloon-info-wrapper {
-  position: absolute;
-  width: 624.47px;
-  height: 327.28px;
-  left: 190.02px;
-  top: calc(50% - 307.28px / 2 + 24.76px);
-  background: white;
-  border-radius: 11.96px;
-  box-shadow: 0 0 5.93px rgba(0, 0, 0, 0.08);
+  z-index: 15; /* Retained to stay above other elements */
 }
 
 /* == BALLOON TEXT DETAILS == */
@@ -102,8 +101,8 @@
   position: absolute;
   width: 270px;
   height: 40px;
-  left: calc(50% - 270px / 2 + 188.49px);
-  top: 273.12px;
+  left: 250px; /* Adjusted to position next to balloon image */
+  top: 20px; /* Adjusted to fit within wrapper */
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -115,8 +114,8 @@
   position: absolute;
   width: 303px;
   height: 40px;
-  left: calc(50% - 303px / 2 + 204.99px);
-  top: 434.19px;
+  left: 250px; /* Adjusted to align with balloon-number */
+  top: 80px; /* Spaced below balloon-number */
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -128,8 +127,8 @@
   position: absolute;
   width: 253px;
   height: 40px;
-  left: calc(50% - 253px / 2 + 179.99px);
-  top: 495.26px;
+  left: 250px; /* Adjusted to align with other text */
+  top: 140px; /* Spaced below potential-earnings */
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -141,8 +140,8 @@
   position: absolute;
   width: 263px;
   height: 40px;
-  left: calc(50% - 263px / 2 + 184.99px);
-  top: 556.34px;
+  left: 250px; /* Adjusted to align with other text */
+  top: 200px; /* Spaced below number-of-pumps */
   font-size: 24px;
   font-weight: 500;
   line-height: 40px;
@@ -180,10 +179,10 @@
 /* Collect Button */
 .collect-button {
   width: 217.98px;
-  height: 42px;
+  height Ethyl 42px;
   background: #FFFFFF;
   color: #1B5680;
-  font-weight: 700;
+  font _(weight: 700;
   font-size: 18px;
   border-radius: 11.9606px;
   border: 1px solid #1B5680;

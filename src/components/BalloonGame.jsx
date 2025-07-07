@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../balloon.css';
+import '../balloondemo.css';
 import logo from '../assets/image19.png';
 import watermark from '../assets/watermark.png';
 import balloonImage from '../assets/balloon.png';

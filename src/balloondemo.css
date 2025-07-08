@@ -67,10 +67,10 @@
 /* === Balloon Image === */
 .image-4 {
   position: absolute;
-  width: 135.39px; /* 75% of 207.18px */
-  height: 158.19px; /* 75% of 250.92px */
+  width: 105.39px; /* 75% of 207.18px */
+  height: 138.19px; /* 75% of 250.92px */
   left: 452.02px;
-  top: 550.12px;
+  top: 300.12px;
   background-size: contain; /* Changed to contain to ensure full visibility */
   background-repeat: no-repeat;
   background-position: center;

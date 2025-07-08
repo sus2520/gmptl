@@ -85,6 +85,7 @@
   height: 288.19px; /* Match normal balloon size */
   transform: scale(1); /* Reset scale for popped image */
   z-index: 11; /* Slightly higher to ensure visibility */
+  top: 525.12px;
 }
 
 /* === Popped Message === */

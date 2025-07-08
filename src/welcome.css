@@ -25,28 +25,27 @@ html, body {
   width: 1440px;
   height: 31.44px;
   z-index: 10;
-  display: flex;
   overflow: hidden;
 }
 
-/* Blue bar: from left to center with subtle diagonal */
+/* Blue bar: diagonal from top-right to bottom-left */
 .blue-bar {
   position: absolute;
   left: 0;
   width: 720px;
   height: 100%;
   background: #1B577E;
-  clip-path: polygon(0 0, 720px 0, 700px 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-/* Orange bar: from center to right with opposite diagonal */
+/* Orange bar: diagonal from top-left to bottom-right */
 .orange-bar {
   position: absolute;
   left: 720px;
   width: 720px;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(20px 0, 720px 0, 720px 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 

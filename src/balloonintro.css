@@ -24,7 +24,7 @@
   width: 720px;
   height: 100%;
   background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 99.2% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 99.5% 100%, 0% 100%);
 }
 
 /* Orange section (slightly diagonal) */
@@ -32,7 +32,7 @@
   width: 744.67px;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(1.8% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(2.8% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 /* Logo top-left */

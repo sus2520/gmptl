@@ -17,8 +17,9 @@ html, body {
   margin: 0 auto;
   overflow: hidden;
 }
+
 .header-bar {
-  position: relative; /* Remove duplicate absolute */
+  position: relative;
   top: 0;
   left: 0;
   width: 1440px;
@@ -28,25 +29,26 @@ html, body {
   overflow: hidden;
 }
 
-/* Blue bar: right-to-left diagonal */
+/* Blue bar: from left to center with subtle diagonal */
 .blue-bar {
   position: absolute;
   left: 0;
-  width: 50%;
+  width: 720px;
   height: 100%;
   background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+  clip-path: polygon(0 0, 720px 0, 700px 100%, 0 100%);
 }
 
-/* Orange bar: left-to-right diagonal */
+/* Orange bar: from center to right with opposite diagonal */
 .orange-bar {
   position: absolute;
-  right: 0;
-  width: 50%;
+  left: 720px;
+  width: 720px;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(20px 0, 720px 0, 720px 100%, 0 100%);
 }
+
 
 
 /* 4. Logo */

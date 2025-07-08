@@ -20,32 +20,30 @@ html, body {
 
 .header-bar {
   position: relative;
-  top: 0;
-  left: 0;
   width: 1440px;
   height: 31.44px;
-  z-index: 10;
   overflow: hidden;
+  z-index: 10;
 }
 
-/* Blue bar: diagonal from top-right to bottom-left */
+/* Blue bar: top-right to bottom-left (touches center) */
 .blue-bar {
   position: absolute;
   left: 0;
   width: 720px;
   height: 100%;
   background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
 }
 
-/* Orange bar: diagonal from top-left to bottom-right */
+/* Orange bar: top-left to bottom-right (touches center) */
 .orange-bar {
   position: absolute;
   left: 720px;
   width: 720px;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(4% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 

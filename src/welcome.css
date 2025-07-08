@@ -17,39 +17,36 @@ html, body {
   margin: 0 auto;
   overflow: hidden;
 }
-
 .header-bar {
-  position: absolute;
+  position: relative; /* Remove duplicate absolute */
   top: 0;
   left: 0;
   width: 1440px;
   height: 31.44px;
   z-index: 10;
   display: flex;
-  position: relative;
   overflow: hidden;
 }
 
-/* Blue bar: subtle diagonal right to left */
+/* Blue bar: right-to-left diagonal */
 .blue-bar {
   position: absolute;
   left: 0;
-  width: 720px;
+  width: 50%;
   height: 100%;
   background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
 }
 
-/* Orange bar: subtle diagonal left to right */
+/* Orange bar: left-to-right diagonal */
 .orange-bar {
   position: absolute;
   right: 0;
-  width: 750px;
+  width: 50%;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
 }
-
 
 
 /* 4. Logo */

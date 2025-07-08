@@ -22,7 +22,7 @@ export default function BalloonIntro() {
       {/* Top-left logo */}
       <img
         src={logo}
-        alt="Application Logo"
+        alt="Logotipo de la aplicación"
         className="logo-image"
       />
 
@@ -36,17 +36,17 @@ export default function BalloonIntro() {
       {/* Small thumbnail balloon */}
       <img
         src={balloon}
-        alt="Balloon Thumbnail"
+        alt="Miniatura de globo"
         className="balloon-image"
       />
 
       {/* Main white box */}
       <div className="intro-box">
         <h1 className="intro-title">
-          Balloon Analogue<br />Risk Task
+          Tarea de Riesgo<br />Globo Análogo
         </h1>
         <p className="intro-description">
-          Ready to test your risk-taking skills? Pump balloons to rack up points, but beware—each pump could make them pop! The bigger the balloon, the higher the reward, but one wrong move could cost you everything. Dive into this exciting challenge to see how bold you can be. Start with a practice round now!
+          ¿Listo para poner a prueba tus habilidades para tomar riesgos? Bombea globos para acumular puntos, ¡pero ten cuidado—cada bombeo podría hacerlos estallar! Cuanto más grande sea el globo, mayor será la recompensa, pero un movimiento equivocado podría costarte todo. Adéntrate en este emocionante desafío para ver lo audaz que puedes ser. ¡Comienza con una ronda de práctica ahora!
         </p>
         <button
           className="start-btn"
@@ -57,7 +57,7 @@ export default function BalloonIntro() {
             }
           }}
         >
-          Practice
+          Práctica
         </button>
       </div>
     </div>

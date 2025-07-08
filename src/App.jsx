@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LanguageProvider } from './LanguageContext';
+import { LanguageProvider } from './components/LanguageContext';
 import WelcomePage from './components/WelcomePage';
 import Activities from './components/Activities';
 import BalloonIntro from './components/BalloonIntro';

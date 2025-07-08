@@ -37,14 +37,14 @@ html, body {
 .header-bar .blue {
   width: 720px;
   height: 100%;
-  background: rgba(27, 87, 126, 0.2); /* Light blue */
+  background: #1B577E; /* Solid blue */
   clip-path: polygon(0 0, 100% 0, 99.9% 100%, 0% 100%);
 }
 
 .header-bar .orange {
   width: 720px;
   height: 100%;
-  background: rgba(235, 86, 23, 0.2); /* Light orange */
+  background: #EB5617; /* Solid orange */
   clip-path: polygon(0.1% 0, 100% 0, 100% 100%, 0% 100%);
 }
 

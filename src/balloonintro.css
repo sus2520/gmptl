@@ -19,31 +19,32 @@
   overflow: hidden;
 }
 
-.header-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1440px;
-  height: 31.44px;
-  z-index: 10;
-  display: flex;
-  overflow: hidden;
-}
-
+/* Blue section (slightly diagonal) */
 .header-bar .blue {
   width: 720px;
   height: 100%;
-  background: rgba(27, 87, 126, 0.2); /* Light blue */
+  background: #1B577E;
   clip-path: polygon(0 0, 100% 0, 99.9% 100%, 0% 100%);
 }
 
+/* Orange section (slightly diagonal) */
 .header-bar .orange {
-  width: 720px;
+  width: 744.67px;
   height: 100%;
-  background: rgba(235, 86, 23, 0.2); /* Light orange */
+  background: #EB5617;
   clip-path: polygon(0.1% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/* Logo top-left */
+.logo-image {
+  position: absolute;
+  width: 181.76px;
+  height: 160.19px;
+  left: 116.27px;
+  top: 68.99px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 /* Balloon image */
 .balloon-image {

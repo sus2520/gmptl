@@ -26,26 +26,30 @@ html, body {
   z-index: 10;
 }
 
-/* Blue bar: top-right to bottom-left */
+/* Blue bar: subtle diagonal from top-right to bottom-left */
 .blue-bar {
   position: absolute;
   left: 0;
   width: 720px;
   height: 100%;
   background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 99.5% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  /* Diagonal via transform, more reliable than clip-path percentage precision */
+  transform: skewX(-1.5deg);
+  transform-origin: top right;
 }
 
-/* Orange bar: top-left to bottom-right */
+/* Orange bar: subtle diagonal from top-left to bottom-right */
 .orange-bar {
   position: absolute;
   left: 720px;
   width: 720px;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(0.5% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transform: skewX(1.5deg);
+  transform-origin: top left;
 }
-
 
 /* 4. Logo */
 .welcome-logo {

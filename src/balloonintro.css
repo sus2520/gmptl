@@ -7,7 +7,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Header Bar with Light Diagonal Shape */
+/* Header Bar with Subtle Diagonal Shape */
 .header-bar {
   position: absolute;
   top: 0;
@@ -19,21 +19,23 @@
   overflow: hidden;
 }
 
-/* Blue section (slightly diagonal) */
+/* Blue section (shifted right + subtle diagonal) */
 .header-bar .blue {
   width: 720px;
   height: 100%;
   background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 99.9% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 99.5% 100%, 0% 100%);
+  margin-left: 45px;
 }
 
-/* Orange section (slightly diagonal) */
+/* Orange section (subtle diagonal to match blue) */
 .header-bar .orange {
-  width: 744.67px;
+  width: 720px;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(0.1% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0.5% 0, 100% 0, 100% 100%, 0% 100%);
 }
+
 
 /* Logo top-left */
 .logo-image {

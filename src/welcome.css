@@ -34,7 +34,6 @@ html, body {
   height: 100%;
   background: #1B577E;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  /* Diagonal via transform, more reliable than clip-path percentage precision */
   transform: skewX(-1.5deg);
   transform-origin: top right;
 }
@@ -73,9 +72,9 @@ html, body {
   top: 293.21px;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.7; /* Increased from 0.5 for better visibility */
-  z-index: 1; /* Below container, above background */
-  pointer-events: none; /* Avoid interference */
+  opacity: 0.7;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* 6. Main Content Box */
@@ -83,7 +82,7 @@ html, body {
   position: absolute;
   width: 727px;
   height: 605.97px;
-  left: 356.5px; /* (1440 - 727) / 2 */
+  left: 356.5px;
   top: 198.42px;
   background: #FFFFFF;
   border: 0.5px solid #2C51A1;
@@ -158,7 +157,44 @@ html, body {
   background: #154a6b;
 }
 
-/* 11. Activities Section (for WelcomePage adaptation) */
+/* 11. Language Buttons */
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.language-btn {
+  width: 217.98px; /* Matches .accept-button width */
+  height: 42px; /* Matches .accept-button height */
+  background: #1B5680; /* Matches .accept-button exactly */
+  border-radius: 11.96px; /* Matches .accept-button */
+  color: #FEE9E7; /* Matches .accept-button text color */
+  font-size: 18px; /* Matches .accept-button */
+  font-weight: 700; /* Matches .accept-button */
+  text-align: center;
+  line-height: 42px; /* Matches .accept-button */
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s; /* Matches .accept-button */
+}
+
+.language-btn:hover:not(:disabled) {
+  background: #154a6b; /* Matches .accept-button hover */
+}
+
+.language-btn:focus {
+  outline: 2px solid #154a6b;
+  outline-offset: 2px;
+}
+
+.language-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* 12. Activities Section (for WelcomePage adaptation) */
 .activities-container {
   position: absolute;
   width: 778.52px;
@@ -267,11 +303,11 @@ html, body {
 }
 
 .activity-status.ok {
-  color: #00B050; /* Green for OK */
+  color: #00B050;
 }
 
 .activity-status.pending {
-  color: #FF0000; /* Red for Pendiente */
+  color: #FF0000;
 }
 
 .exit-button {

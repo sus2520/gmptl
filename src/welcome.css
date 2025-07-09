@@ -34,7 +34,7 @@ html, body {
   height: 100%;
   background: #1B577E;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  transform: skewX(-1.5deg);
+  transform: skewX(-2.5deg);
   transform-origin: top right;
 }
 
@@ -46,7 +46,7 @@ html, body {
   height: 100%;
   background: #EB5617;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  transform: skewX(1.5deg);
+  transform: skewX(2.5deg);
   transform-origin: top left;
 }
 

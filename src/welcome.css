@@ -26,29 +26,26 @@ html, body {
   z-index: 10;
 }
 
-/* Blue bar: subtle diagonal from top-right to bottom-left */
+/* Blue bar: from top-left to bottom-right on right edge */
 .blue-bar {
   position: absolute;
   left: 0;
   width: 720px;
   height: 100%;
   background: #1B577E;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  transform: skewX(-2.5deg);
-  transform-origin: top right;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
 }
 
-/* Orange bar: subtle diagonal from top-left to bottom-right */
+/* Orange bar: from top-left to bottom-right on left edge */
 .orange-bar {
   position: absolute;
   left: 720px;
   width: 720px;
   height: 100%;
   background: #EB5617;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  transform: skewX(2.5deg);
-  transform-origin: top left;
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
 }
+
 
 /* 4. Logo */
 .welcome-logo {

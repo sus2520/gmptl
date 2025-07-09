@@ -92,6 +92,7 @@ function WelcomePage() {
             className="language-btn"
             onClick={() => setLanguage('es')}
             disabled={language === 'es'}
+            aria-label="Seleccionar Español"
           >
             Español
           </button>
@@ -99,6 +100,7 @@ function WelcomePage() {
             className="language-btn"
             onClick={() => setLanguage('en')}
             disabled={language === 'en'}
+            aria-label="Select English"
           >
             English
           </button>

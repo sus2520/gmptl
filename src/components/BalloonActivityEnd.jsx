@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { LanguageContext } from './LanguageContext';
 import logoImage from '../assets/image19.png';
-import '../BalloonActivityEnd.css';
+import './BalloonActivityEnd.css';
 
 export default function BalloonActivityEnd() {
   const { language } = useContext(LanguageContext);
@@ -43,23 +43,18 @@ export default function BalloonActivityEnd() {
 
   return (
     <div className="desktop">
-      {/* Top Bar */}
       <div className="group-20937">
         <div className="rectangle-746"></div>
         <div className="rectangle-745"></div>
       </div>
-      {/* Logo Image */}
       <div className="image-19-1" style={{ backgroundImage: `url(${logoImage})` }}></div>
-      {/* Background Overlay Image */}
       <div className="image-19-2" style={{ backgroundImage: `url(${logoImage})` }}></div>
-      {/* Content Box */}
       <div className="rectangle-744">
         <div className="group-20909">
           <div className="title">{content[language].title}</div>
           <div className="message">{content[language].message}</div>
         </div>
       </div>
-      {/* OK Button */}
       <div className="group-20934">
         <button
           className="button-danger"

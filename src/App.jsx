@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LanguageProvider } from './components/LanguageContext.jsx';
-import WelcomePage from './components/WelcomePage.jsx';
-import Activities from './components/Activities.jsx';
-import BalloonIntro from './components/BalloonIntro.jsx';
-import BalloonGame from './components/BalloonGame.jsx';
-import GameComplete from './components/GameComplete.jsx';
+import { LanguageProvider } from './components/LanguageContext';
+import WelcomePage from './components/WelcomePage';
+import Activities from './components/Activities';
+import BalloonIntro from './components/BalloonIntro';
+import BalloonDemo from './components/BalloonGame'; // Corrected from BalloonGame
+import GameComplete from './components/GameComplete'; // Added
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
             <Route path="/" element={<WelcomePage />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/intro" element={<BalloonIntro />} />
-            <Route path="/demo" element={<BalloonGame />} />
-            <Route path="/balloon" element={<BalloonGame />} />
-            <Route path="/game-complete" element={<GameComplete />} />
+            <Route path="/demo" element={<BalloonDemo />} />
+            <Route path="/balloon" element={<BalloonDemo />} />
+            <Route path="/game-complete" element={<GameComplete />} /> {/* Added */}
           </Routes>
         </div>
       </Router>

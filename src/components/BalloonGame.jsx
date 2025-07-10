@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import '../balloondemo.css';
+import { useNavigate } from 'react-router-dom';
+import '../balloongame.css';
 import image19 from '../assets/image19.png';
 import balloonImage from '../assets/image [Background removed] [Upscaled].png';
 import poppedBalloonImage from '../assets/popped_balloon.png';
 
-const BalloonDemo = () => {
+const BalloonGame = () => {
   const [pumps, setPumps] = useState(0);
   const [tempEarnings, setTempEarnings] = useState(0);
   const [totalEarnings, setTotalEarnings] = useState(0);
@@ -12,6 +13,7 @@ const BalloonDemo = () => {
   const [isPopped, setIsPopped] = useState(false);
   const [burstPoint, setBurstPoint] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const navigate = useNavigate();
 
   // Generate random burst point based on balloon number
   const generateBurstPoint = (balloonNum) => {
@@ -42,7 +44,8 @@ const BalloonDemo = () => {
           setBalloonNumber(balloonNumber + 1);
           setIsPopped(false);
         } else {
-          setGameOver(true); // End game after 30 balloons
+          setGameOver(true);
+          navigate('/game-end', { state: { totalEarnings, gameOver: true } });
         }
       }, 2000); // Show popped state for 2 seconds
     }
@@ -57,7 +60,8 @@ const BalloonDemo = () => {
         setBalloonNumber(balloonNumber + 1);
         setIsPopped(false);
       } else {
-        setGameOver(true); // End game after 30 balloons
+        setGameOver(true);
+        navigate('/game-end', { state: { totalEarnings, gameOver: true } });
       }
     }
   };
@@ -117,4 +121,4 @@ const BalloonDemo = () => {
   );
 };
 
-export default BalloonDemo;
+export default BalloonGame;

@@ -3,8 +3,7 @@ import { LanguageProvider } from './components/LanguageContext';
 import WelcomePage from './components/WelcomePage';
 import Activities from './components/Activities';
 import BalloonIntro from './components/BalloonIntro';
-import BalloonDemo from './components/BalloonGame'; // Corrected from BalloonGame
-import GameComplete from './components/GameComplete'; // Added
+import BalloonDemo from './components/BalloonGame';
 
 function App() {
   return (
@@ -16,8 +15,7 @@ function App() {
             <Route path="/activities" element={<Activities />} />
             <Route path="/intro" element={<BalloonIntro />} />
             <Route path="/demo" element={<BalloonDemo />} />
-            <Route path="/balloon" element={<BalloonDemo />} />
-            <Route path="/game-complete" element={<GameComplete />} /> {/* Added */}
+            <Route path="/balloon" element={<BalloonGame />} />
           </Routes>
         </div>
       </Router>

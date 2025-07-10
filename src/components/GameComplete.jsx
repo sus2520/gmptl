@@ -2,14 +2,15 @@ import React, { useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { LanguageContext } from './LanguageContext';
 import logoImage from '../assets/image19.png';
-import backgroundImage from '../assets/background-overlay.png'; // Replace with actual background image or use logoImage as fallback
+import backgroundOverlay from '../assets/image19.png';
+
 import '../GameComplete.css';
 
 export default function GameComplete() {
-  const { language } = useContext(LanguageContext);
+  const { language = 'en' } = useContext(LanguageContext); // Default to 'en' if undefined
   const navigate = useNavigate();
   const { state } = useLocation();
-  const totalEarnings = state?.totalEarnings || 0; // Fallback to 0 if undefined
+  const totalEarnings = state?.totalEarnings || 0;
 
   const content = {
     es: {
@@ -27,12 +28,12 @@ export default function GameComplete() {
   };
 
   const handleOk = () => {
-    navigate('/balloon'); // Navigates back to BalloonDemo as requested
+    navigate('/balloon');
   };
 
-  // Fallback images
-  const logoImageLoaded = logoImage || '/path/to/fallback-image.png';
-  const backgroundImageLoaded = backgroundImage || logoImage || '/path/to/fallback-image.png';
+  // Use imported images with a fallback
+  const logoImageLoaded = logoImage || '/fallback-image.png';
+  const backgroundImageLoaded = backgroundOverlay || '/fallback-image.png';
 
   return (
     <main className="desktop">
@@ -49,6 +50,7 @@ export default function GameComplete() {
             {content[language].earnings.replace('{amount}', totalEarnings.toFixed(2))}
           </div>
           <button
+            role="button"
             className="button-danger"
             onClick={handleOk}
             aria-label={content[language].buttonAriaLabel}

@@ -14,13 +14,15 @@ export default function GameComplete() {
 
   const content = {
     es: {
-      message: 'Muchas gracias por completar la actividad.',
+      title: 'Felicitaciones!!!!',
+      message: 'Usted ha completado todas las actividades.',
       earnings: 'Ganancias totales: ${amount}',
       buttonText: 'OK',
       buttonAriaLabel: 'Confirmar y volver al juego',
     },
     en: {
-      message: 'Thank you very much for completing the activity.',
+      title: 'Congratulations!!!!',
+      message: 'You have completed all the activities.',
       earnings: 'Total Earnings: ${amount}',
       buttonText: 'OK',
       buttonAriaLabel: 'Confirm and return to the game',
@@ -31,7 +33,6 @@ export default function GameComplete() {
     navigate('/balloon');
   };
 
-  // Use imported images with a fallback
   const logoImageLoaded = logoImage || '/fallback-image.png';
   const backgroundImageLoaded = backgroundOverlay || '/fallback-image.png';
 
@@ -45,7 +46,8 @@ export default function GameComplete() {
       <div className="image-19-2" style={{ backgroundImage: `url(${backgroundImageLoaded})` }}></div>
       <div className="rectangle-744">
         <div className="group-20909">
-          <h1 className="message">{content[language].message}</h1>
+          <h1 className="title">{content[language].title}</h1>
+          <div className="message">{content[language].message}</div>
           <div className="total-earnings">
             {content[language].earnings.replace('{amount}', totalEarnings.toFixed(2))}
           </div>

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { LanguageContext } from './LanguageContext';
 import logoImage from '../assets/image19.png';
-import './BalloonActivityEnd.css';
+import '../BalloonActivityEnd.css';
 
 export default function BalloonActivityEnd() {
   const { language } = useContext(LanguageContext);

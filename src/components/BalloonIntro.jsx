@@ -29,7 +29,7 @@ export default function BalloonIntro() {
   };
 
   const handleStartPractice = () => {
-    navigate('/demo', { state: { totalWinnings: 0 } });
+    navigate('/balloon', { state: { totalWinnings: 0 } });
   };
 
   return (

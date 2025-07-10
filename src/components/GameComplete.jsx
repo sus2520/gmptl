@@ -3,26 +3,25 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { LanguageContext } from './LanguageContext';
 import logoImage from '../assets/image19.png';
 import backgroundOverlay from '../assets/image19.png';
-
 import '../GameComplete.css';
 
 export default function GameComplete() {
-  const { language = 'en' } = useContext(LanguageContext); // Default to 'en' if undefined
+  const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
   const { state } = useLocation();
-  const totalEarnings = state?.totalEarnings || 0;
+  const totalEarnings = state?.totalEarnings || 0; // Fallback to 0 if undefined
 
   const content = {
     es: {
-      title: 'Felicitaciones!!!!',
-      message: 'Usted ha completado todas las actividades.',
+      title: 'Balloon Analogue Risk Task',
+      message: 'Muchas gracias por completar la actividad.',
       earnings: 'Ganancias totales: ${amount}',
       buttonText: 'OK',
       buttonAriaLabel: 'Confirmar y volver al juego',
     },
     en: {
-      title: 'Congratulations!!!!',
-      message: 'You have completed all the activities.',
+      title: 'Balloon Analogue Risk Task',
+      message: 'Thank you very much for completing the activity.',
       earnings: 'Total Earnings: ${amount}',
       buttonText: 'OK',
       buttonAriaLabel: 'Confirm and return to the game',
@@ -33,8 +32,9 @@ export default function GameComplete() {
     navigate('/balloon');
   };
 
-  const logoImageLoaded = logoImage || '/fallback-image.png';
-  const backgroundImageLoaded = backgroundOverlay || '/fallback-image.png';
+  // Fallback images
+  const logoImageLoaded = logoImage || '/path/to/fallback-image.png';
+  const backgroundImageLoaded = backgroundOverlay || logoImage || '/path/to/fallback-image.png';
 
   return (
     <main className="desktop">
@@ -47,12 +47,11 @@ export default function GameComplete() {
       <div className="rectangle-744">
         <div className="group-20909">
           <h1 className="title">{content[language].title}</h1>
-          <div className="message">{content[language].message}</div>
+          <h2 className="message">{content[language].message}</h2>
           <div className="total-earnings">
             {content[language].earnings.replace('{amount}', totalEarnings.toFixed(2))}
           </div>
           <button
-            role="button"
             className="button-danger"
             onClick={handleOk}
             aria-label={content[language].buttonAriaLabel}

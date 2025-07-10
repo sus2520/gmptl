@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LanguageProvider } from './components/LanguageContext';
-import WelcomePage from './components/WelcomePage.js';
-import Activities from './components/Activities.js';
-import BalloonIntro from './components/BalloonIntro.js';
-import BalloonGame from './components/BalloonGame.js'; // Updated from BalloonDemo
-import GameComplete from './components/GameComplete.js'; // Added
+import { LanguageProvider } from './components/LanguageContext.jsx';
+import WelcomePage from './components/WelcomePage.jsx';
+import Activities from './components/Activities.jsx';
+import BalloonIntro from './components/BalloonIntro.jsx';
+import BalloonGame from './components/BalloonGame.jsx';
+import GameComplete from './components/GameComplete.jsx';
 
 function App() {
   return (

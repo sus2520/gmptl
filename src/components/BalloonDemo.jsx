@@ -98,7 +98,7 @@ export default function BalloonDemo() {
   };
 
   const handleStartGame = () => {
-    navigate('/balloon');
+    navigate('/game-complete', { state: { totalEarnings } });
   };
 
   const balloonScale = isPopped ? 1 : 1 + (pumps / 60) * 1;

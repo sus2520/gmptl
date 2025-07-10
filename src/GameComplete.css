@@ -1,45 +1,50 @@
-/* Desktop Layout */
+/* === Base Desktop Layout === */
 .desktop {
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
   background: #FFFFFF;
   overflow: visible;
   font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
 }
 
-/* Top Bar */
+/* === Top Bar === */
 .group-20937 {
   position: absolute;
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   height: 31.44px;
-  left: 0px;
   top: 0px;
+  left: 0;
 }
 
-/* Blue section */
+/* Blue section with subtle diagonal right edge */
 .rectangle-746 {
   position: absolute;
-  width: 720px;
+  width: 50%;
   height: 31.44px;
-  right: 720px;
+  right: 50%;
   top: 0px;
   background: #1B577E;
+  z-index: 1;
   clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
 }
 
-/* Orange section */
+/* Orange section with matching subtle diagonal left edge */
 .rectangle-745 {
   position: absolute;
-  width: 744.67px;
+  width: 51.73%; /* Matches 744.67px/1440px */
   height: 31.44px;
-  left: 695.33px;
+  left: 48.27%; /* Matches 695.33px/1440px */
   top: 0px;
   background: #EB5617;
+  z-index: 2;
   clip-path: polygon(2% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-/* Logo Image */
+/* === Logo Image === */
 .image-19-1 {
   position: absolute;
   width: 181.76px;
@@ -50,62 +55,94 @@
   background-repeat: no-repeat;
 }
 
-/* Background Overlay Image */
+/* === Background Overlay Image === */
 .image-19-2 {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
   left: calc(50% - 496.49px/2);
   top: calc(50% - 437.58px/2);
-  opacity: 0.5;
+  opacity: 0.3;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* Main Content Box */
+/* === Main Content Box === */
 .rectangle-744 {
   box-sizing: border-box;
   position: absolute;
-  width: 778.52px;
-  height: 810.81px;
-  left: calc(50% - 778.52px/2);
-  top: calc(50% - 810.81px/2);
+  width: 90%;
+  max-width: 778.52px;
+  height: auto;
+  min-height: 510.86px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   border: 0.5px solid #2C51A1;
   box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 
-/* Text Container */
+/* === Text Container inside Box === */
 .group-20909 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  width: 527px;
+  gap: 20px;
+  width: 100%;
+  max-width: 303px;
+  text-align: center;
+  position: relative;
+  left: 160px; /* Kept as per your design */
 }
 
-/* Title */
-.title {
-  font-weight: 600;
-  font-size: 34px;
-  line-height: 41px;
-  color: #EE581B;
+/* === Text Styles === */
+.message {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+}
+
+.total-earnings {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #333333;
+}
+
+/* === Game Over Screen (for BalloonDemo) === */
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
   text-align: center;
 }
 
-/* Message */
-.message {
-  font-weight: 500;
+.game-over h1 {
+  font-weight: 700;
   font-size: 24px;
-  line-height: 40px;
+  line-height: 36px;
   color: #333333;
-  text-align: justify;
 }
 
-/* OK Button */
+.game-over p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #333333;
+}
+
+/* === Button Styles (for consistency with BalloonDemo) === */
 .button-danger {
   display: flex;
   justify-content: center;
@@ -116,6 +153,7 @@
   height: 42px;
   background: #1B5680;
   border-radius: 11.96px;
+  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -124,4 +162,48 @@
   font-size: 18px;
   color: #FEE9E7;
   white-space: nowrap;
+}
+
+.button-collect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  width: 217.98px;
+  height: 42px;
+  border: 1px solid #1B5680;
+  border-radius: 11.96px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button-collect .button-text {
+  font-weight: 700;
+  font-size: 18px;
+  color: #1B5680;
+  white-space: nowrap;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .group-20909 {
+    left: 0; /* Remove shift on smaller screens */
+    max-width: 90%;
+  }
+
+  .image-19-1,
+  .image-19-2 {
+    width: 40%;
+    height: auto;
+  }
+
+  .rectangle-746,
+  .rectangle-745 {
+    width: 50%;
+  }
+
+  .rectangle-745 {
+    left: 50%;
+  }
 }

@@ -1,0 +1,127 @@
+/* Desktop Layout */
+.desktop {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: #FFFFFF;
+  overflow: visible;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Top Bar */
+.group-20937 {
+  position: absolute;
+  width: 1440px;
+  height: 31.44px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Blue section */
+.rectangle-746 {
+  position: absolute;
+  width: 720px;
+  height: 31.44px;
+  right: 720px;
+  top: 0px;
+  background: #1B577E;
+  clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+}
+
+/* Orange section */
+.rectangle-745 {
+  position: absolute;
+  width: 744.67px;
+  height: 31.44px;
+  left: 695.33px;
+  top: 0px;
+  background: #EB5617;
+  clip-path: polygon(2% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Logo Image */
+.image-19-1 {
+  position: absolute;
+  width: 181.76px;
+  height: 160.19px;
+  left: 116.27px;
+  top: 68.99px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Background Overlay Image */
+.image-19-2 {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px/2);
+  top: calc(50% - 437.58px/2);
+  opacity: 0.5;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Main Content Box */
+.rectangle-744 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 778.52px;
+  height: 810.81px;
+  left: calc(50% - 778.52px/2);
+  top: calc(50% - 810.81px/2);
+  border: 0.5px solid #2C51A1;
+  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text Container */
+.group-20909 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 527px;
+}
+
+/* Title */
+.title {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #EE581B;
+  text-align: center;
+}
+
+/* Message */
+.message {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  color: #333333;
+  text-align: justify;
+}
+
+/* OK Button */
+.button-danger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  width: 217.98px;
+  height: 42px;
+  background: #1B5680;
+  border-radius: 11.96px;
+  cursor: pointer;
+}
+
+.button-danger .button-text {
+  font-weight: 700;
+  font-size: 18px;
+  color: #FEE9E7;
+  white-space: nowrap;
+}

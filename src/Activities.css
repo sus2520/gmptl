@@ -23,7 +23,7 @@ html, body {
   background: #FFFFFF;
 }
 
-/.header-bar {
+.header-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -55,7 +55,8 @@ html, body {
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
-  background-image: url('../assets/image19.png');
+  background-image: url('/src/assets/image19.png'); /* ✅ resolves correctly */
+
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 5;
@@ -68,7 +69,8 @@ html, body {
   height: 437.58px;
   left: calc(50% - 496.49px / 2);
   top: calc(50% - 437.58px / 2);
-  background-image: url('../assets/image19.png');
+  background-image: url('/src/assets/image19.png'); /* ✅ resolves correctly */
+
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.06;

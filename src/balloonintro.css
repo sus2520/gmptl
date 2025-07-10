@@ -55,7 +55,7 @@
   height: 94.2px;
   left: 423.5px;
   top: 240.33px;
-  background-image: url('../assets/balloon.png');
+  background-image: url('/src/assets/balloon.png'); /* ✅ resolves correctly */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -69,7 +69,8 @@
   height: 437.58px;
   left: calc(50% - 496.49px / 2);
   top: calc(50% - 437.58px / 2);
-  background-image: url('../assets/image19.png');
+  background-image: url('/src/assets/image19.png'); /* ✅ resolves correctly */
+
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;

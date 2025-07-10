@@ -5,6 +5,7 @@ import Activities from './components/Activities';
 import BalloonIntro from './components/BalloonIntro';
 import BalloonGame from './components/BalloonGame';
 import BalloonDemo from './components/BalloonDemo';
+import BalloonActivityEnd from './components/BalloonActivityEnd';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/intro" element={<BalloonIntro />} />
             <Route path="/demo" element={<BalloonDemo />} />
             <Route path="/balloon" element={<BalloonGame />} />
+            <Route path="/balloon-activity-end" element={<BalloonActivityEnd />} />
           </Routes>
         </div>
       </Router>

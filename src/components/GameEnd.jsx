@@ -1,5 +1,5 @@
 import React from 'react';
-import './gameend.css';
+import '../gameend.css';
 import image19 from '../assets/image19.png'; // ✅ Correct way to import images in React
 
 const GameEnd = () => {

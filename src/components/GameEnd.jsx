@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import './gameend.css';
+import '../gameend.css';
 import image19 from '../assets/image19.png';
 import { LanguageContext } from './LanguageContext';
 

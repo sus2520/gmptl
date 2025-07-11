@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../balloongame.css';
 import image19 from '../assets/image19.png';
 import balloonImage from '../assets/image [Background removed] [Upscaled].png';
@@ -13,7 +12,6 @@ const BalloonGame = () => {
   const [isPopped, setIsPopped] = useState(false);
   const [burstPoint, setBurstPoint] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-  const navigate = useNavigate();
 
   // Generate random burst point based on balloon number
   const generateBurstPoint = (balloonNum) => {
@@ -44,8 +42,7 @@ const BalloonGame = () => {
           setBalloonNumber(balloonNumber + 1);
           setIsPopped(false);
         } else {
-          setGameOver(true);
-          navigate('/game-end', { state: { totalEarnings, gameOver: true } });
+          setGameOver(true); // End game after 30 balloons
         }
       }, 2000); // Show popped state for 2 seconds
     }
@@ -60,8 +57,7 @@ const BalloonGame = () => {
         setBalloonNumber(balloonNumber + 1);
         setIsPopped(false);
       } else {
-        setGameOver(true);
-        navigate('/game-end', { state: { totalEarnings, gameOver: true } });
+        setGameOver(true); // End game after 30 balloons
       }
     }
   };

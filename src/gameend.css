@@ -1,65 +1,145 @@
-/* === Base Desktop Layout === */
-.desktop {
+/* Container */
+.end-game-container {
   position: relative;
   width: 1440px;
   height: 1024px;
   background: #FFFFFF;
-  overflow: visible; /* Changed from hidden to prevent clipping */
-  font-family: 'Montserrat', sans-serif;
 }
 
-/* === Top Bar === */
-.group-20938 {
+/* Header Section */
+.end-game-header {
   position: absolute;
   width: 1440px;
   height: 31.44px;
+  left: 0px;
   top: 0px;
-  left: 45px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-/* Blue section with subtle diagonal right edge */
-.rectangle-746 {
+.end-game-header-left {
   position: absolute;
   width: 720px;
   height: 31.44px;
   right: 720px;
   top: 0px;
   background: #1B577E;
-  z-index: 1;
-  clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-/* Orange section with matching subtle diagonal left edge */
-.rectangle-745 {
+.end-game-header-right {
   position: absolute;
   width: 744.67px;
   height: 31.44px;
   left: 695.33px;
   top: 0px;
   background: #EB5617;
-  z-index: 2;
-  clip-path: polygon(2% 0, 100% 0, 100% 100%, 0% 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-/* === Logo Image === */
-.image-20-1 {
+/* Logo and Watermark */
+.end-game-logo {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
   left: 116.27px;
   top: 68.99px;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
-/* === Background Overlay Image === */
-.image-20-2 {
+.end-game-watermark {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
   left: calc(50% - 496.49px/2);
-  top: calc(50% - 437.58px/2);
-  opacity: 0.3;
+  top: calc(50% - 437.58px/2 - 0px);
   background-size: cover;
-  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+/* Main Box */
+.end-game-box {
+  box-sizing: border-box;
+  position: absolute;
+  width: 778.52px;
+  height: 810.81px;
+  left: calc(50% - 778.52px/2);
+  top: calc(50% - 810.81px/2 + 0px);
+  border: 0.5px solid #2C51A1;
+  box-shadow: 0px 0px 5.93385px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: #FFFFFF;
+}
+
+/* Content Area */
+.end-game-content {
+  position: absolute;
+  width: 527px;
+  height: 121px;
+  left: 456.07px;
+  top: 391px;
+  text-align: center;
+}
+
+/* Title (Felicitaciones/Congratulations) */
+.end-game-title {
+  position: absolute;
+  width: 278px;
+  height: 41px;
+  left: calc(50% - 278px/2 - 3.93px);
+  top: 391px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 41px;
+  color: #EE581B;
+}
+
+/* Message Text */
+.end-game-text {
+  position: absolute;
+  width: 527px;
+  height: 40px;
+  left: calc(50% - 527px/2 - 0.43px);
+  top: 472px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-align: justify;
+  color: #333333;
+}
+
+/* Button */
+.end-game-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  position: absolute;
+  width: 217.98px;
+  height: 42px;
+  left: calc(50% - 217.98px/2 - 3.93px);
+  top: 706px;
+  background: #1B5680;
+  border-radius: 11.9606px;
+  cursor: pointer;
+}
+
+/* Button Text */
+.end-game-button-text {
+  width: 29px;
+  height: 18px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FEE9E7;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }

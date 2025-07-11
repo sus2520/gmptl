@@ -7,48 +7,42 @@ const GameEnd = () => {
   const { language } = useContext(LanguageContext); // 'en' or 'es'
 
   return (
-    <div className="desktop">
+    <div className="end-game-container">
       {/* Top Bar */}
-      <div className="group-20938">
-        <div className="rectangle-746"></div>
-        <div className="rectangle-745"></div>
+      <div className="end-game-header">
+        <div className="end-game-header-left"></div>
+        <div className="end-game-header-right"></div>
       </div>
 
       {/* Logo and Watermark */}
-      <div className="image-20-1" style={{ backgroundImage: `url(${image19})` }}></div>
-      <div className="image-20-2" style={{ backgroundImage: `url(${image19})` }}></div>
+      <div className="end-game-logo" style={{ backgroundImage: `url(${image19})` }}></div>
+      <div className="end-game-watermark" style={{ backgroundImage: `url(${image19})` }}></div>
 
       {/* Message Box */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          textAlign: 'center',
-          background: '#fff',
-          padding: '30px 40px',
-          borderRadius: '12px',
-          boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.15)',
-          zIndex: 10,
-          width: '300px',
-        }}
-      >
-        {language === 'es' ? (
-          <>
-            <p>Balloon Analogue</p>
-            <p>Risk Task</p>
-            <p>Muchas gracias por completar la actividad.</p>
-            <button style={{ padding: '10px 25px', marginTop: '15px' }}>OK</button>
-          </>
-        ) : (
-          <>
-            <p>Balloon Analogue</p>
-            <p>Risk Task</p>
-            <p>Thank you very much for completing the activity.</p>
-            <button style={{ padding: '10px 25px', marginTop: '15px' }}>OK</button>
-          </>
-        )}
+      <div className="end-game-box">
+        <div className="end-game-content">
+          {language === 'es' ? (
+            <>
+              <h1 className="end-game-title">Felicitaciones</h1>
+              <p className="end-game-text">Balloon Analogue</p>
+              <p className="end-game-text">Risk Task</p>
+              <p className="end-game-text">Muchas gracias por completar la actividad.</p>
+              <button className="end-game-button">
+                <span className="end-game-button-text">OK</span>
+              </button>
+            </>
+          ) : (
+            <>
+              <h1 className="end-game-title">Congratulations</h1>
+              <p className="end-game-text">Balloon Analogue</p>
+              <p className="end-game-text">Risk Task</p>
+              <p className="end-game-text">Thank you very much for completing the activity.</p>
+              <button className="end-game-button">
+                <span className="end-game-button-text">OK</span>
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

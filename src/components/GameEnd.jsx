@@ -1,8 +1,11 @@
-import React from 'react';
-import '../gameend.css';
-import image19 from '../assets/image19.png'; // ✅ Correct way to import images in React
+import React, { useContext } from 'react';
+import './gameend.css';
+import image19 from '../assets/image19.png';
+import { LanguageContext } from './LanguageContext';
 
 const GameEnd = () => {
+  const { language } = useContext(LanguageContext); // 'en' or 'es'
+
   return (
     <div className="desktop">
       {/* Top Bar */}
@@ -11,19 +14,11 @@ const GameEnd = () => {
         <div className="rectangle-745"></div>
       </div>
 
-      {/* Logo Image */}
-      <div
-        className="image-20-1"
-        style={{ backgroundImage: `url(${image19})` }}
-      ></div>
+      {/* Logo and Watermark */}
+      <div className="image-20-1" style={{ backgroundImage: `url(${image19})` }}></div>
+      <div className="image-20-2" style={{ backgroundImage: `url(${image19})` }}></div>
 
-      {/* Watermark Image */}
-      <div
-        className="image-20-2"
-        style={{ backgroundImage: `url(${image19})` }}
-      ></div>
-
-      {/* Main Content */}
+      {/* Message Box */}
       <div
         style={{
           position: 'absolute',
@@ -31,30 +26,29 @@ const GameEnd = () => {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           textAlign: 'center',
-          zIndex: 5,
+          background: '#fff',
+          padding: '30px 40px',
+          borderRadius: '12px',
+          boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.15)',
+          zIndex: 10,
+          width: '300px',
         }}
       >
-        <h2>Page 6 - Spanish / English</h2>
-
-        <div>
-          <h3>Spanish:</h3>
-          <p>Balloon Analogue</p>
-          <p>Risk Task</p>
-          <p>Muchas gracias por completar la actividad.</p>
-          <button style={{ padding: '10px 20px', fontSize: '16px', marginTop: '10px' }}>
-            OK
-          </button>
-        </div>
-
-        <div style={{ marginTop: '20px' }}>
-          <h3>English:</h3>
-          <p>Balloon Analogue</p>
-          <p>Risk Task</p>
-          <p>Thank you very much for completing the activity.</p>
-          <button style={{ padding: '10px 20px', fontSize: '16px', marginTop: '10px' }}>
-            OK
-          </button>
-        </div>
+        {language === 'es' ? (
+          <>
+            <p>Balloon Analogue</p>
+            <p>Risk Task</p>
+            <p>Muchas gracias por completar la actividad.</p>
+            <button style={{ padding: '10px 25px', marginTop: '15px' }}>OK</button>
+          </>
+        ) : (
+          <>
+            <p>Balloon Analogue</p>
+            <p>Risk Task</p>
+            <p>Thank you very much for completing the activity.</p>
+            <button style={{ padding: '10px 25px', marginTop: '15px' }}>OK</button>
+          </>
+        )}
       </div>
     </div>
   );

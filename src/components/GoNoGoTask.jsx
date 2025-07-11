@@ -1,56 +1,69 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { JsPsych, SurveyHtml, HtmlKeyboardResponse } from 'react-jspsych';
-import '../GoNoGoTask.css';
+import '../gameend.css';
 import image19 from '../assets/image19.png';
+import { LanguageContext } from './LanguageContext';
 
-const GoNoGoTask = () => {
+const GameEnd = () => {
+  const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
 
-  const trials = [
-    { stimulus: 'X', correct_response: ' ' },
-    { stimulus: 'Y', correct_response: '' },
-    { stimulus: 'X', correct_response: ' ' },
-    { stimulus: 'Y', correct_response: '' }
-  ];
+  const handleOkClick = () => {
+    // Can leave empty or add logic if needed
+  };
 
-  const timeline = [
-    {
-      type: SurveyHtml,
-      preamble: '<p>Instructions: Press space for \'X\' (Go), do not press for \'Y\' (No-Go). Respond quickly and accurately.</p>',
-      button_label: 'Start'
-    },
-    ...trials.map((trial) => ({
-      type: HtmlKeyboardResponse,
-      stimulus: `<div className="go-no-go-current">[Current Stimulus: ${trial.stimulus}]</div>`,
-      choices: trial.correct_response ? [' '] : [],
-      data: { correct_response: trial.correct_response },
-      on_finish: (data) => {
-        data.correct = trial.correct_response ? data.response === ' ' : !data.response;
-      }
-    }))
-  ];
-
-  useEffect(() => {
-    const jsPsych = new JsPsych({
-      on_finish: () => {
-        setTimeout(() => navigate('/game-end'), 5000);
-      }
-    });
-    jsPsych.run(timeline);
-  }, [navigate]);
+  const handleGoToMenu = () => {
+    navigate('/activities');
+  };
 
   return (
-    <div className="go-no-go-desktop">
-      <div className="go-no-go-group-20937">
-        <div className="go-no-go-rectangle-746"></div>
-        <div className="go-no-go-rectangle-745"></div>
+    <div className="end-game-desktop">
+      {/* Top Bar */}
+      <div className="end-game-group-20937">
+        <div className="end-game-rectangle-746"></div>
+        <div className="end-game-rectangle-745"></div>
       </div>
-      <div className="go-no-go-image-19-1" style={{ backgroundImage: `url(${image19})` }}></div>
-      <div className="go-no-go-image-19-2" style={{ backgroundImage: `url(${image19})` }}></div>
-      <div id="jspsych-target" className="go-no-go-rectangle-744"></div>
+
+      {/* Logo and Watermark */}
+      <div className="end-game-logo" style={{ backgroundImage: `url(${image19})` }}></div>
+      <div className="end-game-watermark" style={{ backgroundImage: `url(${image19})` }}></div>
+
+      {/* Message Box */}
+      <div className="end-game-box">
+        <div className="end-game-content">
+          {language === 'es' ? (
+            <>
+              <h1 className="end-game-title">Felicitaciones</h1>
+              <p className="end-game-text">Balloon Analogue</p>
+              <p className="end-game-text">Risk Task</p>
+              <p className="end-game-text">Muchas gracias por completar la actividad.</p>
+
+              <button className="end-game-button" onClick={handleOkClick}>
+                <span className="end-game-button-text">OK</span>
+              </button>
+              <button className="end-game-button" onClick={handleGoToMenu} style={{ marginTop: '20px' }}>
+                <span className="end-game-button-text">Volver al menú del juego</span>
+              </button>
+            </>
+          ) : (
+            <>
+              <h1 className="end-game-title">Congratulations</h1>
+              <p className="end-game-text">Balloon Analogue</p>
+              <p className="end-game-text">Risk Task</p>
+              <p className="end-game-text">Thank you very much for completing the activity.</p>
+
+              <button className="end-game-button" onClick={handleOkClick}>
+                <span className="end-game-button-text">OK</span>
+              </button>
+              <button className="end-game-button" onClick={handleGoToMenu} style={{ marginTop: '20px' }}>
+                <span className="end-game-button-text">Go Back to Game Menu</span>
+              </button>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default GoNoGoTask;
+export default GameEnd;

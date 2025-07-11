@@ -7,10 +7,10 @@ import BalloonIntro from './components/BalloonIntro';
 import BalloonGame from './components/BalloonGame';
 import GameEnd from './components/GameEnd';
 import DigitSymbolTest from './components/DigitSymbolTest';
-import GoNoGoTask from './components/GoNoGoTask';
-import IowaGamblingTask from './components/IowaGamblingTask';
-import MentalRotation from './components/MentalRotation';
-import NBackTask from './components/NBackTask';
+// import GoNoGoTask from './components/GoNoGoTask';
+// import IowaGamblingTask from './components/IowaGamblingTask';
+// import MentalRotation from './components/MentalRotation';
+// import NBackTask from './components/NBackTask';
 
 function App() {
   return (
@@ -24,10 +24,7 @@ function App() {
             <Route path="/demo" element={<BalloonGame />} />
             <Route path="/game-end" element={<GameEnd />} />
             <Route path="/digit-symbol" element={<DigitSymbolTest />} />
-            <Route path="/go-no-go" element={<GoNoGoTask />} />
-            <Route path="/iowa-gambling" element={<IowaGamblingTask />} />
-            <Route path="/mental-rotation" element={<MentalRotation />} />
-            <Route path="/n-back" element={<NBackTask />} />
+   
           </Routes>
         </div>
       </Router>

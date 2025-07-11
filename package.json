@@ -9,7 +9,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "jspsych": "^8.2.1"  
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
@@ -20,7 +21,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm install jspsych && vite build",
     "preview": "vite preview",
     "start": "vite preview",
     "audit-fix": "npm audit fix",

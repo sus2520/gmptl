@@ -82,6 +82,9 @@
 .end-game-content {
   text-align: center;
   width: 527px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Title (Felicitaciones/Congratulations) */
@@ -120,7 +123,7 @@
   background: #1B5680;
   border-radius: 11.9606px;
   cursor: pointer;
-  margin-top: 30px; /* Positioned before the end of the box */
+  margin-top: auto; /* Pushes button to the bottom of the content area */
 }
 
 /* Button Text */

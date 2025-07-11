@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { JsPsych, SurveyHtml, HtmlKeyboardResponse } from 'react-jspsych';
-import './GoNoGoTask.css';
+import '../GoNoGoTask.css';
 import image19 from '../assets/image19.png';
 
 const GoNoGoTask = () => {

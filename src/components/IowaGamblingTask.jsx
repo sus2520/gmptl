@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { JsPsych, SurveyHtml, HtmlButtonResponse } from 'react-jspsych';
-import './IowaGamblingTask.css';
+import '../IowaGamblingTask.css';
 import image19 from '../assets/image19.png';
 
 const IowaGamblingTask = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { JsPsych, SurveyHtml, ImageKeyboardResponse } from 'react-jspsych';
-import './MentalRotation.css';
+import '../MentalRotation.css';
 import image19 from '../assets/image19.png';
 
 const MentalRotation = () => {

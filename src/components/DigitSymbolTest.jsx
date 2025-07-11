@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { JsPsych, SurveyHtml, HtmlKeyboardResponse } from 'react-jspsych';
-import './DigitSymbolTest.css';
+import '../DigitSymbolTest.css';
 import image19 from '../assets/image19.png';
 
 const DigitSymbolTest = () => {

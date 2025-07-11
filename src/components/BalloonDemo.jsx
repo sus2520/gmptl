@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../balloongame.css';
+import '../balloondemo.css';
 import image19 from '../assets/image19.png';
 import balloonImage from '../assets/image [Background removed] [Upscaled].png';
 import poppedBalloonImage from '../assets/popped_balloon.png';

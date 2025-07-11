@@ -7,11 +7,11 @@ const GameEnd = () => {
   const { language } = useContext(LanguageContext); // 'en' or 'es'
 
   return (
-    <div className="end-game-container">
+    <div className="end-game-desktop">
       {/* Top Bar */}
-      <div className="end-game-header">
-        <div className="end-game-header-left"></div>
-        <div className="end-game-header-right"></div>
+      <div className="end-game-group-20937">
+        <div className="end-game-rectangle-746"></div>
+        <div className="end-game-rectangle-745"></div>
       </div>
 
       {/* Logo and Watermark */}

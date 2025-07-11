@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../balloongame.css';
 import image19 from '../assets/image19.png';
 import balloonImage from '../assets/image [Background removed] [Upscaled].png';
@@ -12,6 +13,8 @@ const BalloonGame = () => {
   const [isPopped, setIsPopped] = useState(false);
   const [burstPoint, setBurstPoint] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+
+  const navigate = useNavigate();
 
   // Generate random burst point based on balloon number
   const generateBurstPoint = (balloonNum) => {
@@ -42,7 +45,8 @@ const BalloonGame = () => {
           setBalloonNumber(balloonNumber + 1);
           setIsPopped(false);
         } else {
-          setGameOver(true); // End game after 30 balloons
+          setGameOver(true);
+          navigate('/game-end'); // Navigate after final balloon
         }
       }, 2000); // Show popped state for 2 seconds
     }
@@ -57,24 +61,14 @@ const BalloonGame = () => {
         setBalloonNumber(balloonNumber + 1);
         setIsPopped(false);
       } else {
-        setGameOver(true); // End game after 30 balloons
+        setGameOver(true);
+        navigate('/game-end'); // Navigate after final balloon
       }
     }
   };
 
   // Calculate scale based on pumps (1.0 to 2.0 over a reference max, e.g., 60)
   const balloonScale = isPopped ? 1 : 1 + (pumps / 60) * 1; // Scales from 1x to 2x
-
-  if (gameOver) {
-    return (
-      <div className="desktop">
-        <div className="game-over">
-          <h1>Game Over!</h1>
-          <p>Total Earnings: ${totalEarnings.toFixed(2)}</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="desktop">

@@ -1,0 +1,65 @@
+/* === Base Desktop Layout === */
+.desktop {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: #FFFFFF;
+  overflow: visible; /* Changed from hidden to prevent clipping */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* === Top Bar === */
+.group-20938 {
+  position: absolute;
+  width: 1440px;
+  height: 31.44px;
+  top: 0px;
+  left: 45px;
+}
+
+/* Blue section with subtle diagonal right edge */
+.rectangle-746 {
+  position: absolute;
+  width: 720px;
+  height: 31.44px;
+  right: 720px;
+  top: 0px;
+  background: #1B577E;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+}
+
+/* Orange section with matching subtle diagonal left edge */
+.rectangle-745 {
+  position: absolute;
+  width: 744.67px;
+  height: 31.44px;
+  left: 695.33px;
+  top: 0px;
+  background: #EB5617;
+  z-index: 2;
+  clip-path: polygon(2% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* === Logo Image === */
+.image-20-1 {
+  position: absolute;
+  width: 181.76px;
+  height: 160.19px;
+  left: 116.27px;
+  top: 68.99px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* === Background Overlay Image === */
+.image-20-2 {
+  position: absolute;
+  width: 496.49px;
+  height: 437.58px;
+  left: calc(50% - 496.49px/2);
+  top: calc(50% - 437.58px/2);
+  opacity: 0.3;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

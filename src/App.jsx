@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './components/LanguageContext';
+
 import WelcomePage from './components/WelcomePage';
 import Activities from './components/Activities';
 import BalloonIntro from './components/BalloonIntro';
 import BalloonGame from './components/BalloonGame';
+import GameEnd from './components/GameEnd'; // ✅ Import GameEnd
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
             <Route path="/activities" element={<Activities />} />
             <Route path="/intro" element={<BalloonIntro />} />
             <Route path="/demo" element={<BalloonGame />} />
-
+            <Route path="/game-end" element={<GameEnd />} /> {/* ✅ Add GameEnd route */}
           </Routes>
         </div>
       </Router>

@@ -87,20 +87,20 @@ export default function Activities() {
     duration: content[language].durations[i],
     status: content[language].statuses[i],
     statusColor: content[language].statusColors[i],
-    link: i === 0 ? '/intro' : [
-      '/game/digit-symbol',
-      '/game/go-no-go',
-      '/game/iowa-gambling',
-      '/game/mental-rotation',
-      '/game/n-back',
-      '/game/negative-feedback',
-      '/game/wisconsin-card'
-    ][i - 1], // Keep first as /intro, update second onward with direct routes
+    link: i === 0 ? '/intro' : `/game/${[
+      'digit-symbol',
+      'go-no-go',
+      'iowa-gambling',
+      'mental-rotation',
+      'n-back',
+      'negative-feedback',
+      'wisconsin-card'
+    ][i - 1]}`, // Apply /game/ prefix only from second game onward
     img: images[i],
   }));
 
   const handleExit = () => {
-    navigate('/');
+    navigate('/'); // This will resolve to /game/ with basename
   };
 
   return (

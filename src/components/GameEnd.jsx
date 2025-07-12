@@ -41,7 +41,7 @@ const GameEnd = () => {
               <button className="end-game-button" onClick={handleOkClick}>
                 <span className="end-game-button-text">OK</span>
               </button>
-              <button className="end-game-button" onClick={handleGoToMenu}>
+              <button className="end-game-button" onClick={handleGoToMenu} style={{ marginTop: '20px' }}>
                 <span className="end-game-button-text">Volver al menú del juego</span>
               </button>
             </>
@@ -55,7 +55,7 @@ const GameEnd = () => {
               <button className="end-game-button" onClick={handleOkClick}>
                 <span className="end-game-button-text">OK</span>
               </button>
-              <button className="end-game-button" onClick={handleGoToMenu}>
+              <button className="end-game-button" onClick={handleGoToMenu} style={{ marginTop: '20px' }}>
                 <span className="end-game-button-text">Go Back to Game Menu</span>
               </button>
             </>

@@ -64,13 +64,12 @@ const DigitSymbolTest = () => {
   };
 
   const startRealGame = () => {
+    let currentScore = 0; // Track real-time score
     const jsPsych = initJsPsych({
       display_element: 'jspsych-target',
       on_finish: () => {
-        const data = jsPsych.data.get().filter({ trial_number: { $exists: true } });
-        const score = data.select('correct').values.filter(Boolean).length;
-        console.log(`Real game finished. Total score: ${score}`);
-        setRealGameScore(score);
+        console.log(`Real game finished. Total score: ${currentScore}`);
+        setRealGameScore(currentScore);
         setGameState('gameEnd');
       },
     });
@@ -80,7 +79,7 @@ const DigitSymbolTest = () => {
         type: htmlKeyboardResponse,
         stimulus: `
           <div class="digit-symbol-key-container">
-            <h2>Symbol Key (Real Game)</h2>
+            <h2>Symbol Key</h2>
             <p class="digit-symbol-key">1=* 2=# 3=@ 4=$ 5=% 6=+ 7=! 8=/ 9=?</p>
             <p>Press any key to start.</p>
           </div>`,
@@ -92,13 +91,19 @@ const DigitSymbolTest = () => {
           <div class="digit-symbol-trial">
             <div class="digit-symbol-current">Symbol: ${symbol}</div>
             <p>Press <span class="key-highlight">${index + 1}</span></p>
-            <div class="progress">Trial ${index + 1} of 9</div>
+            <div class="progress-trial">
+              <span class="progress">Trial ${index + 1} of 9</span>
+              <span class="earnings-display">Earnings: ${currentScore}</span>
+            </div>
           </div>`,
         choices: [String(index + 1)],
         data: { correct_response: String(index + 1), trial_number: index + 1 },
         on_finish: (data) => {
           data.correct = data.response === String(index + 1);
           console.log(`Real Game Trial ${index + 1} result:`, data);
+          if (data.correct) {
+            currentScore += 1; // Increment score for correct response
+          }
           const target = document.getElementById('jspsych-target');
           target.classList.add(data.correct ? 'correct' : 'incorrect');
           setTimeout(() => target.classList.remove('correct', 'incorrect'), 500);

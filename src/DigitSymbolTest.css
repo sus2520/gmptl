@@ -115,8 +115,21 @@
 .progress {
   font-size: 16px;
   color: #666666;
-  margin-top: 20px;
+  margin-right: 20px;
   font-style: italic;
+}
+
+.progress-trial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.earnings-display {
+  font-size: 16px;
+  color: #1B577E;
+  font-weight: 600;
 }
 
 .correct {
@@ -280,5 +293,14 @@
 
   .end-game-button-text {
     font-size: 16px;
+  }
+
+  .progress {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .earnings-display {
+    font-size: 14px;
   }
 }

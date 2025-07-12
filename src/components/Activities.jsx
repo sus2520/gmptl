@@ -87,7 +87,7 @@ export default function Activities() {
     duration: content[language].durations[i],
     status: content[language].statuses[i],
     statusColor: content[language].statusColors[i],
-    link: i === 0 ? '/intro' : `/game/${[
+    link: i === 0 ? '/intro' : [
       'digit-symbol',
       'go-no-go',
       'iowa-gambling',
@@ -95,12 +95,12 @@ export default function Activities() {
       'n-back',
       'negative-feedback',
       'wisconsin-card'
-    ][i - 1]}`, // Apply /game/ prefix only from second game onward
+    ][i - 1], // Removed /game/ prefix
     img: images[i],
   }));
 
   const handleExit = () => {
-    navigate('/'); // This will resolve to /game/ with basename
+    navigate('/'); // Navigate to root
   };
 
   return (

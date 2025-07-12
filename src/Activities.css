@@ -185,7 +185,6 @@ html, body {
 .activity-icon {
   width: 54px;
   height: 45px;
-  background-image: url('../assets/image.png');
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 12px;

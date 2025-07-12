@@ -7,37 +7,64 @@ const DigitSymbolTest = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/jspsych@8.2.1/build/jspsych.js';
-    script.async = true;
-    script.onload = () => {
-      const jsPsych = window.jsPsych;
-      const timeline = [
-        {
-          type: jsPsychHtmlKeyboardResponse,
-          stimulus: '<div className="digit-symbol-key">Key Mapping: 1=* 2=# 3=@ 4=$ 5=% 6=+ 7=! 8=/ 9=?</div><p>Press any key to start.</p>',
-          choices: 'ALL_KEYS'
-        },
-        ...['*', '#', '@', '$', '%', '+', '!', '/', '?'].map((symbol, index) => ({
-          type: jsPsychHtmlKeyboardResponse,
-          stimulus: `<div className="digit-symbol-current">[Current Symbol: ${symbol}]</div><p>Press ${index + 1}.</p>`,
-          choices: [String(index + 1)],
-          data: { correct_response: String(index + 1) },
-          on_finish: (data) => {
-            data.correct = data.response === String(index + 1);
+    const jsPsychScript = document.createElement('script');
+    jsPsychScript.src = 'https://cdn.jsdelivr.net/npm/jspsych@8.2.1/build/jspsych.js';
+    jsPsychScript.async = true;
+
+    const pluginScript = document.createElement('script');
+    pluginScript.src = 'https://cdn.jsdelivr.net/npm/@jspsych/plugin-html-keyboard-response@1.1.1/dist/index.min.js';
+    pluginScript.async = true;
+
+    let isLoaded = false;
+
+    const onLoad = () => {
+      if (isLoaded) return;
+      isLoaded = true;
+
+      if (window.jsPsych) {
+        const jsPsych = window.jsPsych;
+        const timeline = [
+          {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: '<div className="digit-symbol-key">Key Mapping: 1=* 2=# 3=@ 4=$ 5=% 6=+ 7=! 8=/ 9=?</div><p>Press any key to start.</p>',
+            choices: 'ALL_KEYS'
+          },
+          ...['*', '#', '@', '$', '%', '+', '!', '/', '?'].map((symbol, index) => ({
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: `<div className="digit-symbol-current">[Current Symbol: ${symbol}]</div><p>Press ${index + 1}.</p>`,
+            choices: [String(index + 1)],
+            data: { correct_response: String(index + 1) },
+            on_finish: (data) => {
+              data.correct = data.response === String(index + 1);
+            }
+          }))
+        ];
+
+        jsPsych.init({
+          timeline: timeline,
+          on_finish: () => {
+            setTimeout(() => navigate('/game-end'), 5000);
           }
-        }))
-      ];
-      jsPsych.init({
-        timeline: timeline,
-        on_finish: () => {
-          setTimeout(() => navigate('/game-end'), 5000);
-        }
-      });
+        }).catch((error) => {
+          console.error('jsPsych initialization failed:', error);
+        });
+      } else {
+        console.error('jsPsych not loaded');
+      }
     };
-    document.body.appendChild(script);
+
+    jsPsychScript.onload = onLoad;
+    pluginScript.onload = onLoad;
+
+    jsPsychScript.onerror = () => console.error('Failed to load jsPsych');
+    pluginScript.onerror = () => console.error('Failed to load html-keyboard-response plugin');
+
+    document.body.appendChild(jsPsychScript);
+    document.body.appendChild(pluginScript);
+
     return () => {
-      document.body.removeChild(script);
+      document.body.removeChild(jsPsychScript);
+      document.body.removeChild(pluginScript);
     };
   }, [navigate]);
 

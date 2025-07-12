@@ -1,5 +1,5 @@
 /* === Base Desktop Layout === */
-.desktop {
+.balloon-desktop {
   position: relative;
   width: 1440px;
   height: 1024px;
@@ -9,7 +9,7 @@
 }
 
 /* === Top Bar === */
-.group-20937 {
+.balloon-group-20937 {
   position: absolute;
   width: 1440px;
   height: 31.44px;
@@ -18,7 +18,7 @@
 }
 
 /* Blue section with subtle diagonal right edge */
-.rectangle-746 {
+.balloon-rectangle-746 {
   position: absolute;
   width: 720px;
   height: 31.44px;
@@ -30,7 +30,7 @@
 }
 
 /* Orange section with matching subtle diagonal left edge */
-.rectangle-745 {
+.balloon-rectangle-745 {
   position: absolute;
   width: 744.67px;
   height: 31.44px;
@@ -42,7 +42,7 @@
 }
 
 /* === Logo Image === */
-.image-19-1 {
+.balloon-image-19-1 {
   position: absolute;
   width: 181.76px;
   height: 160.19px;
@@ -53,7 +53,7 @@
 }
 
 /* === Background Overlay Image === */
-.image-19-2 {
+.balloon-image-19-2 {
   position: absolute;
   width: 496.49px;
   height: 437.58px;
@@ -65,7 +65,7 @@
 }
 
 /* === Balloon Image === */
-.image-4 {
+.balloon-image-4 {
   position: absolute;
   width: 105.39px; /* 75% of 207.18px */
   height: 138.19px; /* 75% of 250.92px */
@@ -79,7 +79,7 @@
 }
 
 /* Popped Balloon Image */
-.image-4.popped {
+.balloon-image-4.popped {
   background-size: contain; /* Ensure popped image fits fully */
   width: 155.39px; /* Match normal balloon size */
   height: 288.19px; /* Match normal balloon size */
@@ -89,7 +89,7 @@
 }
 
 /* === Popped Message === */
-.popped-message {
+.balloon-popped-message {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -104,7 +104,7 @@
 }
 
 /* === Main Content Box === */
-.rectangle-744 {
+.balloon-rectangle-744 {
   box-sizing: border-box;
   position: absolute;
   width: 778.52px;
@@ -121,7 +121,7 @@
 }
 
 /* === Text Container inside Box === */
-.group-20909 {
+.balloon-group-20909 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,10 +134,10 @@
 }
 
 /* === Text Styles === */
-.balloon-number,
-.potential-earnings,
-.number-pumps,
-.total-winnings {
+.balloon-balloon-number,
+.balloon-potential-earnings,
+.balloon-number-pumps,
+.balloon-total-winnings {
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
@@ -145,7 +145,7 @@
 }
 
 /* === Button Container === */
-.group-20934 {
+.balloon-group-20934 {
   position: absolute;
   width: 535.95px;
   height: 42px;
@@ -158,7 +158,7 @@
 }
 
 /* === Pump Button === */
-.button-danger {
+.balloon-button-danger {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,7 +172,7 @@
   cursor: pointer;
 }
 
-.button-danger .button-text {
+.balloon-button-danger .balloon-button-text {
   font-weight: 700;
   font-size: 18px;
   color: #FEE9E7;
@@ -180,7 +180,7 @@
 }
 
 /* === Collect Button === */
-.button-collect {
+.balloon-button-collect {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,9 +194,210 @@
   cursor: pointer;
 }
 
-.button-collect .button-text {
+.balloon-button-collect .balloon-button-text {
   font-weight: 700;
   font-size: 18px;
   color: #1B5680;
   white-space: nowrap;
+}
+
+/* === Game Ended Container === */
+.balloon-game-ended-container {
+  text-align: center;
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+/* === Start Real Game Button === */
+.balloon-start-real-game-btn {
+  background: #1B5680;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.balloon-start-real-game-btn:hover {
+  background: #2C7BB6;
+  transform: translateY(-2px);
+}
+
+/* === End Game Content === */
+.balloon-end-game-content {
+  text-align: center;
+  padding: 40px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* === End Game Title === */
+.balloon-end-game-title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #1B5680;
+  margin-bottom: 20px;
+}
+
+/* === End Game Text === */
+.balloon-end-game-text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #333333;
+  margin: 10px 0;
+}
+
+/* === End Game Button === */
+.balloon-end-game-button {
+  background: #1B5680;
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.balloon-end-game-button:hover {
+  background: #2C7BB6;
+  transform: translateY(-2px);
+}
+
+/* === End Game Button Text === */
+.balloon-end-game-button-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .balloon-desktop {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .balloon-rectangle-744 {
+    width: 90%;
+    height: auto;
+    min-height: 400px;
+    padding: 15px;
+  }
+
+  .balloon-image-19-1 {
+    width: 120px;
+    height: 106px;
+    left: 20px;
+    top: 50px;
+  }
+
+  .balloon-image-19-2 {
+    width: 300px;
+    height: 265px;
+    left: calc(50% - 150px);
+    top: calc(50% - 132.5px);
+  }
+
+  .balloon-image-4 {
+    width: 79px; /* 75% of 105.39px */
+    height: 104px; /* 75% of 138.19px */
+    left: calc(50% - 79px/2);
+    top: calc(50% - 104px/2 + 100px);
+  }
+
+  .balloon-image-4.popped {
+    width: 116px; /* 75% of 155.39px */
+    height: 216px; /* 75% of 288.19px */
+    top: calc(50% - 216px/2 + 50px);
+  }
+
+  .balloon-group-20909 {
+    max-width: 250px;
+    left: 0;
+  }
+
+  .balloon-balloon-number,
+  .balloon-potential-earnings,
+  .balloon-number-pumps,
+  .balloon-total-winnings {
+    font-size: 18px;
+  }
+
+  .balloon-group-20934 {
+    width: 90%;
+    flex-direction: column;
+    gap: 15px;
+    top: auto;
+    bottom: 20px;
+  }
+
+  .balloon-button-danger,
+  .balloon-button-collect {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .balloon-button-text {
+    font-size: 16px;
+  }
+
+  .balloon-popped-message {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .balloon-game-ended-container {
+    padding: 20px;
+  }
+
+  .balloon-start-real-game-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .balloon-end-game-title {
+    font-size: 28px;
+  }
+
+  .balloon-end-game-text {
+    font-size: 18px;
+  }
+
+  .balloon-end-game-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .balloon-end-game-button-text {
+    font-size: 16px;
+  }
 }

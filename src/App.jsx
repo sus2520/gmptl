@@ -7,7 +7,7 @@ import BalloonIntro from './components/BalloonIntro';
 import BalloonGame from './components/BalloonGame';
 import GameEnd from './components/GameEnd';
 import DigitSymbolTest from './components/DigitSymbolTest';
-// import GoNoGoTask from './components/GoNoGoTask';
+import GoNoGoTask from './components/GoNoGoTask';
 // import IowaGamblingTask from './components/IowaGamblingTask';
 // import MentalRotation from './components/MentalRotation';
 // import NBackTask from './components/NBackTask';
@@ -24,6 +24,7 @@ function App() {
             <Route path="/demo" element={<BalloonGame />} />
             <Route path="/game-end" element={<GameEnd />} />
             <Route path="/digit-symbol" element={<DigitSymbolTest />} />
+            <Route path="/go-no-go" element={<GoNoGoTask />} />
 
           </Routes>
         </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './DigitSymbolTest.css';
-import image19 from './assets/image19.png';
+import '../DigitSymbolTest.css';
+import image19 from '../assets/image19.png';
 import { JsPsych, initJsPsych } from 'jspsych';
 import htmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response';
 import { LanguageContext } from './LanguageContext';

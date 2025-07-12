@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '.../DigitSymbolTest.css';
+import '../DigitSymbolTest.css';
 import image19 from './assets/image19.png';
 import { JsPsych, initJsPsych } from 'jspsych';
 import htmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response';

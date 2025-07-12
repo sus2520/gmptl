@@ -150,11 +150,11 @@ const BalloonGame = () => {
         <div className="balloon-game-ended-container" style={{ position: 'relative' }}>
           <div
             className="balloon-image-19-2"
-            style={{ backgroundImage: `url(${image19})`, position: 'absolute', top: 0, left: 0, zIndex: -1 }}
+            style={{ backgroundImage: `url(${image19})`, position: 'absolute', top: '0', left: '0', zIndex: -1 }}
           ></div>
           <div
             className="balloon-image-19-1"
-            style={{ backgroundImage: `url(${image19})`, position: 'absolute', top: 68.99px, left: 116.27px, zIndex: 0 }}
+            style={{ backgroundImage: `url(${image19})`, position: 'absolute', top: '68.99px', left: '116.27px', zIndex: 0 }}
           ></div>
           <h2>{language === 'es' ? 'Demostración Terminada' : 'Demo Game Ended'}</h2>
           <p>{language === 'es' ? '¿Listo para jugar el juego real?' : 'Ready to play the real game?'}</p>

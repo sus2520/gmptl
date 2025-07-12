@@ -1,75 +1,186 @@
 .digit-symbol-desktop {
   position: relative;
-  width: 1440px;
-  height: 1024px;
-  background: #FFFFFF;
-  overflow: visible;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
 }
 
 .digit-symbol-group-20937 {
   position: absolute;
-  width: 1440px;
-  height: 31.44px;
-  top: 0px;
-  left: 45px;
+  width: 100%;
+  max-width: 1440px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  display: flex;
 }
 
 .digit-symbol-rectangle-746 {
-  position: absolute;
-  width: 720px;
-  height: 31.44px;
-  right: 720px;
-  top: 0px;
-  background: #1B577E;
+  width: 50%;
+  height: 40px;
+  background: linear-gradient(to right, #1B577E, #2C7BB6);
+  clip-path: polygon(0 0, 98% 0, 95% 100%, 0% 100%);
   z-index: 1;
-  clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
 }
 
 .digit-symbol-rectangle-745 {
-  position: absolute;
-  width: 744.67px;
-  height: 31.44px;
-  left: 695.33px;
-  top: 0px;
-  background: #EB5617;
+  width: 50%;
+  height: 40px;
+  background: linear-gradient(to left, #EB5617, #FF7F50);
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 2% 100%);
   z-index: 2;
-  clip-path: polygon(2% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.digit-symbol-image-19-1 {
+.digit-symbol-image-19 enjoyment-1 {
   position: absolute;
-  width: 181.76px;
-  height: 160.19px;
-  left: 116.27px;
-  top: 68.99px;
+  width: 150px;
+  height: 130px;
+  left: 30px;
+  top: 60px;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
 }
 
 .digit-symbol-image-19-2 {
   position: absolute;
-  width: 496.49px;
-  height: 437.58px;
-  left: calc(50% - 496.49px/2);
-  top: calc(50% - 437.58px/2);
-  opacity: 0.3;
+  width: 400px;
+  height: 350px;
+  left: calc(50% - 200px);
+  top: calc(50% - 175px);
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.2;
+  filter: blur(2px);
 }
 
 .digit-symbol-rectangle-744 {
-  box-sizing: border-box;
-  position: absolute;
-  width: 778.52px;
-  height: 510.86px;
-  left: calc(50% - 778.52px/2);
-  top: calc(50% - 510.86px/2 + 20.37px);
-  border: 0.5px solid #2C51A1;
-  box-shadow: 0px 0px 5.93px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  min-height: 500px;
+  margin: 80px auto 20px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 5;
 }
 
-.digit-symbol-key { font-weight: 500; font-size: 20px; color: #333333; }
-.digit-symbol-current { font-weight: 600; font-size: 24px; color: #EE581B; margin: 10px 0; }
+.digit-symbol-rectangle-744:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.digit-symbol-key-container {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.digit-symbol-key {
+  font-weight: 600;
+  font-size: 22px;
+  color: #1B577E;
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+
+.digit-symbol-trial {
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.digit-symbol-current {
+  font-weight: 700;
+  font-size: 36px;
+  color: #EB5617;
+  margin: 20px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: pulse 0.3s ease;
+}
+
+.key-highlight {
+  display: inline-block;
+  background: #1B577E;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+.progress {
+  font-size: 16px;
+  color: #666666;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.correct {
+  background: rgba(0, 255, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.incorrect {
+  background: rgba(255, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .digit-symbol-desktop {
+    padding: 10px;
+  }
+
+  .digit-symbol-rectangle-744 {
+    width: 95%;
+    min-height: 400px;
+    padding: 15px;
+  }
+
+  .digit-symbol-image-19-1 {
+    width: 100px;
+    height: 90px;
+    left: 20px;
+    top: 50px;
+  }
+
+  .digit-symbol-image-19-2 {
+    width: 300px;
+    height: 250px;
+    left: calc(50% - 150px);
+    top: calc(50% - 125px);
+  }
+
+  .digit-symbol-current {
+    font-size: 28px;
+  }
+
+  .digit-symbol-key {
+    font-size: 18px;
+  }
+}

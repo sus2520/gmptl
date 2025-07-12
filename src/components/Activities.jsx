@@ -87,7 +87,7 @@ export default function Activities() {
     duration: content[language].durations[i],
     status: content[language].statuses[i],
     statusColor: content[language].statusColors[i],
-    link: i === 0 ? '/game/intro' : [
+    link: i === 0 ? '/intro' : [
       '/game/digit-symbol',
       '/game/go-no-go',
       '/game/iowa-gambling',
@@ -95,12 +95,12 @@ export default function Activities() {
       '/game/n-back',
       '/game/negative-feedback',
       '/game/wisconsin-card'
-    ][i - 1], // Map activities to their respective routes
+    ][i - 1], // Keep first as /intro, update second onward with direct routes
     img: images[i],
   }));
 
   const handleExit = () => {
-    navigate('/game');
+    navigate('/');
   };
 
   return (

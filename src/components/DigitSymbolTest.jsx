@@ -92,7 +92,7 @@ const DigitSymbolTest = () => {
             <div class="digit-symbol-current">Symbol: ${symbol}</div>
             <p>Press <span class="key-highlight">${index + 1}</span></p>
             <div class="progress-trial">
-              <span class="progress">Trial ${index + 1} of 9</span>
+              <span class="progress">${index + 1} of 9</span>
               <span class="earnings-display">Earnings: ${currentScore}</span>
             </div>
           </div>`,
@@ -100,7 +100,7 @@ const DigitSymbolTest = () => {
         data: { correct_response: String(index + 1), trial_number: index + 1 },
         on_finish: (data) => {
           data.correct = data.response === String(index + 1);
-          console.log(`Real Game Trial ${index + 1} result:`, data);
+          console.log(`Real Game ${index + 1} result:`, data);
           if (data.correct) {
             currentScore += 1; // Increment score for correct response
           }
@@ -136,7 +136,11 @@ const DigitSymbolTest = () => {
       <div className="digit-symbol-image-19-2" style={{ backgroundImage: `url(${image19})` }}></div>
       <div id="jspsych-target" className="digit-symbol-rectangle-744">
         {gameState === 'ended' && (
-          <div className="game-ended-container">
+          <div className="game-ended-container" style={{ position: 'relative' }}>
+            <div
+              className="digit-symbol-image-19-2"
+              style={{ backgroundImage: `url(${image19})`, position: 'absolute', top: 0, left: 0, zIndex: -1 }}
+            ></div>
             <h2>Trial Game Ended</h2>
             <p>Ready to play the real game?</p>
             <button

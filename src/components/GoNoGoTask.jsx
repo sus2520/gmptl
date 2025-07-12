@@ -26,9 +26,9 @@ const GoNoGoTask = () => {
         type: htmlKeyboardResponse,
         stimulus: `
           <div class="go-nogo-key-container">
-            <h2>Instructions (Trial)</h2>
-            <p>Press <span class="key-highlight">SPACE</span> for GREEN circle, do NOT press for RED circle.</p>
-            <p>Press any key to start.</p>
+            <h2>${language === 'es' ? 'Instrucciones (Prueba)' : 'Instructions (Trial)'}</h2>
+            <p>${language === 'es' ? 'Presiona <span class="key-highlight">ESPACIO</span> para círculo VERDE, NO presiones para círculo ROJO.' : 'Press <span class="key-highlight">SPACE</span> for GREEN circle, do NOT press for RED circle.'}</p>
+            <p>${language === 'es' ? 'Presiona cualquier tecla para comenzar.' : 'Press any key to start.'}</p>
           </div>`,
         choices: 'ALL_KEYS',
       },
@@ -37,7 +37,7 @@ const GoNoGoTask = () => {
         stimulus: `
           <div class="go-nogo-trial">
             <div class="go-nogo-stimulus go-nogo-${color}"></div>
-            <div class="progress">Trial ${index + 1} of 5</div>
+            <div class="progress">${language === 'es' ? 'Prueba' : 'Trial'} ${index + 1} ${language === 'es' ? 'de' : 'of'} 5</div>
           </div>`,
         choices: ['space'],
         trial_duration: 1000,
@@ -79,9 +79,9 @@ const GoNoGoTask = () => {
         type: htmlKeyboardResponse,
         stimulus: `
           <div class="go-nogo-key-container">
-            <h2>Instructions</h2>
-            <p>Press <span class="key-highlight">SPACE</span> for GREEN circle, do NOT press for RED circle.</p>
-            <p>Press any key to start.</p>
+            <h2>${language === 'es' ? 'Instrucciones' : 'Instructions'}</h2>
+            <p>${language === 'es' ? 'Presiona <span class="key-highlight">ESPACIO</span> para círculo VERDE, NO presiones para círculo ROJO.' : 'Press <span class="key-highlight">SPACE</span> for GREEN circle, do NOT press for RED circle.'}</p>
+            <p>${language === 'es' ? 'Presiona cualquier tecla para comenzar.' : 'Press any key to start.'}</p>
           </div>`,
         choices: 'ALL_KEYS',
       },
@@ -91,8 +91,8 @@ const GoNoGoTask = () => {
           <div class="go-nogo-trial">
             <div class="go-nogo-stimulus go-nogo-${color}"></div>
             <div class="progress-trial">
-              <span class="progress">Trial ${index + 1} of 5</span>
-              <span class="earnings-display">Earnings: ${currentScore}</span>
+              <span class="progress">${index + 1} ${language === 'es' ? 'de' : 'of'} 5</span>
+              <span class="earnings-display">${language === 'es' ? 'Puntuación' : 'Earnings'}: ${currentScore}</span>
             </div>
           </div>`,
         choices: ['space'],
@@ -132,13 +132,19 @@ const GoNoGoTask = () => {
         <div className="go-nogo-rectangle-746"></div>
         <div className="go-nogo-rectangle-745"></div>
       </div>
-      <div className="go-nogo-image-19-1" style={{ backgroundImage: `url(${image19})` }}></div>
-      <div className="go-nogo-image-19-2" style={{ backgroundImage: `url(${image19})` }}></div>
+      <div
+        className="go-nogo-image-19-1"
+        style={{ backgroundImage: `url(${image19})`, position: 'absolute', top: '68.99px', left: '116.27px', zIndex: 0 }}
+      ></div>
+      <div
+        className="go-nogo-image-19-2"
+        style={{ backgroundImage: `url(${image19})`, position: 'absolute', top: '0', left: '0', zIndex: -1 }}
+      ></div>
       <div id="jspsych-target" className="go-nogo-rectangle-744">
         {gameState === 'ended' && (
           <div className="game-ended-container">
-            <h2>Trial Game Ended</h2>
-            <p>Ready to play the real game?</p>
+            <h2>{language === 'es' ? 'Prueba Terminada' : 'Demo Game Ended'}</h2>
+            <p>{language === 'es' ? '¿Listo para jugar el juego real?' : 'Ready to play the real game?'}</p>
             <button
               className="start-real-game-btn"
               onClick={() => {
@@ -146,7 +152,7 @@ const GoNoGoTask = () => {
                 setGameState('real');
               }}
             >
-              Start Real Game
+              {language === 'es' ? 'Iniciar Juego Real' : 'Start Real Game'}
             </button>
           </div>
         )}
@@ -161,7 +167,11 @@ const GoNoGoTask = () => {
                 <button className="end-game-button" onClick={() => {}}>
                   <span className="end-game-button-text">OK</span>
                 </button>
-                <button className="end-game-button" onClick={() => navigate('/activities')} style={{ marginTop: '20px' }}>
+                <button
+                  className="end-game-button"
+                  onClick={() => navigate('/activities')}
+                  style={{ marginTop: '20px' }}
+                >
                   <span className="end-game-button-text">Volver al menú del juego</span>
                 </button>
               </>
@@ -174,7 +184,11 @@ const GoNoGoTask = () => {
                 <button className="end-game-button" onClick={() => {}}>
                   <span className="end-game-button-text">OK</span>
                 </button>
-                <button className="end-game-button" onClick={() => navigate('/activities')} style={{ marginTop: '20px' }}>
+                <button
+                  className="end-game-button"
+                  onClick={() => navigate('/activities')}
+                  style={{ marginTop: '20px' }}
+                >
                   <span className="end-game-button-text">Go Back to Game Menu</span>
                 </button>
               </>

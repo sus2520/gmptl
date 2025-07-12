@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import '../DigitSymbolTest.css';
-import image19 from '../assets/image19.png';
+import React, { useEffect, useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './DigitSymbolTest.css';
+import image19 from './assets/image19.png';
 import { JsPsych, initJsPsych } from 'jspsych';
 import htmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response';
+import { LanguageContext } from './LanguageContext';
 
 const DigitSymbolTest = () => {
-  const [gameState, setGameState] = useState('trial'); // trial, ended, real
+  const [gameState, setGameState] = useState('trial'); // trial, ended, real, gameEnd
+  const [realGameScore, setRealGameScore] = useState(0); // Track real game earnings
+  const { language } = useContext(LanguageContext);
+  const navigate = useNavigate();
 
   const startTrial = () => {
     const jsPsych = initJsPsych({
@@ -43,7 +48,6 @@ const DigitSymbolTest = () => {
           const target = document.getElementById('jspsych-target');
           target.classList.add(data.correct ? 'correct' : 'incorrect');
           setTimeout(() => target.classList.remove('correct', 'incorrect'), 500);
-          // Ensure ended state is set after the 9th trial
           if (data.trial_number === 9) {
             console.log('Reached Trial 9/9, setting gameState to ended');
             setGameState('ended');
@@ -63,8 +67,11 @@ const DigitSymbolTest = () => {
     const jsPsych = initJsPsych({
       display_element: 'jspsych-target',
       on_finish: () => {
-        console.log('Real game finished');
-        setGameState('ended');
+        const data = jsPsych.data.get().filter({ trial_number: { $exists: true } });
+        const score = data.select('correct').values.filter(Boolean).length;
+        console.log(`Real game finished. Total score: ${score}`);
+        setRealGameScore(score);
+        setGameState('gameEnd');
       },
     });
 
@@ -129,10 +136,44 @@ const DigitSymbolTest = () => {
             <p>Ready to play the real game?</p>
             <button
               className="start-real-game-btn"
-              onClick={() => setGameState('real')}
+              onClick={() => {
+                setRealGameScore(0); // Reset score for new real game
+                setGameState('real');
+              }}
             >
               Start Real Game
             </button>
+          </div>
+        )}
+        {gameState === 'gameEnd' && (
+          <div className="end-game-content">
+            {language === 'es' ? (
+              <>
+                <h1 className="end-game-title">Felicitaciones</h1>
+                <p className="end-game-text">Prueba de Símbolos y Dígitos</p>
+                <p className="end-game-text">Puntuación: {realGameScore}/9</p>
+                <p className="end-game-text">Muchas gracias por completar la actividad.</p>
+                <button className="end-game-button" onClick={() => {}}>
+                  <span className="end-game-button-text">OK</span>
+                </button>
+                <button className="end-game-button" onClick={() => navigate('/activities')} style={{ marginTop: '20px' }}>
+                  <span className="end-game-button-text">Volver al menú del juego</span>
+                </button>
+              </>
+            ) : (
+              <>
+                <h1 className="end-game-title">Congratulations</h1>
+                <p className="end-game-text">Digit Symbol Test</p>
+                <p className="end-game-text">Score: {realGameScore}/9</p>
+                <p className="end-game-text">Thank you very much for completing the activity.</p>
+                <button className="end-game-button" onClick={() => {}}>
+                  <span className="end-game-button-text">OK</span>
+                </button>
+                <button className="end-game-button" onClick={() => navigate('/activities')} style={{ marginTop: '20px' }}>
+                  <span className="end-game-button-text">Go Back to Game Menu</span>
+                </button>
+              </>
+            )}
           </div>
         )}
       </div>

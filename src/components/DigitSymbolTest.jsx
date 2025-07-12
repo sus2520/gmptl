@@ -2,76 +2,44 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../DigitSymbolTest.css';
 import image19 from '../assets/image19.png';
+import { JsPsych, initJsPsych } from 'jspsych';
+import htmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response';
 
 const DigitSymbolTest = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const jsPsychScript = document.createElement('script');
-    jsPsychScript.src = 'https://cdn.jsdelivr.net/npm/jspsych@8.2.1/dist/jspsych.js';
-    jsPsychScript.async = true;
+    const jsPsych = initJsPsych({
+      display_element: 'jspsych-target',
+      on_finish: () => {
+        console.log('Game finished');
+        setTimeout(() => navigate('/game-end'), 5000);
+      },
+    });
 
-    const pluginScript = document.createElement('script');
-    pluginScript.src = 'https://cdn.jsdelivr.net/npm/@jspsych/plugin-html-keyboard-response@1.1.1/dist/index.min.js';
-    pluginScript.async = true;
+    const timeline = [
+      {
+        type: htmlKeyboardResponse,
+        stimulus: '<div class="digit-symbol-key">Key Mapping: 1=* 2=# 3=@ 4=$ 5=% 6=+ 7=! 8=/ 9=?</div><p>Press any key to start.</p>',
+        choices: 'ALL_KEYS',
+      },
+      ...['*', '#', '@', '$', '%', '+', '!', '/', '?'].map((symbol, index) => ({
+        type: htmlKeyboardResponse,
+        stimulus: `<div class="digit-symbol-current">[Current Symbol: ${symbol}]</div><p>Press ${index + 1}.</p>`,
+        choices: [String(index + 1)],
+        data: { correct_response: String(index + 1) },
+        on_finish: (data) => {
+          data.correct = data.response === String(index + 1);
+          console.log(`Trial ${index + 1} result:`, data);
+        },
+      })),
+    ];
 
-    let isLoaded = false;
-
-    const onLoad = () => {
-      if (isLoaded) return;
-      isLoaded = true;
-
-      if (window.jsPsych && window.jsPsych.plugins['html-keyboard-response']) {
-        console.log('jsPsych and plugin loaded successfully');
-        const jsPsych = window.jsPsych;
-        const timeline = [
-          {
-            type: jsPsych.plugins['html-keyboard-response'],
-            stimulus: '<div className="digit-symbol-key">Key Mapping: 1=* 2=# 3=@ 4=$ 5=% 6=+ 7=! 8=/ 9=?</div><p>Press any key to start.</p>',
-            choices: 'ALL_KEYS'
-          },
-          ...['*', '#', '@', '$', '%', '+', '!', '/', '?'].map((symbol, index) => ({
-            type: jsPsych.plugins['html-keyboard-response'],
-            stimulus: `<div className="digit-symbol-current">[Current Symbol: ${symbol}]</div><p>Press ${index + 1}.</p>`,
-            choices: [String(index + 1)],
-            data: { correct_response: String(index + 1) },
-            on_finish: (data) => {
-              data.correct = data.response === String(index + 1);
-              console.log(`Trial ${index + 1} result:`, data);
-            }
-          }))
-        ];
-
-        try {
-          jsPsych.init({
-            timeline: timeline,
-            on_finish: () => {
-              console.log('Game finished');
-              setTimeout(() => navigate('/game-end'), 5000);
-            }
-          });
-        } catch (error) {
-          console.error('jsPsych initialization error:', error);
-        }
-      } else {
-        console.error('jsPsych or plugin not loaded');
-      }
-    };
-
-    jsPsychScript.onload = () => {
-      document.body.appendChild(pluginScript);
-    };
-    pluginScript.onload = onLoad;
-
-    jsPsychScript.onerror = () => console.error('Failed to load jsPsych script');
-    pluginScript.onerror = () => console.error('Failed to load html-keyboard-response plugin');
-
-    document.body.appendChild(jsPsychScript);
-
-    return () => {
-      document.body.removeChild(jsPsychScript);
-      document.body.removeChild(pluginScript);
-    };
+    try {
+      jsPsych.run(timeline);
+    } catch (error) {
+      console.error('jsPsych initialization error:', error);
+    }
   }, [navigate]);
 
   return (

@@ -88,14 +88,14 @@ export default function Activities() {
     status: content[language].statuses[i],
     statusColor: content[language].statusColors[i],
     link: i === 0 ? '/intro' : [
-      'digit-symbol',
-      'go-no-go',
-      'iowa-gambling',
-      'mental-rotation',
-      'n-back',
-      'negative-feedback',
-      'wisconsin-card'
-    ][i - 1], // Removed /game/ prefix
+      '/digit-symbol',
+      '/go-no-go',
+      '/iowa-gambling',
+      '/mental-rotation',
+      '/n-back',
+      '/negative-feedback',
+      '/wisconsin-card'
+    ][i - 1], // Direct routes without /game/ or /activities/ prefix
     img: images[i],
   }));
 

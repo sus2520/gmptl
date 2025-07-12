@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import '../DigitSymbolTest.css';
-import image19 from '../assets/image19.png';
+import './DigitSymbolTest.css';
+import image19 from './assets/image19.png';
 import { JsPsych, initJsPsych } from 'jspsych';
 import htmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response';
 
@@ -11,7 +11,7 @@ const DigitSymbolTest = () => {
     const jsPsych = initJsPsych({
       display_element: 'jspsych-target',
       on_finish: () => {
-        console.log('Trial game finished');
+        console.log('Trial game finished after Trial 9/9');
         setGameState('ended');
       },
     });
@@ -43,6 +43,11 @@ const DigitSymbolTest = () => {
           const target = document.getElementById('jspsych-target');
           target.classList.add(data.correct ? 'correct' : 'incorrect');
           setTimeout(() => target.classList.remove('correct', 'incorrect'), 500);
+          // Ensure ended state is set after the 9th trial
+          if (data.trial_number === 9) {
+            console.log('Reached Trial 9/9, setting gameState to ended');
+            setGameState('ended');
+          }
         },
       })),
     ];
